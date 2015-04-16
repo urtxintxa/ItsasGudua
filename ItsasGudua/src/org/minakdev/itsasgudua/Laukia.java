@@ -3,7 +3,8 @@ package org.minakdev.itsasgudua;
 public class Laukia {
 	
 	private boolean begiratuta = false;
-	private Itsasontzia itsasontzia = false;
+	private Itsasontzia itsasontzia = false; 
+	//lol
 	private boolean mina = false;
 	
 	public Laukia() {}
