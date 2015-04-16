@@ -4,7 +4,7 @@ public class Laukia {
 	
 	private boolean begiratuta = false;
 	private Itsasontzia itsasontzia = false; 
-	//lol
+//uu
 	private boolean mina = false;
 	
 	public Laukia() {}
