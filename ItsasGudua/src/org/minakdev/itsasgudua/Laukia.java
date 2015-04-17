@@ -4,22 +4,21 @@ public class Laukia {
 	
 	private boolean begiratuta = false;
 	private Itsasontzia itsasontzia = false; 
-//uu
-	private boolean mina = false;
+	private boolean mina = false;//6666
 	
 	public Laukia() {}
 	
 	public void nireaInprimatu() {
 		if(this.mina) {
 			if(this.begiratuta) {
-				System.out.print("☠"); //mina boooom
+				System.out.print("â˜ "); //mina boooom
 			}
 			else {
-				System.out.println("☣"); //mina 
+				System.out.println("â˜£"); //mina 
 			}
 		}
 		else if(this.itsasontzia != null) {
-			System.out.print("⏅");
+			System.out.print("â�…");
 		}
 		else {
 			System.out.print("~"); // ura
@@ -28,14 +27,14 @@ public class Laukia {
 	
 	public void aurkariarenaInprimatu() {
 		if(!this.begiratuta) {
-			System.out.print("·");
+			System.out.print("Â·");
 		}
 		else {
 			if(this.mina) {
-				System.out.print("☠"); //mina boooom
+				System.out.print("â˜ "); //mina boooom
 			}
 			else if(this.itsasontzia != null) {
-				System.out.print("✝"); //itsasontzi hondoratua
+				System.out.print("âœ�"); //itsasontzi hondoratua
 			}
 			else {
 				System.out.print("~"); //ura
