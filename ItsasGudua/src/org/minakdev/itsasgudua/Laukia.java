@@ -3,22 +3,22 @@ package org.minakdev.itsasgudua;
 public class Laukia {
 	
 	private boolean begiratuta = false;
-	private Itsasontzia itsasontzia = false; 
-	private boolean mina = false;//pene
+	private Itsasontzia itsasontzia = false;
+	private boolean mina = false;
 	
 	public Laukia() {}
 	
 	public void nireaInprimatu() {
 		if(this.mina) {
 			if(this.begiratuta) {
-				System.out.print("â˜ "); //mina boooom
+				System.out.print("☠"); //mina boooom
 			}
 			else {
-				System.out.println("â˜£"); //mina 
+				System.out.println("☣"); //mina 
 			}
 		}
 		else if(this.itsasontzia != null) {
-			System.out.print("â�…");
+			System.out.print("⏅");
 		}
 		else {
 			System.out.print("~"); // ura
@@ -27,14 +27,14 @@ public class Laukia {
 	
 	public void aurkariarenaInprimatu() {
 		if(!this.begiratuta) {
-			System.out.print("Â·");
+			System.out.print("·");
 		}
 		else {
 			if(this.mina) {
-				System.out.print("â˜ "); //mina boooom
+				System.out.print("☠"); //mina boooom
 			}
 			else if(this.itsasontzia != null) {
-				System.out.print("âœ�"); //itsasontzi hondoratua
+				System.out.print("✝"); //itsasontzi hondoratua
 			}
 			else {
 				System.out.print("~"); //ura
