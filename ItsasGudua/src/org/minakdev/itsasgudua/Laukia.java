@@ -11,7 +11,7 @@ public class Laukia {
 	public void nireaInprimatu() {
 		if(this.mina) {
 			if(this.begiratuta) {
-				System.out.print("☠"); //mina booom
+				System.out.print("☠"); //mina boooom
 			}
 			else {
 				System.out.println("☣"); //mina 
