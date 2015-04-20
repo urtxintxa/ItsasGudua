@@ -4,15 +4,19 @@ public class Tableroa {
 	
 	private Laukia[][] lista;
 	private static int minaKop = 3;
-	private static int tamaina = 6;//jgjh
+	private static int tamaina = 6;
 	
 	public Tableroa() {
-		this.lista = new Laukia[tamaina][tamaina];
+		for(int i = 0; i < tamaina; i++) {
+			for(int j = 0; j < tamaina; j++) {
+				this.lista = new Laukia[i][j];
+			}
+		}
 	}
 	
 	public void itsasontziaJarri(int pX, int pY, int pTamaina, char pNoranzkoa, Itsasontzia pItsasontzia) {
 		if(pNoranzkoa == 'B') {
-			for(int i = 1; i < pTamaina; i++) {
+			for(int i = 0; i < pTamaina; i++) {
 				this.lista[pX+i][pY].setItsasontzia(pItsasontzia);
 			}
 		}
@@ -47,7 +51,7 @@ public class Tableroa {
 	}
 	
 	public void tableroOsoaInprimatu() {
-		for(int i = 0; i <= tamaina; i++) {
+		for(int i = 0; i < tamaina; i++) {
 			for(int j = 0; j <= tamaina; j++) {
 				this.lista[i][j].nireaInprimatu();
 				System.out.print(" ");

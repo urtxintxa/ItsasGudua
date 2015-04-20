@@ -12,11 +12,8 @@ public class Jokalaria {
 	private static int ontziaMax;
 	private static int itsaspekoMax;
 	private String izena;
-
 	
 	Scanner sc = new Scanner(System.in);
-	
-	
 	
 	public Jokalaria(String pIzena) {
 	}
