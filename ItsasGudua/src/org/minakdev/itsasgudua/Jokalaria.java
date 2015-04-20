@@ -15,24 +15,76 @@ public class Jokalaria {
 	
 	Scanner sc = new Scanner(System.in);
 	
-	public Jokalaria(String pIzena) {
+	public Jokalaria(String pIzena){
+		this.tablero=new Tableroa();
+		this.penalizazioa=false;
+		this.minaIkutuak=0;
+		this.itsasontziak=new ListaItsasontziak();
+		this.izena=pIzena;
 	}
 
-	public void tiroEgin(Jokalaria pAurkari) {
+	public void tiroEgin(Jokalaria pAurkari){
+		if(!this.penalizazioa){
+			this.jokalariarenEgoeraInprimatu();
+			pAurkari.partzialkiInprimatu();
+			boolean ego=false;
+			boolean beg=true;
+			int pX=0;
+			int pY=0;
+			while(!ego || beg){
+				pX=this.eskatuX();
+				pY=this.eskatuY();
+				if(this.tablero.koordenatuEgokiak(pX, pY)){
+					beg=this.tablero.begiratutaDago(pX, pY);
+					ego=true;
+				}
+				else{
+					ego=false;
+				}
+			}
+			this.tablero.setBegiratuta(pX,pY,true);
+			boolean am=false;
+			Itsasontzia it=this.tablero.itsasontzirikDago(pX,pY);
+			if(it!=null){
+				it.zatiaKendu();
+				if(it.hondoratutaDago()){
+					this.itsasontziak.kenduItsasontzia(it);
+					if(this.itsasontziak.zenbatItsasontzi()==0){
+						am=true;
+					}
+				}
+				
+			}
+			if(!am){
+				if(this.tablero.minarikDago(pX, pY)){
+					this.penalizazioa=true;
+					this.minaIkutuak++;
+				}
+				boolean de=false;
+				if(this.minaMaxGainditua()){
+					de=true;
+				}
+				if(!de){
+					this.tablero.minakBoom(pX, pY, pAurkari);
+				}
+			}
+		}
 	}
 
-	public void nireTableroaInprimatu() {
+	public void guztizInprimatu(){
+		this.tablero.tableroOsoaInprimatu();
 	}
 
-	public void aurkariarenTableroaInprimatu() {
+	public void partzialkiInprimatu(){
+		this.tablero.egungoTableroaInprimatu();
 	}
 
-	private int eskatuX() {
-		return 0;
+	private int eskatuX(){
+		return 0; //sartu zurea Eneko
 	}
 
-	private int eskatuY() {
-		return 0;
+	private int eskatuY(){
+		return 0; //sartu zurea Eneko
 	}
 
 	public void itsasontziaJarri(Itsasontzia pItsasontzia) {	
