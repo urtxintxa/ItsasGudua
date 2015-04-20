@@ -153,9 +153,8 @@ public class Jokalaria {
 
 		if (pHorBer == 'B') {
 			while (i < pTamaina && zuzena) {
-				pX++;
-				if (this.tablero.koordenatuEgokiak(pX, pY)) {
-					if (this.tablero.itsasontzirikDago(pX, pY) != null) {
+				if (this.tablero.koordenatuEgokiak(pX+i, pY)) {
+					if (this.tablero.itsasontzirikDago(pX+i, pY) != null) {
 						zuzena = false;
 					}
 					i++;
@@ -170,9 +169,8 @@ public class Jokalaria {
 		else { 
 			if(pHorBer=='H'){
 				while (i < pTamaina && zuzena) {
-					pY++;
-					if (this.tablero.koordenatuEgokiak(pX, pY)) {
-						if (this.tablero.itsasontzirikDago(pX, pY) != null) {
+					if (this.tablero.koordenatuEgokiak(pX, pY+i)) {
+						if (this.tablero.itsasontzirikDago(pX, pY+i) != null) {
 							zuzena = false;
 						}
 						i++;
@@ -221,7 +219,7 @@ public class Jokalaria {
 		return this.itsasontziak.zenbatItsasontzi();
 	}
 
-	
+	//Hemendik aurrera herentziarako
 	public ListaItsasontziak getListaItsasontziak(){
 		return this.itsasontziak;
 	}
