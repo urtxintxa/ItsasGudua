@@ -140,8 +140,18 @@ public class Tableroa {
 	}
 	
 	private void minaLehertu(int pX, int pY, Jokalaria pAurkaria) {
-		if(this.itsasontzirikDago(pX, pY) != null){
-			if()
+		Itsasontzia itsasontzi = this.itsasontzirikDago(pX, pY);
+		if(itsasontzi != null){
+			if(!itsasontzi.getAntiMina()) {
+				this.setBegiratuta(pX, pY, true);
+				itsasontzi.kenduZatia();
+				if(itsasontzi.hondoratutaDago()) {
+					//lista.kenduItsasontzia(itsasontzi);
+				}
+			}
+		}
+		else if(this.minarikDago(pX, pY)) {
+			this.setBegiratuta(pX, pY, true);
 		}
 	}
 	
