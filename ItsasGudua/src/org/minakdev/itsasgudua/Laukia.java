@@ -11,13 +11,13 @@ public class Laukia {
 	public void nireaInprimatu() {
 		if(this.mina) {
 			if(this.begiratuta) {
-				System.out.print("☠"); //mina booooooom
+				System.out.print("☠"); //mina boom
 			}
 			else {
 				System.out.println("☣"); //mina 
 			}
 		}
-		else if(this.itsasontzia != null) {
+		else if(this.itsasontzia != null) { //itsasontzia
 			System.out.print("⏅");
 		}
 		else {
