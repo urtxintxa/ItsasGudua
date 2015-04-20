@@ -1,6 +1,9 @@
 package org.minakdev.itsasgudua;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import org.proiektua.itsasontziak.ZenbakiTartea;
 
 public class Jokalaria {
 	private Tableroa tablero;
@@ -80,11 +83,55 @@ public class Jokalaria {
 	}
 
 	private int eskatuX(){
-		return 0; //sartu zurea Eneko
+		boolean amaitu = false;
+		int n;
+		do {
+			try {
+				amaitu = false;
+				System.out.println("Sartu X koordenatua, 1 eta 6 artekoa (biak barne): ");
+				n = sc.nextInt();	
+				if(n > 6 || n < 0){
+					throw new TablerotikKanpo("Zenbakiak ez daude tartean.");
+				}
+			} catch (InputMismatchException e) {
+				sc.nextLine();
+				n = 0;
+				System.out.println("Ez duzu zenbaki oso bat sartu.");
+				amaitu = true;
+			}catch (TablerotikKanpo e) {
+				System.out.println(e.getMessage());
+				amaitu = true;
+			}
+
+			
+		} while (amaitu);
+		return n;
 	}
 
 	private int eskatuY(){
-		return 0; //sartu zurea Eneko
+		boolean amaitu = false;
+		int n;
+		do {
+			try {
+				amaitu = false;
+				System.out.println("Sartu Y koordenatua, 1 eta 6 artekoa (biak barne): ");
+				n = sc.nextInt();	
+				if(n > 6 || n < 0){
+					throw new TablerotikKanpo("Zenbakiak ez daude tartean.");
+				}
+			} catch (InputMismatchException e) {
+				sc.nextLine();
+				n = 0;
+				System.out.println("Ez duzu zenbaki oso bat sartu.");
+				amaitu = true;
+			}catch (TablerotikKanpo e) {
+				System.out.println(e.getMessage());
+				amaitu = true;
+			}
+
+			
+		} while (amaitu);
+		return n;
 	}
 
 	public void itsasontziaJarri(Itsasontzia pItsasontzia) {	
