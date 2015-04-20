@@ -3,8 +3,6 @@ package org.minakdev.itsasgudua;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import org.proiektua.itsasontziak.ZenbakiTartea;
-
 public class Jokalaria {
 	private Tableroa tablero;
 	private boolean penalizazioa;
@@ -84,7 +82,7 @@ public class Jokalaria {
 
 	private int eskatuX(){
 		boolean amaitu = false;
-		int n;
+		int n = 0;
 		do {
 			try {
 				amaitu = false;
@@ -110,7 +108,7 @@ public class Jokalaria {
 
 	private int eskatuY(){
 		boolean amaitu = false;
-		int n;
+		int n = 0;
 		do {
 			try {
 				amaitu = false;
