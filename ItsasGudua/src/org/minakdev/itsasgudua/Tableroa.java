@@ -28,17 +28,14 @@ public class Tableroa {
 	}
 	
 	public void minakJarri() {
-		for(int i = 0; i < minaKop; i++ ) {
-			boolean topatua = false;
-			while(!topatua) {
-				int x = (int)(Math.random()*(tamaina+1));
-				int y = (int)(Math.random()*(tamaina+1));
-				if(this.koordenatuEgokiak(x, y)) {
-					this.lista[x][y].setMina(true);
-					topatua = true;
-				}
+		int i = 1;
+		while(i != minaKop) {
+			int x = (int)(Math.random()*(tamaina+1));
+			int y = (int)(Math.random()*(tamaina+1));
+			if(this.koordenatuEgokiak(x, y)) {
+				this.lista[x][y].setMina(true);
+				i++;
 			}
-			
 		}
 	}
 	
