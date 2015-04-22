@@ -50,7 +50,7 @@ public class Tableroa {
 	
 	public void tableroOsoaInprimatu() {
 		for(int i = 0; i < tamaina; i++) {
-			for(int j = 0; j <= tamaina; j++) {
+			for(int j = 0; j < tamaina; j++) {
 				this.lista[i][j].osoaInprimatu();;
 				System.out.print(" ");
 			}
@@ -110,8 +110,8 @@ public class Tableroa {
 	}
 	
 	public void egungoTableroaInprimatu() {
-		for(int i = 0; i <= tamaina; i++) {
-			for(int j = 0; j <= tamaina; j++) {
+		for(int i = 0; i < tamaina; i++) {
+			for(int j = 0; j < tamaina; j++) {
 				this.lista[i][j].egungoaInprimatu();;
 				System.out.print(" ");
 			}
@@ -124,7 +124,7 @@ public class Tableroa {
 	}
 	
 	public boolean koordenatuEgokiak(int pX, int pY) {
-		if(pX < 0 || pX > tamaina || pY < 0 || pY > tamaina ) {
+		if(pX < 0 || pX >= tamaina || pY < 0 || pY >= tamaina ) {
 			return false;
 		}
 		else {

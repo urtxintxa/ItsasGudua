@@ -286,7 +286,7 @@ public class Jokalaria {
 				atera=true;
 			}
 		} while (!atera);
-		
+		this.tablero.minakJarri();
 	}
 	
 	private int hautatuItsasontzia(int pTxalupaKop, int pUrpekariKop, int pOntziKop) {

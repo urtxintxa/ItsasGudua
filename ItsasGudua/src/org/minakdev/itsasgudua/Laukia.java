@@ -14,7 +14,7 @@ public class Laukia {
 				System.out.print("☠"); //mina boom
 			}
 			else {
-				System.out.println("☣"); //mina 
+				System.out.print("☣"); //mina 
 			}
 		}
 		else if(this.itsasontzia != null) {
@@ -22,7 +22,7 @@ public class Laukia {
 				System.out.print("✝"); //itsasontzi hondoratua
 			}
 			else {
-				System.out.println("⏅"); //itsasontzia
+				System.out.print("⏅"); //itsasontzia
 			}
 		}
 		else {
@@ -30,7 +30,7 @@ public class Laukia {
 				System.out.print("~"); // ur ikusia
 			}
 			else {
-				System.out.println("≈"); //ur ez ikusia
+				System.out.print("≈"); //ur ez ikusia
 			}
 		}
 	}
