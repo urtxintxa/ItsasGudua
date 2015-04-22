@@ -22,7 +22,7 @@ public class Tableroa {
 		}
 		else {
 			for(int i = 0; i < pTamaina; i++) {
-				this.lista[pX][pY+1].setItsasontzia(pItsasontzia);			
+				this.lista[pX][pY+i].setItsasontzia(pItsasontzia);			
 			}
 		}
 	}
