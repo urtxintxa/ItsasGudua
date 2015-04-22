@@ -32,7 +32,7 @@ public class Tableroa {
 		while(i != minaKop) {
 			int x = (int)(Math.random()*(tamaina+1));
 			int y = (int)(Math.random()*(tamaina+1));
-			if(this.koordenatuEgokiak(x, y)) {
+			if(!this.lista[x][y].getMina() && this.lista[x][y].getItsasontzia() == null) {
 				this.lista[x][y].setMina(true);
 				i++;
 			}
@@ -50,7 +50,7 @@ public class Tableroa {
 	public void tableroOsoaInprimatu() {
 		for(int i = 0; i < tamaina; i++) {
 			for(int j = 0; j <= tamaina; j++) {
-				this.lista[i][j].nireaInprimatu();
+				this.lista[i][j].osoaInprimatu();;
 				System.out.print(" ");
 			}
 			System.out.println();
@@ -111,7 +111,7 @@ public class Tableroa {
 	public void egungoTableroaInprimatu() {
 		for(int i = 0; i <= tamaina; i++) {
 			for(int j = 0; j <= tamaina; j++) {
-				this.lista[i][j].aurkariarenaInprimatu();
+				this.lista[i][j].egungoaInprimatu();;
 				System.out.print(" ");
 			}
 			System.out.println();
@@ -127,24 +127,18 @@ public class Tableroa {
 			return false;
 		}
 		else {
-			if(this.lista[pX][pY].getMina() || this.lista[pX][pY].getItsasontzia() != null) {
-				return false;
-			}
-			else {
-				return true;
-			}
+			return true;
 		}
 	}
 	
 	private void minaLehertu(int pX, int pY, Jokalaria pAurkaria) {
-		ListaItsasontziak lista= pAurkaria.getListaItsasontziak();
 		Itsasontzia itsasontzi = this.itsasontzirikDago(pX, pY);
 		if(itsasontzi != null){
 			if(!itsasontzi.getAntiMina()) {
 				this.setBegiratuta(pX, pY, true);
 				itsasontzi.kenduZatia();
 				if(itsasontzi.hondoratutaDago()) {
-					lista.kenduItsasontzia(itsasontzi);
+					pAurkaria.getListaItsasontziak().kenduItsasontzia(itsasontzi);
 				}
 			}
 		}
@@ -153,6 +147,10 @@ public class Tableroa {
 		}
 	}
 	
+	public static int getTamaina() {
+		return tamaina;
+	}
+
 	public void setBegiratuta(int pX, int pY, boolean pBegiratuta) {
 		this.lista[pX][pY].setBegiratuta(pBegiratuta);
 	}

@@ -3,12 +3,12 @@ package org.minakdev.itsasgudua;
 public class Laukia {
 	
 	private boolean begiratuta = false;
-	private Itsasontzia itsasontzia = false;
+	private Itsasontzia itsasontzia = null;
 	private boolean mina = false;
 	
 	public Laukia() {}
 	
-	public void nireaInprimatu() {
+	public void osoaInprimatu() {
 		if(this.mina) {
 			if(this.begiratuta) {
 				System.out.print("☠"); //mina boom
@@ -25,7 +25,7 @@ public class Laukia {
 		}
 	}
 	
-	public void aurkariarenaInprimatu() {
+	public void egungoaInprimatu() {
 		if(!this.begiratuta) {
 			System.out.print("·");
 		}

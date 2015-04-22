@@ -15,7 +15,7 @@ public class Jokoa {
     	this.txanda=0;
 	}
 	
-	public Jokoa getNireJokoa() {
+	public static synchronized Jokoa getNireJokoa() {
 		if(nireJokoa == null) {
 			nireJokoa = new Jokoa();
 		}
@@ -24,7 +24,6 @@ public class Jokoa {
 	
 	public void partidaBatjolastu() {
 		Jokalaria irabazlea=null;
-    	
     	
     	System.out.println("Lehengo jokalaria, sartu izena.");
     	this.jokalariak[0]= new Jokalaria(this.izenaEskatu());
@@ -39,9 +38,7 @@ public class Jokoa {
     	System.out.println("Has dadila partida.");
     	
     	while(irabazlea==null){
-    		if(!this.jokalariak[this.txanda % 2].getPenalizazioa()){
-    			this.jokalariak[this.txanda % 2].tiroEgin(this.jokalariak[(this.txanda + 1) % 2]);
-    		}
+    		this.jokalariak[this.txanda % 2].tiroEgin(this.jokalariak[(this.txanda + 1) % 2]);
     		this.txanda++;
     		irabazlea=this.partidarenIrabazlea();
     	}
@@ -56,11 +53,9 @@ public class Jokoa {
     	this.jokalariak[0].guztizInprimatu();
     	this.jokalariak[1].guztizInprimatu();
 
-		
 	}
 	
 	private String izenaEskatu() {
-		//System.out.println("Sartu zure izena: ");
 		String izena = sc.next();
 		return izena;
 	}
