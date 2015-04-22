@@ -133,15 +133,16 @@ public class Jokalaria {
 	}
 
 	public void itsasontziaJarri(Itsasontzia pItsasontzia) {	
+		this.guztizInprimatu();
 		int x= this.eskatuX();
 		int y= this.eskatuY();
 		char hB= this.eskatuHorizontalBertikal();
-		int tamaina =pItsasontzia.get
+		int tamaina =pItsasontzia.getHondoratuGabekoZatiKop();
 		boolean koordenatuZuzenak = this.koordenatuZuzenak(x, y, hB, tamaina);
 
 		while (!koordenatuZuzenak) {
 			System.out.println("Sartu dituzun koordenatuetan ezin da itsasontzia jarri. Saiatu berriz.");
-			this.nireTableroaInprimatu();
+			this.guztizInprimatu();
 			x = this.eskatuX();
 			y = this.eskatuY();
 			hB = this.eskatuHorizontalBertikal();
@@ -238,12 +239,52 @@ public class Jokalaria {
 		int txalupaTamaina = Itsasontzia.getTxalupaTamaina();
 		int urpekariTamaina = Itsasontzia.getUrpekariaTamaina();
 		int ontziTamaina = Itsasontzia.getOntziaTamaina();
-		
+		Itsasontzia its;
 		boolean atera = false;
 		
 		do {
 			int ontziMota= this.hautatuItsasontzia(txalupaKop, urpekariKop, ontziKop);
+			if(ontziMota==1){
+				if(Jokalaria.txalupaMax-txalupaKop!=0){
+					its = new Itsasontzia(txalupaTamaina, false);
+					txalupaKop++;
+					this.itsasontziaJarri(its);
+				}
+				else{
+					System.out.println("Txalupa guztiak jarrita daude.");
+					System.out.println("Aukeratu beste itsasontzi mota bat.");
+				}
+			}
+			else{
+				if(ontziMota==2){
+					if(Jokalaria.itsaspekoMax-urpekariKop!=0){
+						its=new Itsasontzia(urpekariTamaina, true);
+						urpekariKop++;
+						this.itsasontziaJarri(its);
+					}
+					else{
+						System.out.println("Itsaspeko guztiak jarrita daude.");
+						System.out.println("Aukeratu beste itsasontzi mota bat.");
+					}
+				}
 			
+				else{
+					if(ontziMota==3){
+						if(Jokalaria.ontziaMax-ontziKop!=0){
+							its= new Itsasontzia(ontziTamaina, false);
+							ontziKop++;
+							this.itsasontziaJarri(its);
+						}
+						else{
+							System.out.println("Ontzi guztiak jarrita daude.");
+							System.out.println("Aukeratu beste itsasontzi mota bat.");
+						}
+					}
+				}
+			}
+			if(Jokalaria.txalupaMax==txalupaKop && Jokalaria.itsaspekoMax==urpekariKop && Jokalaria.ontziaMax==ontziKop){
+				atera=true;
+			}
 		} while (!atera);
 		
 	}
