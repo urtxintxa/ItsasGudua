@@ -143,7 +143,7 @@ public class Tableroa {
 				}
 			}
 		}
-		else if(this.minarikDago(pX, pY)) {
+		else if(!this.minarikDago(pX, pY)) {
 			this.setBegiratuta(pX, pY, true);
 		}
 	}
