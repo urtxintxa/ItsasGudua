@@ -17,8 +17,13 @@ public class Laukia {
 				System.out.println("☣"); //mina 
 			}
 		}
-		else if(this.itsasontzia != null) { //itsasontzia
-			System.out.print("⏅");
+		else if(this.itsasontzia != null) {
+			if(this.begiratuta) {
+				System.out.print("✝"); //itsasontzi hondoratua
+			}
+			else {
+				System.out.println("⏅"); //itsasontzia
+			}
 		}
 		else {
 			System.out.print("~"); // ura
