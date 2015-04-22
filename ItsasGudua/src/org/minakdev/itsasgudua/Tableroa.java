@@ -7,9 +7,10 @@ public class Tableroa {
 	private static int tamaina = 6;
 	
 	public Tableroa() {
+		
 		for(int i = 0; i < tamaina; i++) {
 			for(int j = 0; j < tamaina; j++) {
-				this.lista = new Laukia[i][j];
+				this.lista[i][j] = new Laukia();
 			}
 		}
 	}

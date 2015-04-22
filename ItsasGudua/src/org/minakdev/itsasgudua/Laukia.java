@@ -26,7 +26,12 @@ public class Laukia {
 			}
 		}
 		else {
-			System.out.print("~"); // ura
+			if(this.begiratuta){
+				System.out.print("~"); // ur ikusia
+			}
+			else {
+				System.out.println("≈"); //ur ez ikusia
+			}
 		}
 	}
 	
@@ -42,7 +47,7 @@ public class Laukia {
 				System.out.print("✝"); //itsasontzi hondoratua
 			}
 			else {
-				System.out.print("~"); //ura
+				System.out.print("≈"); //ura
 			}
 		}
 	}
