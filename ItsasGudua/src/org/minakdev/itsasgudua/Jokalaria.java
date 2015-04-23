@@ -132,7 +132,7 @@ public class Jokalaria {
 		return n;
 	}
 
-	public void itsasontziaJarri(Itsasontzia pItsasontzia) {	
+	public void itsasontziaJarriEskuz(Itsasontzia pItsasontzia) {	
 		this.guztizInprimatu();
 		int x= this.eskatuX();
 		int y= this.eskatuY();
@@ -231,7 +231,7 @@ public class Jokalaria {
 		return zuzena;
 	}
 
-	public void tableroaPrestatu() {
+	public void tableroaPrestatuEskuz() {
 		int txalupaKop = 0;
 		int urpekariKop = 0;
 		int ontziKop = 0;
@@ -248,7 +248,7 @@ public class Jokalaria {
 				if(Jokalaria.txalupaMax-txalupaKop!=0){
 					its = new Itsasontzia(txalupaTamaina, false);
 					txalupaKop++;
-					this.itsasontziaJarri(its);
+					this.itsasontziaJarriEskuz(its);
 				}
 				else{
 					System.out.println("Txalupa guztiak jarrita daude.");
@@ -260,7 +260,7 @@ public class Jokalaria {
 					if(Jokalaria.itsaspekoMax-urpekariKop!=0){
 						its=new Itsasontzia(urpekariTamaina, true);
 						urpekariKop++;
-						this.itsasontziaJarri(its);
+						this.itsasontziaJarriEskuz(its);
 					}
 					else{
 						System.out.println("Itsaspeko guztiak jarrita daude.");
@@ -273,7 +273,7 @@ public class Jokalaria {
 						if(Jokalaria.ontziaMax-ontziKop!=0){
 							its= new Itsasontzia(ontziTamaina, false);
 							ontziKop++;
-							this.itsasontziaJarri(its);
+							this.itsasontziaJarriEskuz(its);
 						}
 						else{
 							System.out.println("Ontzi guztiak jarrita daude.");
@@ -324,6 +324,148 @@ public class Jokalaria {
 
 	public ListaItsasontziak getListaItsasontziak(){
 		return this.itsasontziak;
+	}
+	
+	public void itsasontziaJarriAutomatico(Itsasontzia pItsasontzia){
+    	int x=this.lortuXY();
+    	int y=this.lortuXY();
+    	char horBer=this.lortuHorBer();
+    	int tamaina= pItsasontzia.getHondoratuGabekoZatiKop();
+    	boolean koordenatuZuzenak = this.koordenatuZuzenak(x, y, horBer, tamaina);
+    	
+    	while(!koordenatuZuzenak){
+    		x=this.lortuXY();
+        	y=this.lortuXY();
+        	horBer=this.lortuHorBer();
+        	koordenatuZuzenak = this.koordenatuZuzenak(x, y, horBer, tamaina);
+    	}
+    	
+    	this.itsasontziak.gehituItsasontzia(pItsasontzia);
+    	this.tablero.itsasontziaJarri(x, y, tamaina, horBer, pItsasontzia);
+    	
+    }
+	
+	
+	private int lortuXY(){
+    	int x = (int)(Math.random()*(Tableroa.getTamaina()+1));
+    	return x;
+    }
+	
+	
+	public void tableroaPrestatuAutomatiko() {
+		int i = 0;
+		Itsasontzia its;
+
+		while (i < Jokalaria.itsaspekoMax) {
+			its = new Itsasontzia(Itsasontzia.getUrpekariaTamaina(), true);
+			this.itsasontziaJarriAutomatico(its);
+			i++;
+			this.guztizInprimatu();
+			System.out.println("____________________________________________");
+		}
+		i = 0;
+		while (i < Jokalaria.ontziaMax) {
+			its = new Itsasontzia(Itsasontzia.getOntziaTamaina(), false);
+			this.itsasontziaJarriAutomatico(its);
+			i++;
+			this.guztizInprimatu();
+			System.out.println("____________________________________________");
+		}
+		i = 0;
+
+		while (i < Jokalaria.txalupaMax) {
+			its = new Itsasontzia(Itsasontzia.getTxalupaTamaina(), false);
+			this.itsasontziaJarriAutomatico(its);
+			i++;
+			this.guztizInprimatu();
+			System.out.println("____________________________________________");
+		}
+		this.guztizInprimatu();
+		this.tablero.minakJarri();
+		
+	}
+
+	
+	public void tableroaPrestatu(){
+		boolean amaitu=false;
+		int aukera=0;
+		
+		do{
+				aukera=this.tableroaJartzekoModuaHautatu();
+				if(aukera==1){
+					this.tableroaPrestatuAutomatiko();
+				}
+				else{
+					if(aukera==2){
+						this.tableroaPrestatuEskuz();
+					}
+				}
+				System.out.println("Tableroa ondo dago?    B/E");
+				char baiEz=this.baiEz();
+				if(baiEz=='B'){
+					amaitu=true;
+				}
+				else{
+					this.tablero= new Tableroa();
+				}
+			
+			
+		}while(!amaitu);
+		
+	}
+	
+	private int tableroaJartzekoModuaHautatu(){
+		boolean amaitu=false;
+		int aukera=0;
+		do{
+			try{
+				System.out.println("Tableroa jartzeko modua aukeratu: ");
+				System.out.println("1 - Automatiko");
+				System.out.println("2 - Eskuz");
+				aukera = sc.nextInt();
+				if (aukera!=1 && aukera!=2 ){
+					throw new TablerotikKanpoException("Sartutako zenbakia ez da zuzena.");
+				}
+				amaitu=true;
+			}
+			catch (InputMismatchException e) {
+				sc.nextLine();
+				System.out.println("Ez duzu zenbakirik sartu.");
+			}
+			catch (TablerotikKanpoException e) {
+				System.out.println(e.getMessage());
+			}
+			
+		}while(!amaitu);
+		
+		return aukera;
+	}
+	
+	private char baiEz(){
+		String s = null ;
+		boolean zuzena = false;
+
+		while (!zuzena) {
+			s = sc.next();
+			if (s.equals("E") || s.equals("B")) {
+				zuzena = true;
+			} else {
+				System.out.println("Sartu duzuna ez da egokia.");
+				System.out.println("Sartu berriz");
+
+			}
+		}
+
+		return s.charAt(0);
+		
+	}
+	
+	private char lortuHorBer(){
+		int a = (int)(Math.random()*(2));
+		if(a==0){return 'H';}
+		else{
+				return 'B';
+		}
 	}
 	
 	//Hemendik aurrera herentziarako
