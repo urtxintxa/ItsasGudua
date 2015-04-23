@@ -30,6 +30,7 @@ public class Jokalaria {
 
 	public void tiroEgin(Jokalaria pAurkari){
 		if(!this.penalizazioa){
+			System.out.println(this.izena+" zure txanda da.");
 			this.jokalariarenEgoeraInprimatu();
 			pAurkari.jokalariarenEgoeraInprimatu();
 			pAurkari.partzialkiInprimatu();
@@ -40,29 +41,29 @@ public class Jokalaria {
 			while(!egokia || begiratuta){
 				pX=this.eskatuX();
 				pY=this.eskatuY();
-				if(this.tablero.koordenatuEgokiak(pX, pY)){
-					begiratuta=this.tablero.begiratutaDago(pX, pY);
+				if(pAurkari.tablero.koordenatuEgokiak(pX, pY)){
+					begiratuta=pAurkari.tablero.begiratutaDago(pX, pY);
 					egokia=true;
 				}
 				else{
 					egokia=false;
 				}
 			}
-			this.tablero.setBegiratuta(pX,pY,true);
+			pAurkari.tablero.setBegiratuta(pX,pY,true);
 			boolean amaitu=false;
-			Itsasontzia it=this.tablero.itsasontzirikDago(pX,pY);
+			Itsasontzia it=pAurkari.tablero.itsasontzirikDago(pX,pY);
 			if(it!=null){
 				it.kenduZatia();
 				if(it.hondoratutaDago()){
-					this.itsasontziak.kenduItsasontzia(it);
-					if(this.itsasontziak.zenbatItsasontzi()==0){
+					pAurkari.itsasontziak.kenduItsasontzia(it);
+					if(pAurkari.itsasontziak.zenbatItsasontzi()==0){
 						amaitu=true;
 					}
 				}
 				if (!amaitu){this.tiroEgin(pAurkari);}
 			}
 			else {
-				if(this.tablero.minarikDago(pX, pY)){
+				if(pAurkari.tablero.minarikDago(pX, pY)){
 					this.penalizazioa=true;
 					this.minaIkutuak++;
 				}
@@ -77,7 +78,7 @@ public class Jokalaria {
 			}
 		}
 		else {
-			pAurkari.penalizazioa = false;
+			this.penalizazioa = false;
 		}
 	}
 
