@@ -407,6 +407,7 @@ public class Jokalaria {
 				}
 				else{
 					this.tablero= new Tableroa();
+					this.itsasontziak = new ListaItsasontziak();
 				}
 			
 			
