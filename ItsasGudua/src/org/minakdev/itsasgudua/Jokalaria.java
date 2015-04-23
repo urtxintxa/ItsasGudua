@@ -1,7 +1,11 @@
 package org.minakdev.itsasgudua;
 
+import java.io.File;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 public class Jokalaria {
 	private Tableroa tablero;
@@ -68,6 +72,7 @@ public class Jokalaria {
 				}
 				if(!hilda){
 					this.tablero.minakBoom(pX, pY, pAurkari);
+					this.leherketaSoinua();
 				}
 			}
 		}
@@ -165,14 +170,12 @@ public class Jokalaria {
 	public void jokalariarenEgoeraInprimatu() {
 		System.out.println(this.getIzena());
 		System.out.println("Gelditzen zaizkizun itsasontziak:	"+ this.zenbatItsasontzi());
-		System.out.println("Gelditzen zaizkizun bizitzak:	"+ (Jokalaria.minaIkutuMaximo-this.minaIkutuak) );
+		System.out.println("Gelditzen zaizkizun bizitzak:	    "+ (Jokalaria.minaIkutuMaximo-this.minaIkutuak) );
 	}
-
 	
 	public String getIzena() {
 		return this.izena;
 	}
-
 	
 	private char eskatuHorizontalBertikal() {
 		String s = null ;
@@ -347,8 +350,8 @@ public class Jokalaria {
 	
 	
 	private int lortuXY(){
-    	int x = (int)(Math.random()*(Tableroa.getTamaina()+1));
-    	return x;
+    	int xy = (int)(Math.random()*(Tableroa.getTamaina()+1));
+    	return xy;
     }
 	
 	
@@ -392,21 +395,21 @@ public class Jokalaria {
 		
 		do{
 				aukera=this.tableroaJartzekoModuaHautatu();
-				if(aukera==1){
+				if(aukera == 1){
 					this.tableroaPrestatuAutomatiko();
 				}
 				else{
-					if(aukera==2){
+					if(aukera == 2){
 						this.tableroaPrestatuEskuz();
 					}
 				}
 				System.out.println("Tableroa ondo dago?    B/E");
 				char baiEz=this.baiEz();
-				if(baiEz=='B'){
+				if(baiEz == 'B'){
 					amaitu=true;
 				}
 				else{
-					this.tablero= new Tableroa();
+					this.tablero = new Tableroa();
 					this.itsasontziak = new ListaItsasontziak();
 				}
 			
@@ -467,6 +470,17 @@ public class Jokalaria {
 		else{
 				return 'B';
 		}
+	}
+	
+	private void leherketaSoinua() {
+		try {
+			Clip leherketa = AudioSystem.getClip();
+			File fitxategia = new File("Soinuak/leherketa.wav");
+			leherketa.open(AudioSystem.getAudioInputStream(fitxategia));
+			leherketa.start();
+			leherketa.close();
+		}
+		catch (Exception e) {}
 	}
 	
 	//Hemendik aurrera herentziarako
