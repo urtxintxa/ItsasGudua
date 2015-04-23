@@ -31,8 +31,8 @@ public class Tableroa {
 	public void minakJarri() {
 		int i = 1;
 		while(i != minaKop) {
-			int x = (int)(Math.random()*(tamaina+1));
-			int y = (int)(Math.random()*(tamaina+1));
+			int x = (int)(Math.random()*(tamaina));
+			int y = (int)(Math.random()*(tamaina));
 			if(!this.lista[x][y].getMina() && this.lista[x][y].getItsasontzia() == null) {
 				this.lista[x][y].setMina(true);
 				i++;
