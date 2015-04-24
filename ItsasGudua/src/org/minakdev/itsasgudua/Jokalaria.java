@@ -68,7 +68,7 @@ public class Jokalaria {
 					this.minaIkutuak++;
 					this.leherketaSoinua();
 					if(!this.minaMaxGainditua()) {
-						this.tablero.minakBoom(pX, pY, pAurkari);
+						pAurkari.tablero.minakBoom(pX, pY, pAurkari);
 					}
 				}
 			}
