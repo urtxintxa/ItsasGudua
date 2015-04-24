@@ -64,16 +64,12 @@ public class Jokalaria {
 			}
 			else {
 				if(pAurkari.tablero.minarikDago(pX, pY)){
-					this.penalizazioa=true;
+					this.penalizazioa = true;
 					this.minaIkutuak++;
-				}
-				boolean hilda=false;
-				if(this.minaMaxGainditua()){
-					hilda=true;
-				}
-				if(!hilda){
-					this.tablero.minakBoom(pX, pY, pAurkari);
 					this.leherketaSoinua();
+					if(!this.minaMaxGainditua()) {
+						this.tablero.minakBoom(pX, pY, pAurkari);
+					}
 				}
 			}
 		}
@@ -467,10 +463,8 @@ public class Jokalaria {
 	
 	private char lortuHorBer(){
 		int a = (int)(Math.random()*(2));
-		if(a==0){return 'H';}
-		else{
-				return 'B';
-		}
+		if(a==0) {return 'H';}
+		else{return 'B';}
 	}
 	
 	private void leherketaSoinua() {
