@@ -51,7 +51,7 @@ public class Tableroa {
 	public void tableroOsoaInprimatu() {
 		for(int i = 0; i < tamaina; i++) {
 			for(int j = 0; j < tamaina; j++) {
-				this.lista[i][j].osoaInprimatu();;
+				this.lista[i][j].osoaInprimatu();
 				System.out.print(" ");
 			}
 			System.out.println();

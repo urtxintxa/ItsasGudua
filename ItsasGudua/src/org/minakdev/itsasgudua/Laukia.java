@@ -11,43 +11,45 @@ public class Laukia {
 	public void osoaInprimatu() {
 		if(this.mina) {
 			if(this.begiratuta) {
-				System.out.print("Ο"); //mina boom
+				System.out.print("☠"); //mina boom
 			}
 			else {
-				System.out.print("Θ"); //mina 
+				System.out.print("☣"); //mina 
 			}
 		}
 		else if(this.itsasontzia != null) {
 			if(this.begiratuta) {
-				System.out.print("#"); //itsasontzi hondoratua
+				System.out.print(""); //itsasontzi hondoratua
 			}
 			else {
-				System.out.print("Δ"); //itsasontzia
+				//System.out.print(new String(⏅, "UTF-8"));
+				System.out.printf("⏅"); //itsasontzia
 			}
 		}
 		else {
 			if(this.begiratuta){
-				System.out.print("~"); // ur ikusia
+				System.out.print("☓"); // ur ikusia
 			}
 			else {
-				System.out.print("≈"); //ur ez ikusia
+				//System.out.print((char)(Integer.parseInt("2248",16)));
+				System.out.print("♒"); //ur ez ikusia ♒
 			}
 		}
 	}
 	
 	public void egungoaInprimatu() {
 		if(!this.begiratuta) {
-			System.out.print("·");
+			System.out.print("☓");
 		}
 		else {
 			if(this.mina) {
-				System.out.print("Ο"); //mina boooom
+				System.out.print("☠"); //mina boooom
 			}
 			else if(this.itsasontzia != null) {
-				System.out.print("#"); //itsasontzi hondoratua
+				System.out.print("✝"); //itsasontzi hondoratua
 			}
 			else {
-				System.out.print("≈"); //ura
+				System.out.print("♒"); //ura
 			}
 		}
 	}
