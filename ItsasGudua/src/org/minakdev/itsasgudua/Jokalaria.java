@@ -30,14 +30,14 @@ public class Jokalaria {
 
 	public void tiroEgin(Jokalaria pAurkari){
 		if(!this.penalizazioa){
-			System.out.println(this.izena+" zure txanda da.");
+			System.out.println("\n"+this.izena+" zure txanda da.");
 			this.jokalariarenEgoeraInprimatu();
 			pAurkari.jokalariarenEgoeraInprimatu();
 			pAurkari.partzialkiInprimatu();
-			boolean egokia=false;
-			boolean begiratuta=true;
-			int pX=0;
-			int pY=0;
+			boolean egokia = false;
+			boolean begiratuta = true;
+			int pX = 0;
+			int pY = 0;
 			while(!egokia || begiratuta){
 				pX=this.eskatuX();
 				pY=this.eskatuY();
@@ -76,6 +76,7 @@ public class Jokalaria {
 		else {
 			this.penalizazioa = false;
 		}
+		pAurkari.partzialkiInprimatu();
 	}
 
 	public void guztizInprimatu() {
@@ -165,6 +166,7 @@ public class Jokalaria {
 	}
 
 	public void jokalariarenEgoeraInprimatu() {
+		System.out.println();
 		System.out.println(this.getIzena());
 		System.out.println("Gelditzen zaizkizun itsasontziak:	"+ this.zenbatItsasontzi());
 		System.out.println("Gelditzen zaizkizun bizitzak:	    "+ (Jokalaria.minaIkutuMaximo-this.minaIkutuak) );
