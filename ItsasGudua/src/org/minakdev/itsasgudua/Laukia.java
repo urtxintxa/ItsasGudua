@@ -11,18 +11,18 @@ public class Laukia {
 	public void osoaInprimatu() {
 		if(this.mina) {
 			if(this.begiratuta) {
-				System.out.print("☠"); //mina boom
+				System.out.print("Ο"); //mina boom
 			}
 			else {
-				System.out.print("☣"); //mina 
+				System.out.print("Θ"); //mina 
 			}
 		}
 		else if(this.itsasontzia != null) {
 			if(this.begiratuta) {
-				System.out.print("✝"); //itsasontzi hondoratua
+				System.out.print("#"); //itsasontzi hondoratua
 			}
 			else {
-				System.out.print("⏅"); //itsasontzia
+				System.out.print("Δ"); //itsasontzia
 			}
 		}
 		else {
@@ -41,10 +41,10 @@ public class Laukia {
 		}
 		else {
 			if(this.mina) {
-				System.out.print("☠"); //mina boooom
+				System.out.print("Ο"); //mina boooom
 			}
 			else if(this.itsasontzia != null) {
-				System.out.print("✝"); //itsasontzi hondoratua
+				System.out.print("#"); //itsasontzi hondoratua
 			}
 			else {
 				System.out.print("≈"); //ura

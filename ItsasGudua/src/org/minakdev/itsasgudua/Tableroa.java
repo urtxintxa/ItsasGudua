@@ -4,7 +4,7 @@ public class Tableroa {
 	
 	private Laukia[][] lista;
 	private static int minaKop = 3;
-	private static int tamaina = 6;
+	private static int tamaina = 8;
 	
 	public Tableroa() {
 		this.lista = new Laukia[tamaina][tamaina];

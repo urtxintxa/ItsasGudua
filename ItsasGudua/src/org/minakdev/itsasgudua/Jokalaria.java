@@ -91,7 +91,7 @@ public class Jokalaria {
 		int n = 0;
 		do {
 			try {
-				System.out.println("Sartu X koordenatua, 0 eta "+(Tableroa.getTamaina()-1)+" artekoa (biak barne): ");
+				System.out.println("\nSartu X koordenatua, 0 eta "+(Tableroa.getTamaina()-1)+" artekoa (biak barne): ");
 				n = sc.nextInt();	
 				if(n > (Tableroa.getTamaina()-1) || n < 0){
 					throw new TablerotikKanpoException("Zenbakiak ez daude tartean.");
@@ -115,7 +115,7 @@ public class Jokalaria {
 		int n = 0;
 		do {
 			try {
-				System.out.println("Sartu Y koordenatua, 0 eta "+(Tableroa.getTamaina()-1)+" artekoa (biak barne): ");
+				System.out.println("\nSartu Y koordenatua, 0 eta "+(Tableroa.getTamaina()-1)+" artekoa (biak barne): ");
 				n = sc.nextInt();	
 				if(n > (Tableroa.getTamaina()-1) || n < 0){
 					throw new TablerotikKanpoException("Zenbakiak ez daude tartean.");
@@ -179,7 +179,7 @@ public class Jokalaria {
 		boolean zuzena = false;
 
 		while (!zuzena) {
-			System.out.println("Sartu H (horizontal) edo B (bertikal).");
+			System.out.println("\nSartu H (horizontal) edo B (bertikal).");
 			s = sc.next();
 			if (s.equals("H") || s.equals("B")) {
 				zuzena = true;
@@ -290,11 +290,11 @@ public class Jokalaria {
 	}
 	
 	private int hautatuItsasontzia(int pTxalupaKop, int pUrpekariKop, int pOntziKop) {
-		System.out.println("Aukeratu jarri nahi duzun ontzia.");
+		System.out.println("\nAukeratu jarri nahi duzun ontzia.");
 		System.out.println("1 - Txalupa ("+(txalupaMax-pTxalupaKop)+" gelditzen zaizkizu ipintzeko)");
 		System.out.println("2 - Urpekaria ("+(itsaspekoMax-pUrpekariKop)+" gelditzen zaizkizu ipintzeko)");
 		System.out.println("3 - Ontzia ("+(ontziaMax-pOntziKop)+" gelditzen zaizkizu ipintzeko)");
-		System.out.println("Sartu itsasontziaren kodea: ");
+		System.out.println("\nSartu itsasontziaren kodea: ");
 		
 		int itsasontzia = 0;
 		boolean ezAmaitu = true;
@@ -400,7 +400,7 @@ public class Jokalaria {
 						this.tableroaPrestatuEskuz();
 					}
 				}
-				System.out.println("Tableroa ondo dago?    B/E");
+				System.out.println("\nTableroa ondo dago?    B/E");
 				char baiEz=this.baiEz();
 				if(baiEz == 'B'){
 					amaitu=true;
@@ -420,7 +420,7 @@ public class Jokalaria {
 		int aukera=0;
 		do{
 			try{
-				System.out.println("Tableroa jartzeko modua aukeratu: ");
+				System.out.println("\nTableroa jartzeko modua aukeratu: ");
 				System.out.println("1 - Automatiko");
 				System.out.println("2 - Eskuz");
 				aukera = sc.nextInt();
@@ -473,6 +473,7 @@ public class Jokalaria {
 			File fitxategia = new File("Soinuak/leherketa.wav");
 			leherketa.open(AudioSystem.getAudioInputStream(fitxategia));
 			leherketa.start();
+			Thread.sleep(1000);
 			leherketa.close();
 		}
 		catch (Exception e) {}

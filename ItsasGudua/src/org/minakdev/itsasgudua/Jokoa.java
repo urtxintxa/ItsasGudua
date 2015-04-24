@@ -25,17 +25,17 @@ public class Jokoa {
 	public void partidaBatjolastu() {
 		Jokalaria irabazlea=null;
     	
-    	System.out.println("Lehengo jokalaria, sartu izena.");
+    	System.out.println("\nLehengo jokalaria, sartu izena.");
     	this.jokalariak[0]= new Jokalaria(this.izenaEskatu());
-    	System.out.println("Bigarren jokalaria, sartu izena.");
+    	System.out.println("\nBigarren jokalaria, sartu izena.");
     	this.jokalariak[1]= new Jokalaria(this.izenaEskatu());
     	
-    	System.out.println(this.jokalariak[0].getIzena() + ", zure tableroa prestatu.");
+    	System.out.println("\n"+this.jokalariak[0].getIzena() + ", zure tableroa prestatu.");
     	this.jokalariak[0].tableroaPrestatu();
-    	System.out.println(this.jokalariak[1].getIzena() + ", zure tableroa prestatu.");
+    	System.out.println("\n"+this.jokalariak[1].getIzena() + ", zure tableroa prestatu.");
     	this.jokalariak[1].tableroaPrestatu();
     	
-    	System.out.println("Has dadila partida.");
+    	System.out.println("\nHAS DADILA PARTIDA :D");
     	
     	while(irabazlea==null){
     		this.jokalariak[this.txanda % 2].tiroEgin(this.jokalariak[(this.txanda + 1) % 2]);
