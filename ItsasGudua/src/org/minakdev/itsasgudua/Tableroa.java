@@ -66,43 +66,43 @@ public class Tableroa {
 			}
 		}
 		//2
-		else if(this.koordenatuEgokiak(pX, pY - 1)){
+		if(this.koordenatuEgokiak(pX, pY - 1)){
 			if(!this.begiratutaDago(pX, pY - 1)) {
 				this.minaLehertu(pX, pY - 1, pAurkaria);
 			}
 		}
 		//3
-		else if(this.koordenatuEgokiak(pX + 1, pY - 1)){
+		if(this.koordenatuEgokiak(pX + 1, pY - 1)){
 			if(!this.begiratutaDago(pX + 1, pY - 1)) {
 				this.minaLehertu(pX + 1, pY - 1, pAurkaria);
 			}
 		}
 		//4
-		else if(this.koordenatuEgokiak(pX - 1, pY)){
+		if(this.koordenatuEgokiak(pX - 1, pY)){
 			if(!this.begiratutaDago(pX - 1, pY)) {
 				this.minaLehertu(pX - 1, pY, pAurkaria);
 			}
 		}
 		//6
-		else if(this.koordenatuEgokiak(pX + 1, pY)){
+		if(this.koordenatuEgokiak(pX + 1, pY)){
 			if(!this.begiratutaDago(pX + 1, pY)) {
 				this.minaLehertu(pX + 1, pY, pAurkaria);
 			}
 		}
 		//7
-		else if(this.koordenatuEgokiak(pX - 1, pY + 1)){
+		if(this.koordenatuEgokiak(pX - 1, pY + 1)){
 			if(!this.begiratutaDago(pX - 1, pY + 1)) {
 				this.minaLehertu(pX - 1, pY + 1, pAurkaria);
 			}
 		}
 		//8
-		else if(this.koordenatuEgokiak(pX, pY + 1)){
+		if(this.koordenatuEgokiak(pX, pY + 1)){
 			if(!this.begiratutaDago(pX, pY + 1)) {
 				this.minaLehertu(pX, pY + 1, pAurkaria);
 			}
 		}
 		//9
-		else if(this.koordenatuEgokiak(pX + 1, pY + 1)){
+		if(this.koordenatuEgokiak(pX + 1, pY + 1)){
 			if(!this.begiratutaDago(pX + 1, pY + 1)) {
 				this.minaLehertu(pX + 1, pY + 1, pAurkaria);
 			}
