@@ -3,7 +3,7 @@ package org.minakdev.itsasgudua;
 public class Tableroa {
 	
 	private Laukia[][] lista;
-	private static int minaKop = 3;
+	private static int minaKop = 6;
 	private static int tamaina = 8;
 	
 	public Tableroa() {
@@ -29,7 +29,7 @@ public class Tableroa {
 	}
 	
 	public void minakJarri() {
-		int i = 1;
+		int i = 0;
 		while(i != minaKop) {
 			int x = (int)(Math.random()*(tamaina));
 			int y = (int)(Math.random()*(tamaina));
