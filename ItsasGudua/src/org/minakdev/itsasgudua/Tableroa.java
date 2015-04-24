@@ -122,6 +122,7 @@ public class Tableroa {
 		}
 		System.out.println();
 		for(int i = 0; i < tamaina; i++) {
+			System.out.print(i+"   ");
 			for(int j = 0; j < tamaina; j++) {
 				this.lista[i][j].egungoaInprimatu();;
 				System.out.print(" ");

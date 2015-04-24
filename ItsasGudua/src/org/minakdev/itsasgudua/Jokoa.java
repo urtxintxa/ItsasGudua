@@ -39,6 +39,7 @@ public class Jokoa {
     	
     	while(irabazlea==null){
     		this.jokalariak[this.txanda % 2].tiroEgin(this.jokalariak[(this.txanda + 1) % 2]);
+    		this.jokalariak[(this.txanda + 1) % 2].partzialkiInprimatu();
     		this.txanda++;
     		irabazlea=this.partidarenIrabazlea();
     	}

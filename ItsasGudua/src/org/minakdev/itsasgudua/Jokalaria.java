@@ -74,9 +74,9 @@ public class Jokalaria {
 			}
 		}
 		else {
+			System.out.println(this.izena + " ezin duzu jokatu, penalizazioa duzu.");
 			this.penalizazioa = false;
 		}
-		pAurkari.partzialkiInprimatu();
 	}
 
 	public void guztizInprimatu() {
