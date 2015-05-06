@@ -135,7 +135,7 @@ public class Jokalaria {
 		return n;
 	}
 
-	public void itsasontziaJarriEskuz(Itsasontzia pItsasontzia) {	
+	private void itsasontziaJarriEskuz(Itsasontzia pItsasontzia) {	
 		this.guztizInprimatu();
 		int x= this.eskatuX();
 		int y= this.eskatuY();
@@ -194,7 +194,7 @@ public class Jokalaria {
 		return s.charAt(0);
 	}
 
-	protected boolean koordenatuZuzenak(int pX, int pY, char pHorBer,
+	private boolean koordenatuZuzenak(int pX, int pY, char pHorBer,
 			int pTamaina) {
 		boolean zuzena = true;
 		int i = 0;
@@ -233,7 +233,7 @@ public class Jokalaria {
 		return zuzena;
 	}
 
-	public void tableroaPrestatuEskuz() {
+	private void tableroaPrestatuEskuz() {
 		int txalupaKop = 0;
 		int urpekariKop = 0;
 		int ontziKop = 0;
@@ -328,7 +328,7 @@ public class Jokalaria {
 		return this.itsasontziak;
 	}
 	
-	public void itsasontziaJarriAutomatico(Itsasontzia pItsasontzia){
+	private void itsasontziaJarriAutomatico(Itsasontzia pItsasontzia){
     	int x=this.lortuXY();
     	int y=this.lortuXY();
     	char horBer=this.lortuHorBer();
@@ -354,7 +354,7 @@ public class Jokalaria {
     }
 	
 	
-	public void tableroaPrestatuAutomatiko() {
+	private void tableroaPrestatuAutomatiko() {
 		int i = 0;
 		Itsasontzia its;
 
