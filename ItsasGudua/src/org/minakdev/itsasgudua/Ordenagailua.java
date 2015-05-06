@@ -176,7 +176,7 @@ public class Ordenagailua extends Jokalaria{
 		    			}
 		    		}
 		    		this.itsasontzienKoordenatuak.remove(0);
-	    			
+	    			this.kalkulatuHurrengoKoordenatuak(pAurkari);
 	    		}
 	    		else{
 	    			koor=this.itsasontzienKoordenatuak.get(0);

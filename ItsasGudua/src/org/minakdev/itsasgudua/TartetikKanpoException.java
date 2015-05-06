@@ -1,10 +1,10 @@
 package org.minakdev.itsasgudua;
 
-public class TablerotikKanpoException extends Exception {
+public class TartetikKanpoException extends Exception {
 
 	private static final long serialVersionUID = 1L;
 
-	public TablerotikKanpoException(String pMezua) {
+	public TartetikKanpoException(String pMezua) {
 		super(pMezua);
 	}
 }

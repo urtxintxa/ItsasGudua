@@ -4,7 +4,7 @@ public class Tableroa {
 	
 	private Laukia[][] lista;
 	private static int minaKop = 6;
-	private static int tamaina = 8;
+	private static int tamaina = 4;
 	
 	public Tableroa() {
 		this.lista = new Laukia[tamaina][tamaina];
@@ -49,7 +49,7 @@ public class Tableroa {
 	}
 	
 	public void tableroOsoaInprimatu() {
-		System.out.print("    ");
+		System.out.print("     ");
 		for(int a = 0; a < tamaina; a++){
 			System.out.print(a+" ");
 		}

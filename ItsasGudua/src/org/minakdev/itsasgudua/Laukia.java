@@ -27,17 +27,17 @@ public class Laukia {
 		}
 		else {
 			if(this.begiratuta){
-				System.out.print("~"); // ur ikusia
+				System.out.print("☓"); // ur ikusia
 			}
 			else {
-				System.out.print("≈"); //ur ez ikusia 
+				System.out.print("♒"); //ur ez ikusia 
 			}
 		}
 	}
 	
 	public void egungoaInprimatu() {
 		if(!this.begiratuta) {
-			System.out.print("·");
+			System.out.print("☓");
 		}
 		else {
 			if(this.mina) {
@@ -47,7 +47,7 @@ public class Laukia {
 				System.out.print("✝"); //itsasontzi hondoratua
 			}
 			else {
-				System.out.print("≈"); //ura
+				System.out.print("♒"); //ura
 			}
 		}
 	}

@@ -95,14 +95,14 @@ public class Jokalaria {
 				System.out.println("\nSartu X koordenatua, 0 eta "+(Tableroa.getTamaina()-1)+" artekoa (biak barne): ");
 				n = sc.nextInt();	
 				if(n > (Tableroa.getTamaina()-1) || n < 0){
-					throw new TablerotikKanpoException("Zenbakiak ez daude tartean.");
+					throw new TartetikKanpoException("Zenbakiak ez daude tartean.");
 				}
 				ezAmaitu = false;
 			} catch (InputMismatchException e) {
 				sc.nextLine();
 				n = 0;
 				System.out.println("Ez duzu zenbaki oso bat sartu.");
-			}catch (TablerotikKanpoException e) {
+			}catch (TartetikKanpoException e) {
 				System.out.println(e.getMessage());
 			}
 
@@ -119,14 +119,14 @@ public class Jokalaria {
 				System.out.println("\nSartu Y koordenatua, 0 eta "+(Tableroa.getTamaina()-1)+" artekoa (biak barne): ");
 				n = sc.nextInt();	
 				if(n > (Tableroa.getTamaina()-1) || n < 0){
-					throw new TablerotikKanpoException("Zenbakiak ez daude tartean.");
+					throw new TartetikKanpoException("Zenbakiak ez daude tartean.");
 				}
 				ezAmaitu = false;
 			} catch (InputMismatchException e) {
 				sc.nextLine();
 				n = 0;
 				System.out.println("Ez duzu zenbaki oso bat sartu.");
-			}catch (TablerotikKanpoException e) {
+			}catch (TartetikKanpoException e) {
 				System.out.println(e.getMessage());
 			}
 
@@ -304,14 +304,14 @@ public class Jokalaria {
 			try {
 				itsasontzia = sc.nextInt();
 				if(itsasontzia < 1 || itsasontzia > 3) {
-					throw new TablerotikKanpoException("Sartutako zenbakia ez da zuzena.");
+					throw new TartetikKanpoException("Sartutako zenbakia ez da zuzena.");
 				}
 				ezAmaitu = false;
 			} catch (InputMismatchException e) {
 				sc.nextLine();
 				itsasontzia = 0;
 				System.out.println("Ez duzu zenbakirik sartu.");
-			} catch (TablerotikKanpoException e) {
+			} catch (TartetikKanpoException e) {
 				System.out.println(e.getMessage());
 			}
 		} while (ezAmaitu);	
@@ -362,16 +362,12 @@ public class Jokalaria {
 			its = new Itsasontzia(Itsasontzia.getUrpekariaTamaina(), true);
 			this.itsasontziaJarriAutomatico(its);
 			i++;
-			this.guztizInprimatu();
-			System.out.println("____________________________________________");
 		}
 		i = 0;
 		while (i < Jokalaria.ontziaMax) {
 			its = new Itsasontzia(Itsasontzia.getOntziaTamaina(), false);
 			this.itsasontziaJarriAutomatico(its);
 			i++;
-			this.guztizInprimatu();
-			System.out.println("____________________________________________");
 		}
 		i = 0;
 
@@ -379,8 +375,6 @@ public class Jokalaria {
 			its = new Itsasontzia(Itsasontzia.getTxalupaTamaina(), false);
 			this.itsasontziaJarriAutomatico(its);
 			i++;
-			this.guztizInprimatu();
-			System.out.println("____________________________________________");
 		}
 		this.guztizInprimatu();
 		this.tablero.minakJarri();
@@ -427,7 +421,7 @@ public class Jokalaria {
 				System.out.println("2 - Eskuz");
 				aukera = sc.nextInt();
 				if (aukera!=1 && aukera!=2 ){
-					throw new TablerotikKanpoException("Sartutako zenbakia ez da zuzena.");
+					throw new TartetikKanpoException("Sartutako zenbakia ez da zuzena.");
 				}
 				amaitu=true;
 			}
@@ -435,7 +429,7 @@ public class Jokalaria {
 				sc.nextLine();
 				System.out.println("Ez duzu zenbakirik sartu.");
 			}
-			catch (TablerotikKanpoException e) {
+			catch (TartetikKanpoException e) {
 				System.out.println(e.getMessage());
 			}
 			
