@@ -1,5 +1,6 @@
 package org.minakdev.itsasgudua;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Jokoa {
@@ -31,12 +32,27 @@ public class Jokoa {
 		System.out.println();
 		System.out.println("Jolasteko 1 zenbakia sakatu.");
 		System.out.println("Irteteko 0 zenbakia sakatu.");
-
-		int aukera = sc.nextInt();
 		
-		//Exception-a falta da.
+		int aukera = 0;
+		boolean ezAmaitu = true;
+		do {
+			try {
+				System.out.println("\nAukeratu 0 edo 1: ");
+				aukera = sc.nextInt();	
+				if(aukera > 1 || aukera < 0){
+					throw new TartetikKanpoException("0 edo 1 aukeratu behar duzu.");
+				}
+				ezAmaitu = false;
+			} catch (InputMismatchException e) {
+				sc.nextLine();
+				aukera = 0;
+				System.out.println("0 edo 1 aukeratu behar duzu.");
+			}catch (TartetikKanpoException e) {
+				System.out.println(e.getMessage());
+			}
+		} while (ezAmaitu);
 		
-		if(aukera == 1) {
+		if(aukera == 1){
 			nireJokoa.partidaBatjolastu();
 		}
 		else {
@@ -47,6 +63,9 @@ public class Jokoa {
 	public void partidaBatjolastu() {
 		Jokalaria irabazlea=null;
     	
+		System.out.println("\nHasteko tableroen parametroak definituko dituzue.");
+    	this.jokatzekoParametroakEskatu();
+		
     	System.out.println("\nLehengo jokalaria, sartu izena.");
     	this.jokalariak[0]= new Jokalaria(this.izenaEskatu());
     	System.out.println("\nBigarren jokalaria, sartu izena.");
@@ -82,6 +101,72 @@ public class Jokoa {
 		String izena = sc.next();
 		return izena;
 	}
+	
+	private void jokatzekoParametroakEskatu(){
+		System.out.println("3 tablero mota dituzue:");
+		System.out.println("	1 - 5x5koa");
+		System.out.println("	2 - 8x8koa");
+		System.out.println("	3 - 12x12koa");
+		
+		boolean ezAmaitu = true;
+		int n = 0;
+		do {
+			try {
+				System.out.println("\nAukeratu aukera bat: ");
+				n = sc.nextInt();	
+				if(n > 3 || n < 1){
+					throw new TartetikKanpoException("Zenbakia ez dago tartean.");
+				}
+				ezAmaitu = false;
+			} catch (InputMismatchException e) {
+				sc.nextLine();
+				n = 0;
+				System.out.println("Ez duzu zenbaki oso bat sartu.");
+			}catch (TartetikKanpoException e) {
+				System.out.println(e.getMessage());
+			}
+		} while (ezAmaitu);
+		
+		if(n == 1){
+			Jokalaria.setItsaspekoMax(1);
+			Jokalaria.setOntziaMax(1);
+			Jokalaria.setTxalupaMax(2);
+			Jokalaria.setMinaIkutuMaximo(1);
+			
+			Itsasontzia.setUrpekariaTamaina(2);
+			Itsasontzia.setOntziaTamaina(3);
+			Itsasontzia.setTxalupaTamaina(1);
+			
+			Tableroa.setTamaina(5);
+			Tableroa.setMinakop(3);
+		}
+		else if(n == 2){
+			Jokalaria.setItsaspekoMax(2);
+			Jokalaria.setOntziaMax(1);
+			Jokalaria.setTxalupaMax(3);
+			Jokalaria.setMinaIkutuMaximo(3);
+			
+			Itsasontzia.setUrpekariaTamaina(3);
+			Itsasontzia.setOntziaTamaina(4);
+			Itsasontzia.setTxalupaTamaina(2);
+			
+			Tableroa.setTamaina(8);
+			Tableroa.setMinakop(7);
+		}
+		else {
+			Jokalaria.setItsaspekoMax(4);
+			Jokalaria.setOntziaMax(2);
+			Jokalaria.setTxalupaMax(5);
+			Jokalaria.setMinaIkutuMaximo(7);
+			
+			Itsasontzia.setUrpekariaTamaina(4);
+			Itsasontzia.setOntziaTamaina(5);
+			Itsasontzia.setTxalupaTamaina(2);
+			
+			Tableroa.setTamaina(12);
+			Tableroa.setMinakop(15);
+		}
+	}
 
 	public Jokalaria partidarenIrabazlea() {
 		Jokalaria irabazlea=null;
@@ -96,9 +181,7 @@ public class Jokoa {
 	}
 	
 	private void jokalarienEgoeraInprimatu(){
-    	
     	this.jokalariak[0].jokalariarenEgoeraInprimatu();
     	this.jokalariak[1].jokalariarenEgoeraInprimatu();
-    	
     }
 }

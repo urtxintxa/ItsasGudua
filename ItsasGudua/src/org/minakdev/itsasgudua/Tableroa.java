@@ -3,8 +3,8 @@ package org.minakdev.itsasgudua;
 public class Tableroa {
 	
 	private Laukia[][] lista;
-	private static int minaKop = 6;
-	private static int tamaina = 8;
+	private static int minaKop;
+	private static int tamaina;
 	
 	public Tableroa() {
 		this.lista = new Laukia[tamaina][tamaina];
@@ -13,6 +13,14 @@ public class Tableroa {
 				this.lista[i][j] = new Laukia();
 			}
 		}
+	}
+	
+	public static void setTamaina(int pTamaina) {
+		tamaina = pTamaina;
+	}
+	
+	public static void setMinakop(int pMinakopurua) {
+		minaKop = pMinakopurua;
 	}
 	
 	public void itsasontziaJarri(int pX, int pY, int pTamaina, char pNoranzkoa, Itsasontzia pItsasontzia) {

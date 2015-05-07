@@ -11,11 +11,11 @@ public class Jokalaria {
 	private Tableroa tablero;
 	private boolean penalizazioa;
 	private int minaIkutuak;
-	private static int minaIkutuMaximo = 3;
+	private static int minaIkutuMaximo;
 	private ListaItsasontziak itsasontziak;
-	private static int txalupaMax = 3;
-	private static int itsaspekoMax = 2;
-	private static int ontziaMax = 1;
+	private static int txalupaMax;
+	private static int itsaspekoMax;
+	private static int ontziaMax;
 	private String izena;
 	
 	Scanner sc = new Scanner(System.in);
@@ -27,6 +27,23 @@ public class Jokalaria {
 		this.itsasontziak=new ListaItsasontziak();
 		this.izena=pIzena;
 	}
+	
+	public static void setTxalupaMax(int pTamaina) {
+		txalupaMax = pTamaina;
+	}
+	
+	public static void setItsaspekoMax(int pTamaina) {
+		itsaspekoMax = pTamaina;
+	}
+	
+	public static void setOntziaMax(int pTamaina) {
+		ontziaMax = pTamaina;
+	}
+	
+	public static void setMinaIkutuMaximo(int pMinaIkutuMaximo) {
+		minaIkutuMaximo = pMinaIkutuMaximo;
+	}
+	
 
 	public void tiroEgin(Jokalaria pAurkari){
 		if(!this.penalizazioa){

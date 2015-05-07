@@ -2,8 +2,6 @@ package org.minakdev.itsasgudua;
 
 public class Itsasontzia {
 
-
-
 	//atributu
 	private boolean antiMina;
 	private int hondoratuGabekoZatiKop;
@@ -21,6 +19,18 @@ public class Itsasontzia {
 
 	public static int getUrpekariaTamaina() {
 		return urpekariaTamaina;
+	}
+	
+	public static void setTxalupaTamaina(int pTamaina) {
+		txalupaTamaina = pTamaina;
+	}
+
+	public static void setOntziaTamaina(int pTamaina) {
+		ontziaTamaina = pTamaina;
+	}
+
+	public static void setUrpekariaTamaina(int pTamaina) {
+		urpekariaTamaina = pTamaina;
 	}
 	
 	public int getHondoratuGabekoZatiKop() {
