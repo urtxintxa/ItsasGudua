@@ -305,6 +305,7 @@ public class Jokalaria {
 				atera=true;
 			}
 		} while (!atera);
+		this.guztizInprimatu();
 		this.tablero.minakJarri();
 	}
 	
