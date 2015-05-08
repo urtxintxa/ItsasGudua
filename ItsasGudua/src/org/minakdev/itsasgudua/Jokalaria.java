@@ -128,7 +128,7 @@ public class Jokalaria {
 		return n;
 	}
 
-	private int eskatuY(){
+	protected int eskatuY(){
 		boolean ezAmaitu = true;
 		int n = 0;
 		do {
@@ -493,8 +493,8 @@ public class Jokalaria {
 		catch (Exception e) {}
 	}
 	
-	//Hemendik aurrera herentziarako
-	/*public Tableroa getTableroa(){
+	
+	public Tableroa getTableroa(){
 		return this.tablero;
 	}
 	
@@ -508,5 +508,5 @@ public class Jokalaria {
 	
 	public void minaIkutuakHanditu(){
 		this.minaIkutuak++;
-	}*/
+	}
 }

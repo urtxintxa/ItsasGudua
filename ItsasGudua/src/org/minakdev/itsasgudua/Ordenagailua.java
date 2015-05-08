@@ -15,78 +15,51 @@ public class Ordenagailua extends Jokalaria{
 	//Metodo zaharrekin eginda dago, orain jokalariaren metodoak erabiliz egin behar da
 	
 	
-	 public void tiroEgin(Jokalaria pAurkari){
-	    	int x=-1;
-	    	int y=-1;
-	    	boolean koordenatuBegiratua=true;
-	    	Koordenatuak koor;
-	    	Tableroa aurkariarenTableroa=pAurkari.getTableroa();
-	    	
-	    	if(this.getPenalizazioa()){
-	    		System.out.println(this.getIzena()+"Txanda galdu duzu.");
-	    		this.setPenalizazioa(false);
-	    	}
-	    	else{
-	    		this.jokalariarenEgoeraInprimatu();
-	    		pAurkari.jokalariarenEgoeraInprimatu();
-	    		pAurkari.partzialkiInprimatu();
-	    			    	
-			    koor=this.kalkulatuHurrengoKoordenatuak(pAurkari);
-			    x= koor.getX();
-		    	y= koor.getY();		
-
-	    	
-		    	aurkariarenTableroa.setBegiratuta(x, y, true);
-		    	Itsasontzia its=aurkariarenTableroa.itsasontzirikDago(x, y);
-		    	if(its!=null){
-		    		this.gehituKoordenatuak(new Koordenatuak(x, y));
-		    		its.kenduZatia();
-		    		if(its.hondoratutaDago()){
-		    			pAurkari.getListaItsasontziak().kenduItsaontzia(its);
-		    			
-		    			
-		    			
-		    			
-		    			
-		    			
-		    			//koor-en ondoan beti tiro egin edo itsasontzi hori hondoratu ondoren kendu
-		    			//ordenagailuak "tranpa" egin
-		    			
-		    			
-		    			
-		    			
-		    			
-		    			//ein metodo bat koordenatuEgokiak eta ez begiratua bateratzeko::::koordenatuOnak()
-		    			
-		    			
-		    			
-		    			
-		    			
-		    			
-		    			
-		    			
-		    			
-		    		}
-		    		if(pAurkari.zenbatItsasontzi()!=0){
-		    			this.tiroEgin(pAurkari);
-		    		}
-		    	}
-		    	else{
-		    		if(aurkariarenTableroa.minarikDago(x, y)){
-		    			this.setPenalizazioa(true);
-		    			this.minaIkutuakHanditu();
-		    			if(!this.minaMaxGainditua()){
-		    				aurkariarenTableroa.minakBoom(x, y, pAurkari);
-		    			}
-		    		}
-		    	}	    		
-	    		
-	    	}
-	    	
-	    	
-	    }
-
-
+	public void tiroEgin(Jokalaria pAurkari){
+		int x=-1;
+		int y=-1;
+		boolean koordenatuBegiratua=true;
+		Tableroa aurkariarenTableroa=pAurkari.getTableroa();	    	
+		if(this.getPenalizazioa()){
+			System.out.println(this.getIzena()+"Ordenagailuak txanda galdu du.");
+		    this.setPenalizazioa(false);
+		}
+		else{
+			Koordenatuak koor;
+		    this.jokalariarenEgoeraInprimatu();
+		    pAurkari.jokalariarenEgoeraInprimatu();
+		    pAurkari.partzialkiInprimatu();
+		    		
+			koor=this.kalkulatuHurrengoKoordenatuak(pAurkari);
+			x= koor.getX();
+			y= koor.getY();
+			    	
+			aurkariarenTableroa.setBegiratuta(x, y, true);
+			Itsasontzia its=aurkariarenTableroa.itsasontzirikDago(x, y);
+			if(its!=null){
+				this.gehituKoordenatuak(new Koordenatuak(x, y));
+			    its.kenduZatia();
+			    if(its.hondoratutaDago()){
+			    	pAurkari.getListaItsasontziak().kenduItsasontzia(its);
+			    	this.itsasontzienKoordenatuak.clear();
+			    }
+			    if(pAurkari.zenbatItsasontzi()!=0){
+			    		this.tiroEgin(pAurkari);
+			    	}
+			}
+			else{
+				if(aurkariarenTableroa.minarikDago(x, y)){
+					this.setPenalizazioa(true);
+			    	this.minaIkutuakHanditu();
+			    	if(!this.minaMaxGainditua()){
+			    		aurkariarenTableroa.minakBoom(x, y, pAurkari);
+			    	}
+			    }
+			}	    		
+		}
+	}
+		
+	 	
 	    private Koordenatuak kalkulatuHurrengoKoordenatuak(Jokalaria pAurkari){
 	    	int x;
 	    	int y;
