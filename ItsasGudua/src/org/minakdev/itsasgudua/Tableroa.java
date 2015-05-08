@@ -59,10 +59,14 @@ public class Tableroa {
 	public void tableroOsoaInprimatu() {
 		System.out.print("     ");
 		for(int a = 0; a < tamaina; a++){
+			if(a==1){
+				System.out.print(" ");
+			}
 			System.out.print(a+" ");
 		}
 		System.out.println();
 		for(int i = 0; i < tamaina; i++) {
+			if(i<10){System.out.print(" ");}
 			System.out.print(i+"   ");
 			for(int j = 0; j < tamaina; j++) {
 				this.lista[i][j].osoaInprimatu();
@@ -124,12 +128,16 @@ public class Tableroa {
 	}
 	
 	public void egungoTableroaInprimatu() {
-		System.out.print("    ");
+		System.out.print("     ");
 		for(int a = 0; a < tamaina; a++){
+			if(a==1){
+				System.out.print(" ");
+			}
 			System.out.print(a+" ");
 		}
 		System.out.println();
 		for(int i = 0; i < tamaina; i++) {
+			if(i<10){System.out.print(" ");}
 			System.out.print(i+"   ");
 			for(int j = 0; j < tamaina; j++) {
 				this.lista[i][j].egungoaInprimatu();;
