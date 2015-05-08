@@ -1,13 +1,20 @@
 package org.minakdev.itsasgudua;
 
+import java.io.File;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 public class Jokoa {
 	
 	private Jokalaria[] jokalariak;
 	private int txanda;
 	private static Jokoa nireJokoa = null;
+	
+	public static String leherketaSoinua =  "soinuak/minaLeherketa.wav";
+	public static String itsasontziaJo = "soinuak/itsasontziaJo.wav";
 	
 	private Scanner sc = new Scanner(System.in);
 	
@@ -240,6 +247,18 @@ public class Jokoa {
     	else{System.out.println("Galdu duzu :(");}
     	
     	this.jokalariak[1].guztizInprimatu();
-
 	}
+	
+	public static void soinuaErreproduzitu(String pHelbidea) {
+		try {
+			Clip leherketa = AudioSystem.getClip();
+			File fitxategia = new File(pHelbidea);
+			leherketa.open(AudioSystem.getAudioInputStream(fitxategia));
+			leherketa.start();
+			Thread.sleep(1000);
+			leherketa.close();
+		}
+		catch (Exception e) {}
+	}
+	
 }

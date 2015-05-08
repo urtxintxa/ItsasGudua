@@ -72,6 +72,7 @@ public class Jokalaria {
 			Itsasontzia it=pAurkari.tablero.itsasontzirikDago(pX,pY);
 			if(it!=null){
 				System.out.println("Itsasontzi bati tiro egin diozu! :))");
+				Jokoa.soinuaErreproduzitu(Jokoa.itsasontziaJo);
 				it.kenduZatia();
 				if(it.hondoratutaDago()){
 					pAurkari.itsasontziak.kenduItsasontzia(it);
@@ -87,7 +88,7 @@ public class Jokalaria {
 					System.out.println("Mina bat jo duzu.. Penalizazioa jasoko duzu :(");
 					this.penalizazioa = true;
 					this.minaIkutuak++;
-					this.leherketaSoinua();
+					Jokoa.soinuaErreproduzitu(Jokoa.leherketaSoinua);
 					if(!this.minaMaxGainditua()) {
 						pAurkari.tablero.minakBoom(pX, pY, pAurkari);
 					}
@@ -134,7 +135,7 @@ public class Jokalaria {
 				if(pAurkari.tablero.minarikDago(pX, pY)){
 					this.penalizazioa = true;
 					this.minaIkutuak++;
-					this.leherketaSoinua();
+					Jokoa.soinuaErreproduzitu(Jokoa.leherketaSoinua);
 					if(!this.minaMaxGainditua()) {
 						pAurkari.tablero.minakBoom(pX, pY, pAurkari);
 					}
@@ -527,19 +528,6 @@ public class Jokalaria {
 		if(a==0) {return 'H';}
 		else{return 'B';}
 	}
-	
-	private void leherketaSoinua() {
-		try {
-			Clip leherketa = AudioSystem.getClip();
-			File fitxategia = new File("Soinuak/leherketa.wav");
-			leherketa.open(AudioSystem.getAudioInputStream(fitxategia));
-			leherketa.start();
-			Thread.sleep(1000);
-			leherketa.close();
-		}
-		catch (Exception e) {}
-	}
-	
 	
 	public Tableroa getTableroa(){
 		return this.tablero;
