@@ -92,7 +92,10 @@ public class Jokoa {
     	
     	this.jokalarienEgoeraInprimatu();
     	
+    	System.out.println(this.jokalariak[0].getIzena()+"-(r)en tableroa: ");
     	this.jokalariak[0].guztizInprimatu();
+    	
+    	System.out.println(this.jokalariak[1].getIzena()+"-(r)en tableroa: ");
     	this.jokalariak[1].guztizInprimatu();
 
 	}
@@ -184,4 +187,11 @@ public class Jokoa {
     	this.jokalariak[0].jokalariarenEgoeraInprimatu();
     	this.jokalariak[1].jokalariarenEgoeraInprimatu();
     }
+	
+	protected void denboraItxaron(int pSegundoak) {
+		pSegundoak = pSegundoak*1000;
+		try {
+			Thread.sleep(pSegundoak);
+		} catch (Exception e) {}
+	}
 }
