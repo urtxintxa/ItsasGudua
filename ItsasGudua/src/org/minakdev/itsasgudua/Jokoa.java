@@ -194,4 +194,33 @@ public class Jokoa {
 			Thread.sleep(pSegundoak);
 		} catch (Exception e) {}
 	}
+	private void partidaBatJolastu2(){
+		Jokalaria irabazlea=null;
+    	
+		System.out.println("\nHasteko tableroen parametroak definituko dituzue.");
+    	this.jokatzekoParametroakEskatu();
+		
+    	System.out.println("\nJokalaria, sartu izena.");
+    	this.jokalariak[0]= new Jokalaria(this.izenaEskatu());
+    	this.jokalariak[1]= new Ordenagailua();
+    	
+    	this.jokalariak[1].tableroaPrestatu();
+    	System.out.println("\nHAS DADILA PARTIDA :D");
+    	this.jokalariak[1].partzialkiInprimatu();
+    	while(irabazlea==null){
+    		this.jokalariak[0].tiroEgin2(this.jokalariak[1]);
+    		this.jokalariak[1].partzialkiInprimatu();
+    		this.jokalariak[0].inprimatuBizitzaKop();
+    		this.txanda++;
+    		irabazlea=this.partidarenIrabazlea();
+    	}
+    	
+    	System.out.println("Jokoa amaitu egin da.  "+this.txanda+ " txandatan bukatu duzu." );
+    	if (irabazlea instanceof Jokalaria){
+    		System.out.println("Jokoa irabazi duzu!! Zorionak!! :P");}
+    	else{System.out.println("Galdu duzu :(");}
+    	
+    	this.jokalariak[1].guztizInprimatu();
+
+	}
 }

@@ -95,6 +95,50 @@ public class Jokalaria {
 			this.penalizazioa = false;
 		}
 	}
+	
+	public void tiroEgin2(Jokalaria pAurkari){
+		if(!this.penalizazioa){
+			boolean egokia = false;
+			boolean begiratuta = true;
+			int pX = 0;
+			int pY = 0;
+			while(!egokia || begiratuta){
+				pX=this.eskatuX();
+				pY=this.eskatuY();
+				if(pAurkari.tablero.koordenatuEgokiak(pX, pY)){
+					begiratuta=pAurkari.tablero.begiratutaDago(pX, pY);
+					egokia=true;
+				}
+				else{
+					egokia=false;
+				}
+			}
+			pAurkari.tablero.setBegiratuta(pX,pY,true);
+			boolean amaitu=false;
+			Itsasontzia it=pAurkari.tablero.itsasontzirikDago(pX,pY);
+			if(it!=null){
+				it.kenduZatia();
+				if(it.hondoratutaDago()){
+					pAurkari.itsasontziak.kenduItsasontzia(it);
+					if(pAurkari.itsasontziak.zenbatItsasontzi()==0){
+						amaitu=true;
+					}
+				}
+				if (!amaitu){this.tiroEgin(pAurkari);}
+			}
+			else {
+				if(pAurkari.tablero.minarikDago(pX, pY)){
+					this.penalizazioa = true;
+					this.minaIkutuak++;
+					this.leherketaSoinua();
+					if(!this.minaMaxGainditua()) {
+						pAurkari.tablero.minakBoom(pX, pY, pAurkari);
+					}
+				}
+			}
+		}
+		else {this.penalizazioa = false;}
+	}
 
 	public void guztizInprimatu() {
 		this.tablero.tableroOsoaInprimatu();
@@ -394,7 +438,7 @@ public class Jokalaria {
 			this.itsasontziaJarriAutomatico(its);
 			i++;
 		}
-		this.guztizInprimatu();
+		if(this instanceof Jokalaria){this.guztizInprimatu();}
 		this.tablero.minakJarri();
 		
 	}
@@ -509,4 +553,7 @@ public class Jokalaria {
 	public void minaIkutuakHanditu(){
 		this.minaIkutuak++;
 	}
+	public void inprimatuBizitzaKop(){
+		System.out.println("Gelditzen zaizkizun bizitzak:	    "+ (Jokalaria.minaIkutuMaximo-this.minaIkutuak) );
+	}	
 }
