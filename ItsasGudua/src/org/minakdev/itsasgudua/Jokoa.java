@@ -71,12 +71,23 @@ public class Jokoa {
     	System.out.println("\nBigarren jokalaria, sartu izena.");
     	this.jokalariak[1]= new Jokalaria(this.izenaEskatu());
     	
+    	kontsolaGarbitu(40);
+    	
     	System.out.println("\n"+this.jokalariak[0].getIzena() + ", zure tableroa prestatu.");
     	this.jokalariak[0].tableroaPrestatu();
+    	
+    	kontsolaGarbitu(40);
+    	
     	System.out.println("\n"+this.jokalariak[1].getIzena() + ", zure tableroa prestatu.");
     	this.jokalariak[1].tableroaPrestatu();
     	
-    	System.out.println("\nHAS DADILA PARTIDA :D");
+    	kontsolaGarbitu(40);
+    	
+    	System.out.println("//////////////////////////");
+    	System.out.println("\n/ HAS DADILA PARTIDA :D /");
+    	System.out.println("//////////////////////////");
+    	
+    	denboraItxaron(2);
     	
     	while(irabazlea==null){
     		this.jokalariak[this.txanda % 2].tiroEgin(this.jokalariak[(this.txanda + 1) % 2]);
@@ -92,6 +103,7 @@ public class Jokoa {
     	
     	this.jokalarienEgoeraInprimatu();
     	
+    	System.out.println();
     	System.out.println(this.jokalariak[0].getIzena()+"-(r)en tableroa: ");
     	this.jokalariak[0].guztizInprimatu();
     	
@@ -194,6 +206,13 @@ public class Jokoa {
 			Thread.sleep(pSegundoak);
 		} catch (Exception e) {}
 	}
+	
+	public static void kontsolaGarbitu(int pLerroKop){
+		for(int i = 0; i < pLerroKop; i++){
+			System.out.println();
+		}
+	}
+	
 	private void partidaBatJolastu2(){
 		Jokalaria irabazlea=null;
     	

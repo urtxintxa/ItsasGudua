@@ -47,6 +47,7 @@ public class Jokalaria {
 
 	public void tiroEgin(Jokalaria pAurkari){
 		if(!this.penalizazioa){
+			Jokoa.kontsolaGarbitu(40);
 			System.out.println("\n"+this.izena+" zure txanda da.");
 			this.jokalariarenEgoeraInprimatu();
 			pAurkari.jokalariarenEgoeraInprimatu();
@@ -70,9 +71,11 @@ public class Jokalaria {
 			boolean amaitu=false;
 			Itsasontzia it=pAurkari.tablero.itsasontzirikDago(pX,pY);
 			if(it!=null){
+				System.out.println("Itsasontzi bati tiro egin diozu! :))");
 				it.kenduZatia();
 				if(it.hondoratutaDago()){
 					pAurkari.itsasontziak.kenduItsasontzia(it);
+					System.out.println("Gainera, itsasontzia hondoratu duzu, lan bikaina! :D");
 					if(pAurkari.itsasontziak.zenbatItsasontzi()==0){
 						amaitu=true;
 					}
@@ -81,6 +84,7 @@ public class Jokalaria {
 			}
 			else {
 				if(pAurkari.tablero.minarikDago(pX, pY)){
+					System.out.println("Mina bat jo duzu.. Penalizazioa jasoko duzu :(");
 					this.penalizazioa = true;
 					this.minaIkutuak++;
 					this.leherketaSoinua();
@@ -230,7 +234,7 @@ public class Jokalaria {
 		System.out.println();
 		System.out.println(this.getIzena());
 		System.out.println("Gelditzen zaizkizun itsasontziak:	"+ this.zenbatItsasontzi());
-		System.out.println("Gelditzen zaizkizun bizitzak:	    "+ (Jokalaria.minaIkutuMaximo-this.minaIkutuak) );
+		System.out.println("Gelditzen zaizkizun bizitzak:	"+ (Jokalaria.minaIkutuMaximo-this.minaIkutuak) );
 	}
 	
 	public String getIzena() {
