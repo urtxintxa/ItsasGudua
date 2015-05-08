@@ -409,7 +409,6 @@ public class Jokalaria {
     	
     }
 	
-	
 	private int lortuXY(){
     	int xy = (int)(Math.random()*(Tableroa.getTamaina()+1));
     	return xy;

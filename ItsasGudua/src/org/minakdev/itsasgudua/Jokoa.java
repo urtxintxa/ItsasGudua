@@ -15,7 +15,7 @@ public class Jokoa {
 		this.jokalariak= new Jokalaria[2];
     	this.txanda=0;
 	}
-	
+
 	public static synchronized Jokoa getNireJokoa() {
 		if(nireJokoa == null) {
 			nireJokoa = new Jokoa();
