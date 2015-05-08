@@ -244,7 +244,10 @@ public class Ordenagailua extends Jokalaria{
 	    		
 	    	}
 			if(koor==null){
-				//zelan??????
+				for(int i=1; i<zenbatKoor; i++){
+					this.itsasontzienKoordenatuak.remove(i);
+				}
+				return this.kalkulatuHurrengoKoordenatuak(pAurkari);
 			}
 	    	
 	    	
