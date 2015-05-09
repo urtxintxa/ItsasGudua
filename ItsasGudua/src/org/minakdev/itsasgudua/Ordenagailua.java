@@ -12,16 +12,13 @@ public class Ordenagailua extends Jokalaria{
     }
 
 	
-	//Metodo zaharrekin eginda dago, orain jokalariaren metodoak erabiliz egin behar da
-	
 	
 	public void tiroEgin(Jokalaria pAurkari){
 		int x=-1;
 		int y=-1;
-		boolean koordenatuBegiratua=true;
 		Tableroa aurkariarenTableroa=pAurkari.getTableroa();	    	
 		if(this.getPenalizazioa()){
-			System.out.println(this.getIzena()+"Ordenagailuak txanda galdu du.");
+			System.out.println("Ordenagailuak txanda galdu du.");
 		    this.setPenalizazioa(false);
 		}
 		else{
@@ -63,7 +60,7 @@ public class Ordenagailua extends Jokalaria{
 	    private Koordenatuak kalkulatuHurrengoKoordenatuak(Jokalaria pAurkari){
 	    	int x;
 	    	int y;
-	    	Koordenatuak koor;
+	    	Koordenatuak koor=null;
 			Koordenatuak k1;
 			Koordenatuak k2;
 	    	boolean koordenatuEgokiak=false;
@@ -236,5 +233,9 @@ public class Ordenagailua extends Jokalaria{
 	    	return this.itsasontzienKoordenatuak.size();
 	    }
 
+
+	    public void tableroaPrestatu(){
+	    	super.tableroaPrestatuAutomatiko();
+	    }
 
 }

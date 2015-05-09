@@ -60,14 +60,14 @@ public class Jokoa {
 		} while (ezAmaitu);
 		
 		if(aukera == 1){
-			nireJokoa.partidaBatjolastu();
+			nireJokoa.partidaBatJolastu();
 		}
 		else {
 			System.exit(0);
 		}
 	}
 	
-	public void partidaBatjolastu() {
+	public void partidaBatJolastu() {
 		Jokalaria irabazlea=null;
     	
 		System.out.println("\nHasteko tableroen parametroak definituko dituzue.");
@@ -231,20 +231,28 @@ public class Jokoa {
     	this.jokalariak[1]= new Ordenagailua();
     	
     	this.jokalariak[1].tableroaPrestatu();
-    	System.out.println("\nHAS DADILA PARTIDA :D");
-    	this.jokalariak[1].partzialkiInprimatu();
+    	kontsolaGarbitu(40);
+    	
+    	System.out.println("//////////////////////////");
+    	System.out.println("\n/ HAS DADILA PARTIDA :D /");
+    	System.out.println("//////////////////////////");
+    	
+    	denboraItxaron(2);
     	while(irabazlea==null){
     		this.jokalariak[0].tiroEgin2(this.jokalariak[1]);
-    		this.jokalariak[1].partzialkiInprimatu();
-    		this.jokalariak[0].inprimatuBizitzaKop();
     		this.txanda++;
-    		irabazlea=this.partidarenIrabazlea();
+    		if(this.jokalariak[0].minaMaxGainditua()){
+    			irabazlea=this.jokalariak[1];
+    		}
+    		if(this.jokalariak[1].zenbatItsasontzi()==0){
+    			irabazlea=this.jokalariak[0];
+    		}
     	}
     	
     	System.out.println("Jokoa amaitu egin da.  "+this.txanda+ " txandatan bukatu duzu." );
-    	if (irabazlea instanceof Jokalaria){
-    		System.out.println("Jokoa irabazi duzu!! Zorionak!! :P");}
-    	else{System.out.println("Galdu duzu :(");}
+    	if (irabazlea instanceof Ordenagailua){
+    		System.out.println("Galdu duzu :(");}
+    	else{System.out.println("Jokoa irabazi duzu!! Zorionak!! :P");}
     	
     	this.jokalariak[1].guztizInprimatu();
 	}

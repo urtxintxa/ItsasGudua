@@ -103,6 +103,9 @@ public class Jokalaria {
 	
 	public void tiroEgin2(Jokalaria pAurkari){
 		if(!this.penalizazioa){
+			System.out.println("Ordenagailuari gelditzen zaizkion itsasontziak:	"+ pAurkari.zenbatItsasontzi());
+			System.out.println("Gelditzen zaizkizun bizitzak:	"+ (Jokalaria.minaIkutuMaximo-this.minaIkutuak) );
+			pAurkari.partzialkiInprimatu();
 			boolean egokia = false;
 			boolean begiratuta = true;
 			int pX = 0;
@@ -129,7 +132,7 @@ public class Jokalaria {
 						amaitu=true;
 					}
 				}
-				if (!amaitu){this.tiroEgin(pAurkari);}
+				if (!amaitu){this.tiroEgin2(pAurkari);}
 			}
 			else {
 				if(pAurkari.tablero.minarikDago(pX, pY)){
@@ -414,13 +417,13 @@ public class Jokalaria {
     	
     }
 	
-	private int lortuXY(){
+	protected int lortuXY(){
     	int xy = (int)(Math.random()*(Tableroa.getTamaina()+1));
     	return xy;
     }
 	
 	
-	private void tableroaPrestatuAutomatiko() {
+	protected void tableroaPrestatuAutomatiko() {
 		int i = 0;
 		Itsasontzia its;
 
@@ -544,7 +547,5 @@ public class Jokalaria {
 	public void minaIkutuakHanditu(){
 		this.minaIkutuak++;
 	}
-	public void inprimatuBizitzaKop(){
-		System.out.println("Gelditzen zaizkizun bizitzak:	    "+ (Jokalaria.minaIkutuMaximo-this.minaIkutuak) );
-	}	
+	
 }
