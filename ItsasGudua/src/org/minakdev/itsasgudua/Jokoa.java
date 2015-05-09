@@ -60,7 +60,7 @@ public class Jokoa {
 		} while (ezAmaitu);
 		
 		if(aukera == 1){
-			nireJokoa.partidaBatJolastu();
+			nireJokoa.partidaBatJolastu1();
 		}
 		else {
 			System.exit(0);
@@ -223,7 +223,7 @@ public class Jokoa {
 	private void partidaBatJolastu2(){
 		Jokalaria irabazlea=null;
     	
-		System.out.println("\nHasteko tableroen parametroak definituko dituzue.");
+		System.out.println("\nHasteko tableroen parametroak definituko dituzu.");
     	this.jokatzekoParametroakEskatu();
 		
     	System.out.println("\nJokalaria, sartu izena.");
@@ -267,6 +267,54 @@ public class Jokoa {
 			leherketa.close();
 		}
 		catch (Exception e) {}
+	}
+	
+	public void partidaBatJolastu1() {
+		Jokalaria irabazlea=null;
+    	
+		System.out.println("\nHasteko tableroen parametroak definituko dituzu.");
+    	this.jokatzekoParametroakEskatu();
+		
+    	System.out.println("\nJokalaria, sartu izena.");
+    	this.jokalariak[0]= new Jokalaria(this.izenaEskatu());
+    	this.jokalariak[1]= new Ordenagailua();
+    	
+    	kontsolaGarbitu(40);
+    	
+    	System.out.println("\n"+this.jokalariak[0].getIzena() + ", zure tableroa prestatu.");
+    	this.jokalariak[0].tableroaPrestatu();
+    	
+    	kontsolaGarbitu(40);
+    	
+    	this.jokalariak[1].tableroaPrestatu();
+    	
+    	System.out.println("//////////////////////////");
+    	System.out.println("\n/ HAS DADILA PARTIDA :D /");
+    	System.out.println("//////////////////////////");
+    	
+    	denboraItxaron(2);
+    	
+    	while(irabazlea==null){
+    		this.jokalariak[this.txanda % 2].tiroEgin(this.jokalariak[(this.txanda + 1) % 2]);
+    		this.jokalariak[(this.txanda + 1) % 2].partzialkiInprimatu();
+    		this.txanda++;
+    		irabazlea=this.partidarenIrabazlea();
+    	}
+    	
+    	
+    	System.out.println("Jokoa amaitu egin da.");
+    	System.out.printf("Jokoaren irabazlea %s da", irabazlea.getIzena());
+    	System.out.println();
+    	
+    	this.jokalarienEgoeraInprimatu();
+    	
+    	System.out.println();
+    	System.out.println(this.jokalariak[0].getIzena()+"-(r)en tableroa: ");
+    	this.jokalariak[0].guztizInprimatu();
+    	
+    	System.out.println(this.jokalariak[1].getIzena()+"-(r)en tableroa: ");
+    	this.jokalariak[1].guztizInprimatu();
+
 	}
 	
 }
