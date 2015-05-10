@@ -75,7 +75,7 @@ public class Jokoa {
 	}
 	
 	private String izenaEskatu() {
-		String izena = sc.next();
+		String izena = sc.nextLine();
 		return izena;
 	}
 	
@@ -108,7 +108,7 @@ public class Jokoa {
 			Jokalaria.setItsaspekoMax(1);
 			Jokalaria.setOntziaMax(1);
 			Jokalaria.setTxalupaMax(2);
-			Jokalaria.setMinaIkutuMaximo(1);
+			Jokalaria.setMinaIkutuMaximo(2);
 			
 			Itsasontzia.setUrpekariaTamaina(2);
 			Itsasontzia.setOntziaTamaina(3);
@@ -221,6 +221,7 @@ public class Jokoa {
 		System.out.println("\nHasteko tableroen parametroak definituko dituzue.");
     	this.jokatzekoParametroakEskatu();
 		
+    	sc.nextLine();
     	System.out.println("\nLehengo jokalaria, sartu izena.");
     	this.jokalariak[0]= new Jokalaria(this.izenaEskatu());
     	System.out.println("\nBigarren jokalaria, sartu izena.");
@@ -274,6 +275,7 @@ public class Jokoa {
     	this.jokatzekoParametroakEskatu();
 		
     	System.out.println("\nJokalaria, sartu izena.");
+		sc.nextLine();
     	this.jokalariak[0]= new Jokalaria(this.izenaEskatu());
     	this.jokalariak[1]= new Ordenagailua();
     	
@@ -321,6 +323,7 @@ public class Jokoa {
     	this.jokatzekoParametroakEskatu();
 		
     	System.out.println("\nJokalaria, sartu izena.");
+    	sc.nextLine();
     	this.jokalariak[0]= new Jokalaria(this.izenaEskatu());
     	this.jokalariak[1]= new Ordenagailua();
     	
