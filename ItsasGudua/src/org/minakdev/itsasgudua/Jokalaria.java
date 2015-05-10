@@ -47,8 +47,8 @@ public class Jokalaria {
 
 	public void tiroEgin(Jokalaria pAurkari){
 		if(!this.penalizazioa){
-			Jokoa.kontsolaGarbitu(40);
 			System.out.println("\n"+this.izena+" zure txanda da.");
+			Jokoa.denboraItxaron(2);
 			this.jokalariarenEgoeraInprimatu();
 			pAurkari.jokalariarenEgoeraInprimatu();
 			pAurkari.partzialkiInprimatu();
@@ -61,6 +61,9 @@ public class Jokalaria {
 				pY=this.eskatuY();
 				if(pAurkari.tablero.koordenatuEgokiak(pX, pY)){
 					begiratuta=pAurkari.tablero.begiratutaDago(pX, pY);
+					if(begiratuta){
+						System.out.println("Koordenatu horiek begiratuta daude. Saiatu berriz.");
+					}
 					egokia=true;
 				}
 				else{
@@ -71,12 +74,14 @@ public class Jokalaria {
 			boolean amaitu=false;
 			Itsasontzia it=pAurkari.tablero.itsasontzirikDago(pX,pY);
 			if(it!=null){
-				System.out.println("Itsasontzi bati tiro egin diozu! :))");
 				Jokoa.soinuaErreproduzitu(Jokoa.itsasontziaJo);
+				System.out.println("Itsasontzi bati tiro egin diozu! :))");
+				Jokoa.denboraItxaron(1);
 				it.kenduZatia();
 				if(it.hondoratutaDago()){
 					pAurkari.itsasontziak.kenduItsasontzia(it);
 					System.out.println("Gainera, itsasontzia hondoratu duzu, lan bikaina! :D");
+					Jokoa.denboraItxaron(1);
 					if(pAurkari.itsasontziak.zenbatItsasontzi()==0){
 						amaitu=true;
 					}
@@ -85,13 +90,18 @@ public class Jokalaria {
 			}
 			else {
 				if(pAurkari.tablero.minarikDago(pX, pY)){
+					Jokoa.soinuaErreproduzitu(Jokoa.leherketaSoinua);
 					System.out.println("Mina bat jo duzu.. Penalizazioa jasoko duzu :(");
+					Jokoa.denboraItxaron(1);
 					this.penalizazioa = true;
 					this.minaIkutuak++;
-					Jokoa.soinuaErreproduzitu(Jokoa.leherketaSoinua);
 					if(!this.minaMaxGainditua()) {
 						pAurkari.tablero.minakBoom(pX, pY, pAurkari);
 					}
+				}
+				else{
+					System.out.println("Ura jo duzu.");
+					Jokoa.denboraItxaron(1);
 				}
 			}
 		}

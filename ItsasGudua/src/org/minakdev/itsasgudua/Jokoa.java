@@ -190,7 +190,7 @@ public class Jokoa {
     	this.jokalariak[1].jokalariarenEgoeraInprimatu();
     }
 	
-	protected void denboraItxaron(int pSegundoak) {
+	public static void denboraItxaron(int pSegundoak) {
 		pSegundoak = pSegundoak*1000;
 		try {
 			Thread.sleep(pSegundoak);
@@ -246,10 +246,13 @@ public class Jokoa {
     	denboraItxaron(2);
     	
     	while(irabazlea==null){
+    		kontsolaGarbitu(40);
     		this.jokalariak[this.txanda % 2].tiroEgin(this.jokalariak[(this.txanda + 1) % 2]);
     		this.jokalariak[(this.txanda + 1) % 2].partzialkiInprimatu();
     		this.txanda++;
     		irabazlea=this.partidarenIrabazlea();
+    		System.out.println("Sartu enter jarraitzeko.");
+    		sc.nextLine();
     	}
     	
     	
