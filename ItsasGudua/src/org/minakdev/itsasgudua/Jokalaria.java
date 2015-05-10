@@ -399,18 +399,18 @@ public class Jokalaria {
 	}
 	
 	private void itsasontziaJarriAutomatico(Itsasontzia pItsasontzia){
-    	int x=this.lortuXY();
-    	int y=this.lortuXY();
-    	char horBer=this.lortuHorBer();
+    	int x;
+    	int y;
+    	char horBer;
     	int tamaina= pItsasontzia.getHondoratuGabekoZatiKop();
-    	boolean koordenatuZuzenak = this.koordenatuZuzenak(x, y, horBer, tamaina);
+    	boolean koordenatuZuzenak;
     	
-    	while(!koordenatuZuzenak){
+    	do{
     		x=this.lortuXY();
         	y=this.lortuXY();
         	horBer=this.lortuHorBer();
         	koordenatuZuzenak = this.koordenatuZuzenak(x, y, horBer, tamaina);
-    	}
+    	}while(!koordenatuZuzenak);
     	
     	this.itsasontziak.gehituItsasontzia(pItsasontzia);
     	this.tablero.itsasontziaJarri(x, y, tamaina, horBer, pItsasontzia);
