@@ -88,40 +88,20 @@ public class Ordenagailua extends Jokalaria{
 		    			if(!aurkariarenTableroa.begiratutaDago(x-1, y)){
 		    				return new Koordenatuak(x-1, y);
 		    			}
-		    			else{
-		    				if(aurkariarenTableroa.itsasontzirikDago(x-1, y)!=null){
-		    					this.itsasontzienKoordenatuak.add(new Koordenatuak(x-1, y));
-		    				}
-		    			}
 		    		}
 		    		if(aurkariarenTableroa.koordenatuEgokiak(x, y+1)){
 		    			if(!aurkariarenTableroa.begiratutaDago(x, y+1)){
 		    				return new Koordenatuak(x, y+1);
-		    			}
-		    			else{
-		    				if(aurkariarenTableroa.itsasontzirikDago(x, y+1)!=null){
-		    					this.itsasontzienKoordenatuak.add(new Koordenatuak(x, y+1));
-		    				}
 		    			}
 		    		}
 		    		if(aurkariarenTableroa.koordenatuEgokiak(x+1, y)){
 		    			if(!aurkariarenTableroa.begiratutaDago(x+1, y)){
 		    				return new Koordenatuak(x+1, y);
 		    			}
-		    			else{
-		    				if(aurkariarenTableroa.itsasontzirikDago(x+1, y)!=null){
-		    					this.itsasontzienKoordenatuak.add(new Koordenatuak(x+1, y));
-		    				}
-		    			}
 		    		}
 		    		if(aurkariarenTableroa.koordenatuEgokiak(x, y-1)){
 		    			if(!aurkariarenTableroa.begiratutaDago(x, y-1)){
 		    				return new Koordenatuak(x, y-1);
-		    			}
-		    			else{
-		    				if(aurkariarenTableroa.itsasontzirikDago(x, y-1)!=null){
-		    					this.itsasontzienKoordenatuak.add(new Koordenatuak(x, y-1));
-		    				}
 		    			}
 		    		}
 		    		this.itsasontzienKoordenatuak.remove(0);
@@ -244,7 +224,7 @@ public class Ordenagailua extends Jokalaria{
 	    	return koor;
 	    }
 
-	    private void gehituKoordenatuak(Koordenatuak pKoordenatuak){
+	    public void gehituKoordenatuak(Koordenatuak pKoordenatuak){
 	    	this.itsasontzienKoordenatuak.add(pKoordenatuak);
 	    }
 
@@ -257,5 +237,9 @@ public class Ordenagailua extends Jokalaria{
 	    public void tableroaPrestatu(){
 	    	super.tableroaPrestatuAutomatiko();
 	    }
+	    public void koordenatuenZerrendaHustu(){
+	    	this.itsasontzienKoordenatuak.clear();
+	    }
+	    
 
 }

@@ -166,8 +166,14 @@ public class Tableroa {
 			if(!itsasontzi.getAntiMina()) {
 				this.setBegiratuta(pX, pY, true);
 				itsasontzi.kenduZatia();
+				if(Jokoa.noriTokatzenZaio() instanceof Ordenagailua){
+					((Ordenagailua)Jokoa.noriTokatzenZaio()).gehituKoordenatuak(new Koordenatuak(pX, pY));
+				}
 				if(itsasontzi.hondoratutaDago()) {
 					pAurkaria.getListaItsasontziak().kenduItsasontzia(itsasontzi);
+					if(Jokoa.noriTokatzenZaio() instanceof Ordenagailua){
+						((Ordenagailua)Jokoa.noriTokatzenZaio()).koordenatuenZerrendaHustu();
+					}
 				}
 			}
 		}

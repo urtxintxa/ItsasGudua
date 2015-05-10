@@ -350,5 +350,8 @@ public class Jokoa {
     	
     	this.jokalariak[1].guztizInprimatu();
 	}
+	public static Jokalaria noriTokatzenZaio(){
+		return nireJokoa.jokalariak[nireJokoa.txanda%2];
+	}
 	
 }
