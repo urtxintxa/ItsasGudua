@@ -286,8 +286,7 @@ public class Jokoa {
     	
     	System.out.println("\n"+this.jokalariak[0].getIzena() + ", zure tableroa prestatu.");
     	this.jokalariak[0].tableroaPrestatu();
-    	
-    	kontsolaGarbitu(40);
+
     	
     	this.jokalariak[1].tableroaPrestatu();
     	
@@ -298,10 +297,13 @@ public class Jokoa {
     	denboraItxaron(2);
     	
     	while(irabazlea==null){
+    		kontsolaGarbitu(40);
     		this.jokalariak[this.txanda % 2].tiroEgin(this.jokalariak[(this.txanda + 1) % 2]);
     		this.jokalariak[(this.txanda + 1) % 2].partzialkiInprimatu();
     		this.txanda++;
     		irabazlea=this.partidarenIrabazlea();
+    		System.out.println("Sartu enter jarraitzeko.");
+    		sc.nextLine();
     	}
     	
     	

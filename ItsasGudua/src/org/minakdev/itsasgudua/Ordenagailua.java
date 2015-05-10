@@ -14,14 +14,15 @@ public class Ordenagailua extends Jokalaria{
 	
 	
 	public void tiroEgin(Jokalaria pAurkari){
-		int x=-1;
-		int y=-1;
-		Tableroa aurkariarenTableroa=pAurkari.getTableroa();	    	
+		int x;
+		int y;	    	
 		if(this.getPenalizazioa()){
 			System.out.println("Ordenagailuak txanda galdu du.");
+			Jokoa.denboraItxaron(1);
 		    this.setPenalizazioa(false);
 		}
 		else{
+			Tableroa aurkariarenTableroa=pAurkari.getTableroa();
 			Koordenatuak koor;
 		    this.jokalariarenEgoeraInprimatu();
 		    pAurkari.jokalariarenEgoeraInprimatu();
@@ -30,14 +31,19 @@ public class Ordenagailua extends Jokalaria{
 			koor=this.kalkulatuHurrengoKoordenatuak(pAurkari);
 			x= koor.getX();
 			y= koor.getY();
-			    	
+			System.out.println("("+ x + "," + y + ")");
 			aurkariarenTableroa.setBegiratuta(x, y, true);
 			Itsasontzia its=aurkariarenTableroa.itsasontzirikDago(x, y);
 			if(its!=null){
+				Jokoa.soinuaErreproduzitu(Jokoa.itsasontziaJo);
+				System.out.println("Itsasontzi bati tiro egin dio.");
+				Jokoa.denboraItxaron(1);
 				this.gehituKoordenatuak(new Koordenatuak(x, y));
 			    its.kenduZatia();
 			    if(its.hondoratutaDago()){
 			    	pAurkari.getListaItsasontziak().kenduItsasontzia(its);
+			    	System.out.println("Gainera, itsasontzia hondoratu dizu.");
+			    	Jokoa.denboraItxaron(1);
 			    	this.itsasontzienKoordenatuak.clear();
 			    }
 			    if(pAurkari.zenbatItsasontzi()!=0){
@@ -46,12 +52,19 @@ public class Ordenagailua extends Jokalaria{
 			}
 			else{
 				if(aurkariarenTableroa.minarikDago(x, y)){
+					Jokoa.soinuaErreproduzitu(Jokoa.leherketaSoinua);
+					System.out.println("Mina bat jo du. Penalizazioa jasoko du :)");
+					Jokoa.denboraItxaron(1);
 					this.setPenalizazioa(true);
 			    	this.minaIkutuakHanditu();
 			    	if(!this.minaMaxGainditua()){
 			    		aurkariarenTableroa.minakBoom(x, y, pAurkari);
 			    	}
 			    }
+				else{
+					System.out.println("Ura jo du.");
+					Jokoa.denboraItxaron(1);
+				}
 			}	    		
 		}
 	}
