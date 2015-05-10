@@ -180,7 +180,7 @@ public class Jokalaria {
 		return n;
 	}
 
-	protected int eskatuY(){
+	private int eskatuY(){
 		boolean ezAmaitu = true;
 		int n = 0;
 		do {
@@ -205,21 +205,22 @@ public class Jokalaria {
 	}
 
 	private void itsasontziaJarriEskuz(Itsasontzia pItsasontzia) {	
-		this.guztizInprimatu();
-		int x= this.eskatuX();
-		int y= this.eskatuY();
-		char hB= this.eskatuHorizontalBertikal();
+		int x;
+		int y;
+		char hB;
 		int tamaina =pItsasontzia.getHondoratuGabekoZatiKop();
-		boolean koordenatuZuzenak = this.koordenatuZuzenak(x, y, hB, tamaina);
+		boolean koordenatuZuzenak;
 
-		while (!koordenatuZuzenak) {
-			System.out.println("Sartu dituzun koordenatuetan ezin da itsasontzia jarri. Saiatu berriz.");
+		do{
 			this.guztizInprimatu();
 			x = this.eskatuX();
 			y = this.eskatuY();
 			hB = this.eskatuHorizontalBertikal();
 			koordenatuZuzenak = this.koordenatuZuzenak(x, y, hB, tamaina);
-		}
+			if(!koordenatuZuzenak){
+				System.out.println("Sartu dituzun koordenatuetan ezin da itsasontzia jarri. Saiatu berriz.");
+			}
+		}while (!koordenatuZuzenak);
 
 		this.itsasontziak.gehituItsasontzia(pItsasontzia);
 		this.tablero.itsasontziaJarri(x, y, tamaina, hB, pItsasontzia);
@@ -445,7 +446,7 @@ public class Jokalaria {
 			this.itsasontziaJarriAutomatico(its);
 			i++;
 		}
-		if(this instanceof Jokalaria){this.guztizInprimatu();}
+		if(!(this instanceof Ordenagailua)){this.guztizInprimatu();}
 		this.tablero.minakJarri();
 		
 	}
