@@ -59,6 +59,9 @@ public class Jokoa {
 		
 		if(aukera == 1){
 			if(nireJokoa.jokatzekoModuaEskatu() == 1){
+				nireJokoa.partidaBatJolastu();
+			}
+			else if(nireJokoa.jokatzekoModuaEskatu() == 2){
 				nireJokoa.partidaBatJolastu1();
 			}
 			else{
@@ -68,58 +71,6 @@ public class Jokoa {
 		else {
 			System.exit(0);
 		}
-	}
-	
-	public void partidaBatJolastu() {
-		Jokalaria irabazlea=null;
-    	
-		System.out.println("\nHasteko tableroen parametroak definituko dituzue.");
-    	this.jokatzekoParametroakEskatu();
-		
-    	System.out.println("\nLehengo jokalaria, sartu izena.");
-    	this.jokalariak[0]= new Jokalaria(this.izenaEskatu());
-    	System.out.println("\nBigarren jokalaria, sartu izena.");
-    	this.jokalariak[1]= new Jokalaria(this.izenaEskatu());
-    	
-    	kontsolaGarbitu(40);
-    	
-    	System.out.println("\n"+this.jokalariak[0].getIzena() + ", zure tableroa prestatu.");
-    	this.jokalariak[0].tableroaPrestatu();
-    	
-    	kontsolaGarbitu(40);
-    	
-    	System.out.println("\n"+this.jokalariak[1].getIzena() + ", zure tableroa prestatu.");
-    	this.jokalariak[1].tableroaPrestatu();
-    	
-    	kontsolaGarbitu(40);
-    	
-    	System.out.println("//////////////////////////");
-    	System.out.println("\n/ HAS DADILA PARTIDA :D /");
-    	System.out.println("//////////////////////////");
-    	
-    	denboraItxaron(2);
-    	
-    	while(irabazlea==null){
-    		this.jokalariak[this.txanda % 2].tiroEgin(this.jokalariak[(this.txanda + 1) % 2]);
-    		this.jokalariak[(this.txanda + 1) % 2].partzialkiInprimatu();
-    		this.txanda++;
-    		irabazlea=this.partidarenIrabazlea();
-    	}
-    	
-    	
-    	System.out.println("Jokoa amaitu egin da.");
-    	System.out.printf("Jokoaren irabazlea %s da", irabazlea.getIzena());
-    	System.out.println();
-    	
-    	this.jokalarienEgoeraInprimatu();
-    	
-    	System.out.println();
-    	System.out.println(this.jokalariak[0].getIzena()+"-(r)en tableroa: ");
-    	this.jokalariak[0].guztizInprimatu();
-    	
-    	System.out.println(this.jokalariak[1].getIzena()+"-(r)en tableroa: ");
-    	this.jokalariak[1].guztizInprimatu();
-
 	}
 	
 	private String izenaEskatu() {
@@ -194,9 +145,10 @@ public class Jokoa {
 	}
 	
 	public int jokatzekoModuaEskatu() {
-		System.out.println("Jokatzeko 2 modu daude:");
-		System.out.println("	1 - Jokalaria vs Ordenagailua");
-		System.out.println("	2 - Jokalaria vs Jokalaria");
+		System.out.println("Jokatzeko 3 modu daude:");
+		System.out.println("	1 - Jokalaria vs Jokalaria");
+		System.out.println("	2 - Jokalaria vs Ordenagailua (Inteligentzia Artifiziala)");
+		System.out.println("	3 - Jokalaria vs Ordenagailuaren Tableroa");
 		
 		boolean ezAmaitu = true;
 		int n = 0;
@@ -204,7 +156,7 @@ public class Jokoa {
 			try {
 				System.out.println("\nAukeratu aukera bat: ");
 				n = sc.nextInt();	
-				if(n > 2 || n < 1){
+				if(n > 3 || n < 1){
 					throw new TartetikKanpoException("Zenbakia ez dago tartean.");
 				}
 				ezAmaitu = false;
@@ -250,43 +202,6 @@ public class Jokoa {
 		}
 	}
 	
-	private void partidaBatJolastu2(){
-		Jokalaria irabazlea=null;
-    	
-		System.out.println("\nHasteko tableroen parametroak definituko dituzu.");
-    	this.jokatzekoParametroakEskatu();
-		
-    	System.out.println("\nJokalaria, sartu izena.");
-    	this.jokalariak[0]= new Jokalaria(this.izenaEskatu());
-    	this.jokalariak[1]= new Ordenagailua();
-    	
-    	this.jokalariak[1].tableroaPrestatu();
-    	kontsolaGarbitu(40);
-    	
-    	System.out.println("//////////////////////////");
-    	System.out.println("\n/ HAS DADILA PARTIDA :D /");
-    	System.out.println("//////////////////////////");
-    	
-    	denboraItxaron(2);
-    	while(irabazlea==null){
-    		this.jokalariak[0].tiroEgin2(this.jokalariak[1]);
-    		this.txanda++;
-    		if(this.jokalariak[0].minaMaxGainditua()){
-    			irabazlea=this.jokalariak[1];
-    		}
-    		if(this.jokalariak[1].zenbatItsasontzi()==0){
-    			irabazlea=this.jokalariak[0];
-    		}
-    	}
-    	
-    	System.out.println("Jokoa amaitu egin da.  "+this.txanda+ " txandatan bukatu duzu." );
-    	if (irabazlea instanceof Ordenagailua){
-    		System.out.println("Galdu duzu :(");}
-    	else{System.out.println("Jokoa irabazi duzu!! Zorionak!! :P");}
-    	
-    	this.jokalariak[1].guztizInprimatu();
-	}
-	
 	public static void soinuaErreproduzitu(String pHelbidea) {
 		try {
 			Clip leherketa = AudioSystem.getClip();
@@ -297,6 +212,58 @@ public class Jokoa {
 			leherketa.close();
 		}
 		catch (Exception e) {}
+	}
+	
+	public void partidaBatJolastu() {
+		Jokalaria irabazlea=null;
+    	
+		System.out.println("\nHasteko tableroen parametroak definituko dituzue.");
+    	this.jokatzekoParametroakEskatu();
+		
+    	System.out.println("\nLehengo jokalaria, sartu izena.");
+    	this.jokalariak[0]= new Jokalaria(this.izenaEskatu());
+    	System.out.println("\nBigarren jokalaria, sartu izena.");
+    	this.jokalariak[1]= new Jokalaria(this.izenaEskatu());
+    	
+    	kontsolaGarbitu(40);
+    	
+    	System.out.println("\n"+this.jokalariak[0].getIzena() + ", zure tableroa prestatu.");
+    	this.jokalariak[0].tableroaPrestatu();
+    	
+    	kontsolaGarbitu(40);
+    	
+    	System.out.println("\n"+this.jokalariak[1].getIzena() + ", zure tableroa prestatu.");
+    	this.jokalariak[1].tableroaPrestatu();
+    	
+    	kontsolaGarbitu(40);
+    	
+    	System.out.println("//////////////////////////");
+    	System.out.println("\n/ HAS DADILA PARTIDA :D /");
+    	System.out.println("//////////////////////////");
+    	
+    	denboraItxaron(2);
+    	
+    	while(irabazlea==null){
+    		this.jokalariak[this.txanda % 2].tiroEgin(this.jokalariak[(this.txanda + 1) % 2]);
+    		this.jokalariak[(this.txanda + 1) % 2].partzialkiInprimatu();
+    		this.txanda++;
+    		irabazlea=this.partidarenIrabazlea();
+    	}
+    	
+    	
+    	System.out.println("Jokoa amaitu egin da.");
+    	System.out.printf("Jokoaren irabazlea %s da", irabazlea.getIzena());
+    	System.out.println();
+    	
+    	this.jokalarienEgoeraInprimatu();
+    	
+    	System.out.println();
+    	System.out.println(this.jokalariak[0].getIzena()+"-(r)en tableroa: ");
+    	this.jokalariak[0].guztizInprimatu();
+    	
+    	System.out.println(this.jokalariak[1].getIzena()+"-(r)en tableroa: ");
+    	this.jokalariak[1].guztizInprimatu();
+
 	}
 	
 	public void partidaBatJolastu1() {
@@ -344,7 +311,43 @@ public class Jokoa {
     	
     	System.out.println(this.jokalariak[1].getIzena()+"-(r)en tableroa: ");
     	this.jokalariak[1].guztizInprimatu();
-
+	}
+	
+	private void partidaBatJolastu2(){
+		Jokalaria irabazlea=null;
+    	
+		System.out.println("\nHasteko tableroen parametroak definituko dituzu.");
+    	this.jokatzekoParametroakEskatu();
+		
+    	System.out.println("\nJokalaria, sartu izena.");
+    	this.jokalariak[0]= new Jokalaria(this.izenaEskatu());
+    	this.jokalariak[1]= new Ordenagailua();
+    	
+    	this.jokalariak[1].tableroaPrestatu();
+    	kontsolaGarbitu(40);
+    	
+    	System.out.println("//////////////////////////");
+    	System.out.println("\n/ HAS DADILA PARTIDA :D /");
+    	System.out.println("//////////////////////////");
+    	
+    	denboraItxaron(2);
+    	while(irabazlea==null){
+    		this.jokalariak[0].tiroEgin2(this.jokalariak[1]);
+    		this.txanda++;
+    		if(this.jokalariak[0].minaMaxGainditua()){
+    			irabazlea=this.jokalariak[1];
+    		}
+    		if(this.jokalariak[1].zenbatItsasontzi()==0){
+    			irabazlea=this.jokalariak[0];
+    		}
+    	}
+    	
+    	System.out.println("Jokoa amaitu egin da.  "+this.txanda+ " txandatan bukatu duzu." );
+    	if (irabazlea instanceof Ordenagailua){
+    		System.out.println("Galdu duzu :(");}
+    	else{System.out.println("Jokoa irabazi duzu!! Zorionak!! :P");}
+    	
+    	this.jokalariak[1].guztizInprimatu();
 	}
 	
 }
