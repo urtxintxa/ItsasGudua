@@ -22,6 +22,8 @@ public class Ordenagailua extends Jokalaria{
 		    this.setPenalizazioa(false);
 		}
 		else{
+			System.out.println("Ordenagailuaren txanda.");
+			Jokoa.denboraItxaron(1);
 			Tableroa aurkariarenTableroa=pAurkari.getTableroa();
 			Koordenatuak koor;
 		    this.jokalariarenEgoeraInprimatu();
