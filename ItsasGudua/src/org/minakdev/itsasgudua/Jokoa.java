@@ -58,10 +58,11 @@ public class Jokoa {
 		} while (ezAmaitu);
 		
 		if(aukera == 1){
-			if(nireJokoa.jokatzekoModuaEskatu() == 1){
+			int jokatzekoModua = nireJokoa.jokatzekoModuaEskatu();
+			if( jokatzekoModua == 1){
 				nireJokoa.partidaBatJolastu();
 			}
-			else if(nireJokoa.jokatzekoModuaEskatu() == 2){
+			else if(jokatzekoModua == 2){
 				nireJokoa.partidaBatJolastu1();
 			}
 			else{
