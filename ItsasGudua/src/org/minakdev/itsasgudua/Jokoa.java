@@ -13,10 +13,10 @@ public class Jokoa {
 	private int txanda;
 	private static Jokoa nireJokoa = null;
 	
-	public static String leherketaSoinua =  "soinuak/minaLeherketa.wav";
+	public static String leherketaSoinua = "soinuak/minaLeherketa.wav";
 	public static String itsasontziaJo = "soinuak/itsasontziaJo.wav";
 	
-	private Scanner sc = new Scanner(System.in);
+	private static Scanner sc = new Scanner(System.in);
 	
 	private Jokoa() {
 		this.jokalariak= new Jokalaria[2];
@@ -32,8 +32,6 @@ public class Jokoa {
 	
 	public static void main(String[] args) {
 		nireJokoa = Jokoa.getNireJokoa();
-		
-		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Ongi etorri Itsas Gudua jokora :D");
 		System.out.println();
@@ -60,7 +58,12 @@ public class Jokoa {
 		} while (ezAmaitu);
 		
 		if(aukera == 1){
-			nireJokoa.partidaBatJolastu1();
+			if(nireJokoa.jokatzekoModuaEskatu() == 1){
+				nireJokoa.partidaBatJolastu1();
+			}
+			else{
+				nireJokoa.partidaBatJolastu2();
+			}
 		}
 		else {
 			System.exit(0);
@@ -124,7 +127,7 @@ public class Jokoa {
 		return izena;
 	}
 	
-	private void jokatzekoParametroakEskatu(){
+	private void jokatzekoParametroakEskatu() {
 		System.out.println("3 tablero mota dituzue:");
 		System.out.println("	1 - 5x5koa");
 		System.out.println("	2 - 8x8koa");
@@ -188,6 +191,33 @@ public class Jokoa {
 			Tableroa.setTamaina(12);
 			Tableroa.setMinakop(15);
 		}
+	}
+	
+	public int jokatzekoModuaEskatu() {
+		System.out.println("Jokatzeko 2 modu daude:");
+		System.out.println("	1 - Jokalaria vs Ordenagailua");
+		System.out.println("	2 - Jokalaria vs Jokalaria");
+		
+		boolean ezAmaitu = true;
+		int n = 0;
+		do {
+			try {
+				System.out.println("\nAukeratu aukera bat: ");
+				n = sc.nextInt();	
+				if(n > 2 || n < 1){
+					throw new TartetikKanpoException("Zenbakia ez dago tartean.");
+				}
+				ezAmaitu = false;
+			} catch (InputMismatchException e) {
+				sc.nextLine();
+				n = 0;
+				System.out.println("Ez duzu zenbaki oso bat sartu.");
+			}catch (TartetikKanpoException e) {
+				System.out.println(e.getMessage());
+			}
+		} while (ezAmaitu);
+		
+		return n;
 	}
 
 	public Jokalaria partidarenIrabazlea() {

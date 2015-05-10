@@ -71,10 +71,10 @@ public class LaukiaTest {
 
 	@Test
 	public void testSetBegiratuta() {
-		assertTrue(laukia.getBegiratuta() == false);
+		assertFalse(laukia.getBegiratuta());
 		
 		laukia.setBegiratuta(true);
-		assertTrue(laukia.getBegiratuta() == true);
+		assertTrue(laukia.getBegiratuta());
 	}
 
 	@Test
@@ -87,7 +87,7 @@ public class LaukiaTest {
 
 	@Test
 	public void testSetMina() {
-		assertTrue(laukia.getMina() == false);
+		assertFalse(laukia.getMina());
 		
 		laukia.setMina(true);
 		assertTrue(laukia.getMina() == true);
