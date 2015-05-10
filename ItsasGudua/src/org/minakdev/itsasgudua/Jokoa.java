@@ -255,10 +255,12 @@ public class Jokoa {
     		sc.nextLine();
     	}
     	
-    	
+    	kontsolaGarbitu(40);
     	System.out.println("Jokoa amaitu egin da.");
+    	Jokoa.denboraItxaron(2);
     	System.out.printf("Jokoaren irabazlea %s da", irabazlea.getIzena());
     	System.out.println();
+    	Jokoa.denboraItxaron(2);
     	
     	this.jokalarienEgoeraInprimatu();
     	
@@ -306,9 +308,11 @@ public class Jokoa {
     		sc.nextLine();
     	}
     	
-    	
+    	kontsolaGarbitu(40);
     	System.out.println("Jokoa amaitu egin da.");
+    	Jokoa.denboraItxaron(2);
     	System.out.printf("Jokoaren irabazlea %s da", irabazlea.getIzena());
+    	Jokoa.denboraItxaron(2);
     	System.out.println();
     	
     	this.jokalarienEgoeraInprimatu();
