@@ -467,7 +467,7 @@ public class Jokalaria {
 				}
 				System.out.println("\nTableroa ondo dago?    B/E");
 				char baiEz=this.baiEz();
-				if(baiEz == 'B'){
+				if(baiEz == 'B' || baiEz == 'b'){
 					amaitu=true;
 				}
 				else{
@@ -513,7 +513,7 @@ public class Jokalaria {
 
 		while (!zuzena) {
 			s = sc.next();
-			if (s.equals("E") || s.equals("B")) {
+			if (s.equals("E") || s.equals("B")	|| s.equals("b")	|| s.equals("e")) {
 				zuzena = true;
 			} else {
 				System.out.println("Sartu duzuna ez da egokia.");
