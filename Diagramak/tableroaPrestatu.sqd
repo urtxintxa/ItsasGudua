@@ -768,8 +768,8 @@
             <constraint>
               <height>89</height>
               <width>144</width>
-              <x>661</x>
-              <y>350</y>
+              <x>618</x>
+              <y>387</y>
             </constraint>
             <sourceConnections/>
             <targetConnections/>
@@ -833,8 +833,8 @@ itsasontzi kopuru aldiz</content>
             <targetConnections/>
             <children/>
             <filterProperty/>
-            <content>loop koordenatu egokiak izan arte</content>
-            <old></old>
+            <content>loop koordenatu zuzenak izan arte</content>
+            <old>loop koordenatu egokiak izan arte</old>
           </net.java.amateras.uml.model.NoteModel>
           <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../net.java.amateras.uml.sequencediagram.model.LifeLineModel[2]/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[2]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel[2]/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[4]/target"/>
         </children>
@@ -2209,7 +2209,7 @@ itsasontzi kopuru aldiz</content>
             </listeners>
             <constraint>
               <height>43</height>
-              <width>343</width>
+              <width>293</width>
               <x>368</x>
               <y>1391</y>
             </constraint>
@@ -7920,8 +7920,8 @@ itsasontzi kopuru aldiz</content>
             <constraint>
               <height>38</height>
               <width>212</width>
-              <x>363</x>
-              <y>3546</y>
+              <x>375</x>
+              <y>3700</y>
             </constraint>
             <sourceConnections/>
             <targetConnections/>
@@ -8020,9 +8020,9 @@ E=new eta berriro hasi</old>
       </listeners>
       <constraint>
         <height>33</height>
-        <width>433</width>
-        <x>361</x>
-        <y>3104</y>
+        <width>378</width>
+        <x>349</x>
+        <y>3143</y>
       </constraint>
       <sourceConnections/>
       <targetConnections/>
@@ -11512,8 +11512,8 @@ E=new eta berriro hasi</old>
       <constraint>
         <height>61</height>
         <width>269</width>
-        <x>388</x>
-        <y>2159</y>
+        <x>372</x>
+        <y>2204</y>
       </constraint>
       <sourceConnections/>
       <targetConnections/>
@@ -11540,7 +11540,7 @@ E=new eta berriro hasi</old>
         <height>115</height>
         <width>10</width>
         <x>319</x>
-        <y>3194</y>
+        <y>3236</y>
       </constraint>
       <sourceConnections>
         <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
@@ -11572,8 +11572,8 @@ E=new eta berriro hasi</old>
             <constraint>
               <height>59</height>
               <width>10</width>
-              <x>884</x>
-              <y>3240</y>
+              <x>772</x>
+              <y>3282</y>
             </constraint>
             <sourceConnections>
               <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
@@ -11605,8 +11605,8 @@ E=new eta berriro hasi</old>
                   <constraint>
                     <height>30</height>
                     <width>10</width>
-                    <x>1102</x>
-                    <y>3259</y>
+                    <x>955</x>
+                    <y>3301</y>
                   </constraint>
                   <sourceConnections/>
                   <targetConnections>
@@ -11629,9 +11629,9 @@ E=new eta berriro hasi</old>
                       </java.beans.PropertyChangeSupport>
                     </listeners>
                     <constraint>
-                      <height>3752</height>
+                      <height>3911</height>
                       <width>5</width>
-                      <x>1107</x>
+                      <x>960</x>
                       <y>20</y>
                     </constraint>
                     <sourceConnections/>
@@ -11654,7 +11654,7 @@ E=new eta berriro hasi</old>
                         <constraint>
                           <height>30</height>
                           <width>10</width>
-                          <x>1102</x>
+                          <x>955</x>
                           <y>1202</y>
                         </constraint>
                         <sourceConnections>
@@ -11687,7 +11687,7 @@ E=new eta berriro hasi</old>
                               <constraint>
                                 <height>54</height>
                                 <width>10</width>
-                                <x>884</x>
+                                <x>772</x>
                                 <y>1188</y>
                               </constraint>
                               <sourceConnections>
@@ -11753,7 +11753,7 @@ E=new eta berriro hasi</old>
                                           <constraint>
                                             <height>30</height>
                                             <width>10</width>
-                                            <x>884</x>
+                                            <x>772</x>
                                             <y>1119</y>
                                           </constraint>
                                           <sourceConnections>
@@ -11795,9 +11795,9 @@ E=new eta berriro hasi</old>
                                               </java.beans.PropertyChangeSupport>
                                             </listeners>
                                             <constraint>
-                                              <height>3752</height>
+                                              <height>3911</height>
                                               <width>5</width>
-                                              <x>889</x>
+                                              <x>777</x>
                                               <y>20</y>
                                             </constraint>
                                             <sourceConnections/>
@@ -11820,7 +11820,7 @@ E=new eta berriro hasi</old>
                                                 <constraint>
                                                   <height>56</height>
                                                   <width>10</width>
-                                                  <x>884</x>
+                                                  <x>772</x>
                                                   <y>1382</y>
                                                 </constraint>
                                                 <sourceConnections>
@@ -11853,7 +11853,7 @@ E=new eta berriro hasi</old>
                                                       <constraint>
                                                         <height>30</height>
                                                         <width>10</width>
-                                                        <x>1102</x>
+                                                        <x>955</x>
                                                         <y>1398</y>
                                                       </constraint>
                                                       <sourceConnections/>
@@ -11961,7 +11961,7 @@ E=new eta berriro hasi</old>
                                                                 </java.beans.PropertyChangeSupport>
                                                               </listeners>
                                                               <constraint>
-                                                                <height>3752</height>
+                                                                <height>3911</height>
                                                                 <width>5</width>
                                                                 <x>309</x>
                                                                 <y>20</y>
@@ -11984,7 +11984,7 @@ E=new eta berriro hasi</old>
                                                                     </java.beans.PropertyChangeSupport>
                                                                   </listeners>
                                                                   <constraint>
-                                                                    <height>3593</height>
+                                                                    <height>3752</height>
                                                                     <width>10</width>
                                                                     <x>304</x>
                                                                     <y>139</y>
@@ -12069,7 +12069,7 @@ E=new eta berriro hasi</old>
                                                                           </java.beans.PropertyChangeSupport>
                                                                         </listeners>
                                                                         <constraint>
-                                                                          <height>1432</height>
+                                                                          <height>1486</height>
                                                                           <width>10</width>
                                                                           <x>309</x>
                                                                           <y>342</y>
@@ -12104,8 +12104,8 @@ E=new eta berriro hasi</old>
                                                                               <constraint>
                                                                                 <height>30</height>
                                                                                 <width>10</width>
-                                                                                <x>628</x>
-                                                                                <y>378</y>
+                                                                                <x>576</x>
+                                                                                <y>627</y>
                                                                               </constraint>
                                                                               <sourceConnections>
                                                                                 <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
@@ -12146,9 +12146,9 @@ E=new eta berriro hasi</old>
                                                                                   </java.beans.PropertyChangeSupport>
                                                                                 </listeners>
                                                                                 <constraint>
-                                                                                  <height>3752</height>
+                                                                                  <height>3911</height>
                                                                                   <width>5</width>
-                                                                                  <x>633</x>
+                                                                                  <x>581</x>
                                                                                   <y>20</y>
                                                                                 </constraint>
                                                                                 <sourceConnections/>
@@ -12172,7 +12172,7 @@ E=new eta berriro hasi</old>
                                                                                     <constraint>
                                                                                       <height>30</height>
                                                                                       <width>10</width>
-                                                                                      <x>628</x>
+                                                                                      <x>576</x>
                                                                                       <y>764</y>
                                                                                     </constraint>
                                                                                     <sourceConnections>
@@ -12237,8 +12237,8 @@ E=new eta berriro hasi</old>
                                                                                     <constraint>
                                                                                       <height>30</height>
                                                                                       <width>10</width>
-                                                                                      <x>628</x>
-                                                                                      <y>454</y>
+                                                                                      <x>576</x>
+                                                                                      <y>402</y>
                                                                                     </constraint>
                                                                                     <sourceConnections>
                                                                                       <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
@@ -12276,8 +12276,8 @@ E=new eta berriro hasi</old>
                                                                                         <bendpoints/>
                                                                                         <name>getTxalupaTamaina(): int</name>
                                                                                         <direction>true</direction>
-                                                                                        <order>5</order>
-                                                                                        <oldOrder>5</oldOrder>
+                                                                                        <order>4</order>
+                                                                                        <oldOrder>4</oldOrder>
                                                                                       </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                     </targetConnections>
                                                                                     <children/>
@@ -12302,8 +12302,8 @@ E=new eta berriro hasi</old>
                                                                                     <constraint>
                                                                                       <height>30</height>
                                                                                       <width>10</width>
-                                                                                      <x>628</x>
-                                                                                      <y>533</y>
+                                                                                      <x>576</x>
+                                                                                      <y>471</y>
                                                                                     </constraint>
                                                                                     <sourceConnections>
                                                                                       <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
@@ -12341,8 +12341,8 @@ E=new eta berriro hasi</old>
                                                                                         <bendpoints/>
                                                                                         <name>getOntziaTamaina(): int</name>
                                                                                         <direction>true</direction>
-                                                                                        <order>6</order>
-                                                                                        <oldOrder>6</oldOrder>
+                                                                                        <order>5</order>
+                                                                                        <oldOrder>5</oldOrder>
                                                                                       </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                     </targetConnections>
                                                                                     <children/>
@@ -12367,8 +12367,8 @@ E=new eta berriro hasi</old>
                                                                                     <constraint>
                                                                                       <height>30</height>
                                                                                       <width>10</width>
-                                                                                      <x>628</x>
-                                                                                      <y>609</y>
+                                                                                      <x>576</x>
+                                                                                      <y>545</y>
                                                                                     </constraint>
                                                                                     <sourceConnections>
                                                                                       <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
@@ -12406,8 +12406,8 @@ E=new eta berriro hasi</old>
                                                                                         <bendpoints/>
                                                                                         <name>getUrpekariaTamaina(): int</name>
                                                                                         <direction>true</direction>
-                                                                                        <order>7</order>
-                                                                                        <oldOrder>7</oldOrder>
+                                                                                        <order>6</order>
+                                                                                        <oldOrder>6</oldOrder>
                                                                                       </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                     </targetConnections>
                                                                                     <children/>
@@ -12432,8 +12432,8 @@ E=new eta berriro hasi</old>
                                                                                     <constraint>
                                                                                       <height>30</height>
                                                                                       <width>10</width>
-                                                                                      <x>628</x>
-                                                                                      <y>1928</y>
+                                                                                      <x>576</x>
+                                                                                      <y>1970</y>
                                                                                     </constraint>
                                                                                     <sourceConnections>
                                                                                       <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
@@ -12463,10 +12463,10 @@ E=new eta berriro hasi</old>
                                                                                             </java.beans.PropertyChangeSupport>
                                                                                           </listeners>
                                                                                           <constraint>
-                                                                                            <height>1612</height>
+                                                                                            <height>1687</height>
                                                                                             <width>10</width>
                                                                                             <x>309</x>
-                                                                                            <y>1895</y>
+                                                                                            <y>1937</y>
                                                                                           </constraint>
                                                                                           <sourceConnections>
                                                                                             <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
@@ -12484,71 +12484,6 @@ E=new eta berriro hasi</old>
                                                                                               <target class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../../../../.."/>
                                                                                               <bendpoints/>
                                                                                               <name>getTxalupaTamaina(): int</name>
-                                                                                              <direction>true</direction>
-                                                                                              <order>26</order>
-                                                                                              <oldOrder>26</oldOrder>
-                                                                                            </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
-                                                                                            <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
-                                                                                              <showIcon>true</showIcon>
-                                                                                              <listeners serialization="custom">
-                                                                                                <java.beans.PropertyChangeSupport>
-                                                                                                  <default>
-                                                                                                    <source class="net.java.amateras.uml.sequencediagram.model.SyncMessageModel" reference="../../../.."/>
-                                                                                                    <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
-                                                                                                  </default>
-                                                                                                  <null/>
-                                                                                                </java.beans.PropertyChangeSupport>
-                                                                                              </listeners>
-                                                                                              <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../.."/>
-                                                                                              <target class="net.java.amateras.uml.sequencediagram.model.ActivationModel">
-                                                                                                <backgroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../backgroundColor"/>
-                                                                                                <foregroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../foregroundColor"/>
-                                                                                                <showIcon>true</showIcon>
-                                                                                                <parent class="net.java.amateras.uml.sequencediagram.model.InteractionModel" reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../.."/>
-                                                                                                <listeners serialization="custom">
-                                                                                                  <java.beans.PropertyChangeSupport>
-                                                                                                    <default>
-                                                                                                      <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../../.."/>
-                                                                                                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
-                                                                                                    </default>
-                                                                                                    <null/>
-                                                                                                  </java.beans.PropertyChangeSupport>
-                                                                                                </listeners>
-                                                                                                <constraint>
-                                                                                                  <height>30</height>
-                                                                                                  <width>10</width>
-                                                                                                  <x>628</x>
-                                                                                                  <y>1998</y>
-                                                                                                </constraint>
-                                                                                                <sourceConnections>
-                                                                                                  <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
-                                                                                                    <showIcon>true</showIcon>
-                                                                                                    <listeners serialization="custom">
-                                                                                                      <java.beans.PropertyChangeSupport>
-                                                                                                        <default>
-                                                                                                          <source class="net.java.amateras.uml.sequencediagram.model.ReturnMessageModel" reference="../../../.."/>
-                                                                                                          <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
-                                                                                                        </default>
-                                                                                                        <null/>
-                                                                                                      </java.beans.PropertyChangeSupport>
-                                                                                                    </listeners>
-                                                                                                    <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../.."/>
-                                                                                                    <target class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../../../../.."/>
-                                                                                                    <bendpoints/>
-                                                                                                    <name></name>
-                                                                                                    <direction>false</direction>
-                                                                                                  </net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
-                                                                                                </sourceConnections>
-                                                                                                <targetConnections>
-                                                                                                  <net.java.amateras.uml.sequencediagram.model.SyncMessageModel reference="../../.."/>
-                                                                                                </targetConnections>
-                                                                                                <children/>
-                                                                                                <filterProperty/>
-                                                                                                <ownerLine reference="../../../../../../../../.."/>
-                                                                                                <movable>true</movable>
-                                                                                              </target>
-                                                                                              <bendpoints/>
-                                                                                              <name>getOntziaTamaina(): int</name>
                                                                                               <direction>true</direction>
                                                                                               <order>27</order>
                                                                                               <oldOrder>27</oldOrder>
@@ -12582,8 +12517,73 @@ E=new eta berriro hasi</old>
                                                                                                 <constraint>
                                                                                                   <height>30</height>
                                                                                                   <width>10</width>
-                                                                                                  <x>628</x>
-                                                                                                  <y>2071</y>
+                                                                                                  <x>576</x>
+                                                                                                  <y>2040</y>
+                                                                                                </constraint>
+                                                                                                <sourceConnections>
+                                                                                                  <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
+                                                                                                    <showIcon>true</showIcon>
+                                                                                                    <listeners serialization="custom">
+                                                                                                      <java.beans.PropertyChangeSupport>
+                                                                                                        <default>
+                                                                                                          <source class="net.java.amateras.uml.sequencediagram.model.ReturnMessageModel" reference="../../../.."/>
+                                                                                                          <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                                                                                                        </default>
+                                                                                                        <null/>
+                                                                                                      </java.beans.PropertyChangeSupport>
+                                                                                                    </listeners>
+                                                                                                    <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../.."/>
+                                                                                                    <target class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../../../../.."/>
+                                                                                                    <bendpoints/>
+                                                                                                    <name></name>
+                                                                                                    <direction>false</direction>
+                                                                                                  </net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
+                                                                                                </sourceConnections>
+                                                                                                <targetConnections>
+                                                                                                  <net.java.amateras.uml.sequencediagram.model.SyncMessageModel reference="../../.."/>
+                                                                                                </targetConnections>
+                                                                                                <children/>
+                                                                                                <filterProperty/>
+                                                                                                <ownerLine reference="../../../../../../../../.."/>
+                                                                                                <movable>true</movable>
+                                                                                              </target>
+                                                                                              <bendpoints/>
+                                                                                              <name>getOntziaTamaina(): int</name>
+                                                                                              <direction>true</direction>
+                                                                                              <order>28</order>
+                                                                                              <oldOrder>28</oldOrder>
+                                                                                            </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
+                                                                                            <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
+                                                                                              <showIcon>true</showIcon>
+                                                                                              <listeners serialization="custom">
+                                                                                                <java.beans.PropertyChangeSupport>
+                                                                                                  <default>
+                                                                                                    <source class="net.java.amateras.uml.sequencediagram.model.SyncMessageModel" reference="../../../.."/>
+                                                                                                    <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                                                                                                  </default>
+                                                                                                  <null/>
+                                                                                                </java.beans.PropertyChangeSupport>
+                                                                                              </listeners>
+                                                                                              <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../.."/>
+                                                                                              <target class="net.java.amateras.uml.sequencediagram.model.ActivationModel">
+                                                                                                <backgroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../backgroundColor"/>
+                                                                                                <foregroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../foregroundColor"/>
+                                                                                                <showIcon>true</showIcon>
+                                                                                                <parent class="net.java.amateras.uml.sequencediagram.model.InteractionModel" reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../.."/>
+                                                                                                <listeners serialization="custom">
+                                                                                                  <java.beans.PropertyChangeSupport>
+                                                                                                    <default>
+                                                                                                      <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../../.."/>
+                                                                                                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                                                                                                    </default>
+                                                                                                    <null/>
+                                                                                                  </java.beans.PropertyChangeSupport>
+                                                                                                </listeners>
+                                                                                                <constraint>
+                                                                                                  <height>30</height>
+                                                                                                  <width>10</width>
+                                                                                                  <x>576</x>
+                                                                                                  <y>2113</y>
                                                                                                 </constraint>
                                                                                                 <sourceConnections>
                                                                                                   <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
@@ -12615,8 +12615,8 @@ E=new eta berriro hasi</old>
                                                                                               <bendpoints/>
                                                                                               <name>getUrpekariaTamaina(): int</name>
                                                                                               <direction>true</direction>
-                                                                                              <order>28</order>
-                                                                                              <oldOrder>28</oldOrder>
+                                                                                              <order>29</order>
+                                                                                              <oldOrder>29</oldOrder>
                                                                                             </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                             <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                               <backgroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../backgroundColor"/>
@@ -12650,7 +12650,7 @@ E=new eta berriro hasi</old>
                                                                                                   <height>30</height>
                                                                                                   <width>10</width>
                                                                                                   <x>314</x>
-                                                                                                  <y>2168</y>
+                                                                                                  <y>2210</y>
                                                                                                 </constraint>
                                                                                                 <sourceConnections/>
                                                                                                 <targetConnections>
@@ -12665,8 +12665,8 @@ E=new eta berriro hasi</old>
                                                                                               <bendpoints/>
                                                                                               <name>hautatuItsasontzia(pTxalupaKop: int, pUrpekariKop: int, pOntziKop: int): int</name>
                                                                                               <direction>true</direction>
-                                                                                              <order>29</order>
-                                                                                              <oldOrder>29</oldOrder>
+                                                                                              <order>30</order>
+                                                                                              <oldOrder>30</oldOrder>
                                                                                             </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                             <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                               <showIcon>true</showIcon>
@@ -12697,8 +12697,8 @@ E=new eta berriro hasi</old>
                                                                                                 <constraint>
                                                                                                   <height>30</height>
                                                                                                   <width>10</width>
-                                                                                                  <x>628</x>
-                                                                                                  <y>2266</y>
+                                                                                                  <x>576</x>
+                                                                                                  <y>2308</y>
                                                                                                 </constraint>
                                                                                                 <sourceConnections>
                                                                                                   <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
@@ -12730,8 +12730,8 @@ E=new eta berriro hasi</old>
                                                                                               <bendpoints/>
                                                                                               <name>new Itsasontzia(pEzHondoratu: int, pAntiMina: boolean)</name>
                                                                                               <direction>true</direction>
-                                                                                              <order>30</order>
-                                                                                              <oldOrder>30</oldOrder>
+                                                                                              <order>31</order>
+                                                                                              <oldOrder>31</oldOrder>
                                                                                             </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                             <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                               <backgroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../backgroundColor"/>
@@ -12765,7 +12765,7 @@ E=new eta berriro hasi</old>
                                                                                                   <height>949</height>
                                                                                                   <width>10</width>
                                                                                                   <x>314</x>
-                                                                                                  <y>2370</y>
+                                                                                                  <y>2412</y>
                                                                                                 </constraint>
                                                                                                 <sourceConnections>
                                                                                                   <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
@@ -12800,7 +12800,7 @@ E=new eta berriro hasi</old>
                                                                                                         <height>30</height>
                                                                                                         <width>10</width>
                                                                                                         <x>319</x>
-                                                                                                        <y>2480</y>
+                                                                                                        <y>2522</y>
                                                                                                       </constraint>
                                                                                                       <sourceConnections/>
                                                                                                       <targetConnections>
@@ -12815,8 +12815,8 @@ E=new eta berriro hasi</old>
                                                                                                     <bendpoints/>
                                                                                                     <name>guztizInprimatu(): void</name>
                                                                                                     <direction>true</direction>
-                                                                                                    <order>33</order>
-                                                                                                    <oldOrder>33</oldOrder>
+                                                                                                    <order>34</order>
+                                                                                                    <oldOrder>34</oldOrder>
                                                                                                   </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                   <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                     <showIcon>true</showIcon>
@@ -12847,8 +12847,8 @@ E=new eta berriro hasi</old>
                                                                                                       <constraint>
                                                                                                         <height>30</height>
                                                                                                         <width>10</width>
-                                                                                                        <x>628</x>
-                                                                                                        <y>2401</y>
+                                                                                                        <x>576</x>
+                                                                                                        <y>2443</y>
                                                                                                       </constraint>
                                                                                                       <sourceConnections>
                                                                                                         <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
@@ -12880,8 +12880,8 @@ E=new eta berriro hasi</old>
                                                                                                     <bendpoints/>
                                                                                                     <name>getHondoratuGabekoZatiKop(): int</name>
                                                                                                     <direction>true</direction>
-                                                                                                    <order>32</order>
-                                                                                                    <oldOrder>32</oldOrder>
+                                                                                                    <order>33</order>
+                                                                                                    <oldOrder>33</oldOrder>
                                                                                                   </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                   <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                     <backgroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../backgroundColor"/>
@@ -12915,7 +12915,7 @@ E=new eta berriro hasi</old>
                                                                                                         <height>30</height>
                                                                                                         <width>10</width>
                                                                                                         <x>319</x>
-                                                                                                        <y>2555</y>
+                                                                                                        <y>2597</y>
                                                                                                       </constraint>
                                                                                                       <sourceConnections/>
                                                                                                       <targetConnections>
@@ -12929,56 +12929,6 @@ E=new eta berriro hasi</old>
                                                                                                     </target>
                                                                                                     <bendpoints/>
                                                                                                     <name>eskatuX(): int</name>
-                                                                                                    <direction>true</direction>
-                                                                                                    <order>34</order>
-                                                                                                    <oldOrder>34</oldOrder>
-                                                                                                  </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
-                                                                                                  <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
-                                                                                                    <backgroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../backgroundColor"/>
-                                                                                                    <foregroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../foregroundColor"/>
-                                                                                                    <showIcon>true</showIcon>
-                                                                                                    <listeners serialization="custom">
-                                                                                                      <java.beans.PropertyChangeSupport>
-                                                                                                        <default>
-                                                                                                          <source class="net.java.amateras.uml.sequencediagram.model.SyncMessageModel" reference="../../../.."/>
-                                                                                                          <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
-                                                                                                        </default>
-                                                                                                        <null/>
-                                                                                                      </java.beans.PropertyChangeSupport>
-                                                                                                    </listeners>
-                                                                                                    <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../.."/>
-                                                                                                    <target class="net.java.amateras.uml.sequencediagram.model.ActivationModel">
-                                                                                                      <backgroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../backgroundColor"/>
-                                                                                                      <foregroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../foregroundColor"/>
-                                                                                                      <showIcon>true</showIcon>
-                                                                                                      <parent class="net.java.amateras.uml.sequencediagram.model.InteractionModel" reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../.."/>
-                                                                                                      <listeners serialization="custom">
-                                                                                                        <java.beans.PropertyChangeSupport>
-                                                                                                          <default>
-                                                                                                            <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../../.."/>
-                                                                                                            <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
-                                                                                                          </default>
-                                                                                                          <null/>
-                                                                                                        </java.beans.PropertyChangeSupport>
-                                                                                                      </listeners>
-                                                                                                      <constraint>
-                                                                                                        <height>30</height>
-                                                                                                        <width>10</width>
-                                                                                                        <x>319</x>
-                                                                                                        <y>2633</y>
-                                                                                                      </constraint>
-                                                                                                      <sourceConnections/>
-                                                                                                      <targetConnections>
-                                                                                                        <net.java.amateras.uml.sequencediagram.model.SyncMessageModel reference="../../.."/>
-                                                                                                      </targetConnections>
-                                                                                                      <children/>
-                                                                                                      <filterProperty/>
-                                                                                                      <owner reference="../../../.."/>
-                                                                                                      <ownerLine reference="../../../../../../../../../../../../../../../../../../../../.."/>
-                                                                                                      <movable>true</movable>
-                                                                                                    </target>
-                                                                                                    <bendpoints/>
-                                                                                                    <name>eskatuY(): int</name>
                                                                                                     <direction>true</direction>
                                                                                                     <order>35</order>
                                                                                                     <oldOrder>35</oldOrder>
@@ -13015,7 +12965,7 @@ E=new eta berriro hasi</old>
                                                                                                         <height>30</height>
                                                                                                         <width>10</width>
                                                                                                         <x>319</x>
-                                                                                                        <y>2712</y>
+                                                                                                        <y>2675</y>
                                                                                                       </constraint>
                                                                                                       <sourceConnections/>
                                                                                                       <targetConnections>
@@ -13028,7 +12978,7 @@ E=new eta berriro hasi</old>
                                                                                                       <movable>true</movable>
                                                                                                     </target>
                                                                                                     <bendpoints/>
-                                                                                                    <name>eskatuHorizontalBertikal(): char</name>
+                                                                                                    <name>eskatuY(): int</name>
                                                                                                     <direction>true</direction>
                                                                                                     <order>36</order>
                                                                                                     <oldOrder>36</oldOrder>
@@ -13062,10 +13012,60 @@ E=new eta berriro hasi</old>
                                                                                                         </java.beans.PropertyChangeSupport>
                                                                                                       </listeners>
                                                                                                       <constraint>
+                                                                                                        <height>30</height>
+                                                                                                        <width>10</width>
+                                                                                                        <x>319</x>
+                                                                                                        <y>2754</y>
+                                                                                                      </constraint>
+                                                                                                      <sourceConnections/>
+                                                                                                      <targetConnections>
+                                                                                                        <net.java.amateras.uml.sequencediagram.model.SyncMessageModel reference="../../.."/>
+                                                                                                      </targetConnections>
+                                                                                                      <children/>
+                                                                                                      <filterProperty/>
+                                                                                                      <owner reference="../../../.."/>
+                                                                                                      <ownerLine reference="../../../../../../../../../../../../../../../../../../../../.."/>
+                                                                                                      <movable>true</movable>
+                                                                                                    </target>
+                                                                                                    <bendpoints/>
+                                                                                                    <name>eskatuHorizontalBertikal(): char</name>
+                                                                                                    <direction>true</direction>
+                                                                                                    <order>37</order>
+                                                                                                    <oldOrder>37</oldOrder>
+                                                                                                  </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
+                                                                                                  <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
+                                                                                                    <backgroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../backgroundColor"/>
+                                                                                                    <foregroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../foregroundColor"/>
+                                                                                                    <showIcon>true</showIcon>
+                                                                                                    <listeners serialization="custom">
+                                                                                                      <java.beans.PropertyChangeSupport>
+                                                                                                        <default>
+                                                                                                          <source class="net.java.amateras.uml.sequencediagram.model.SyncMessageModel" reference="../../../.."/>
+                                                                                                          <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                                                                                                        </default>
+                                                                                                        <null/>
+                                                                                                      </java.beans.PropertyChangeSupport>
+                                                                                                    </listeners>
+                                                                                                    <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../.."/>
+                                                                                                    <target class="net.java.amateras.uml.sequencediagram.model.ActivationModel">
+                                                                                                      <backgroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../backgroundColor"/>
+                                                                                                      <foregroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../foregroundColor"/>
+                                                                                                      <showIcon>true</showIcon>
+                                                                                                      <parent class="net.java.amateras.uml.sequencediagram.model.InteractionModel" reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../.."/>
+                                                                                                      <listeners serialization="custom">
+                                                                                                        <java.beans.PropertyChangeSupport>
+                                                                                                          <default>
+                                                                                                            <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../../.."/>
+                                                                                                            <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                                                                                                          </default>
+                                                                                                          <null/>
+                                                                                                        </java.beans.PropertyChangeSupport>
+                                                                                                      </listeners>
+                                                                                                      <constraint>
                                                                                                         <height>181</height>
                                                                                                         <width>10</width>
                                                                                                         <x>319</x>
-                                                                                                        <y>2802</y>
+                                                                                                        <y>2844</y>
                                                                                                       </constraint>
                                                                                                       <sourceConnections>
                                                                                                         <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
@@ -13097,8 +13097,8 @@ E=new eta berriro hasi</old>
                                                                                                             <constraint>
                                                                                                               <height>30</height>
                                                                                                               <width>10</width>
-                                                                                                              <x>884</x>
-                                                                                                              <y>2839</y>
+                                                                                                              <x>772</x>
+                                                                                                              <y>2881</y>
                                                                                                             </constraint>
                                                                                                             <sourceConnections>
                                                                                                               <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
@@ -13130,8 +13130,8 @@ E=new eta berriro hasi</old>
                                                                                                           <bendpoints/>
                                                                                                           <name>koordenatuEgokiak(pX: int, pY: int): boolean</name>
                                                                                                           <direction>true</direction>
-                                                                                                          <order>38</order>
-                                                                                                          <oldOrder>38</oldOrder>
+                                                                                                          <order>39</order>
+                                                                                                          <oldOrder>39</oldOrder>
                                                                                                         </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                         <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                           <showIcon>true</showIcon>
@@ -13162,8 +13162,8 @@ E=new eta berriro hasi</old>
                                                                                                             <constraint>
                                                                                                               <height>54</height>
                                                                                                               <width>10</width>
-                                                                                                              <x>884</x>
-                                                                                                              <y>2919</y>
+                                                                                                              <x>772</x>
+                                                                                                              <y>2961</y>
                                                                                                             </constraint>
                                                                                                             <sourceConnections>
                                                                                                               <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
@@ -13212,8 +13212,8 @@ E=new eta berriro hasi</old>
                                                                                                                   <constraint>
                                                                                                                     <height>30</height>
                                                                                                                     <width>10</width>
-                                                                                                                    <x>1102</x>
-                                                                                                                    <y>2933</y>
+                                                                                                                    <x>955</x>
+                                                                                                                    <y>2975</y>
                                                                                                                   </constraint>
                                                                                                                   <sourceConnections>
                                                                                                                     <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
@@ -13245,8 +13245,8 @@ E=new eta berriro hasi</old>
                                                                                                                 <bendpoints/>
                                                                                                                 <name>getItsasontzia(): Itsasontzia</name>
                                                                                                                 <direction>true</direction>
-                                                                                                                <order>40</order>
-                                                                                                                <oldOrder>40</oldOrder>
+                                                                                                                <order>41</order>
+                                                                                                                <oldOrder>41</oldOrder>
                                                                                                               </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                             </sourceConnections>
                                                                                                             <targetConnections>
@@ -13261,8 +13261,8 @@ E=new eta berriro hasi</old>
                                                                                                           <bendpoints/>
                                                                                                           <name>itsasontzirikDago(pX: int, pY: int): Itsasontzia</name>
                                                                                                           <direction>true</direction>
-                                                                                                          <order>39</order>
-                                                                                                          <oldOrder>39</oldOrder>
+                                                                                                          <order>40</order>
+                                                                                                          <oldOrder>40</oldOrder>
                                                                                                         </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                       </sourceConnections>
                                                                                                       <targetConnections>
@@ -13279,8 +13279,8 @@ E=new eta berriro hasi</old>
                                                                                                     <bendpoints/>
                                                                                                     <name>koordenatuZuzenak(pX: int, pY: int, pHorBer: char, pTamaina: int): boolean</name>
                                                                                                     <direction>true</direction>
-                                                                                                    <order>37</order>
-                                                                                                    <oldOrder>37</oldOrder>
+                                                                                                    <order>38</order>
+                                                                                                    <oldOrder>38</oldOrder>
                                                                                                   </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                   <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                     <showIcon>true</showIcon>
@@ -13311,8 +13311,8 @@ E=new eta berriro hasi</old>
                                                                                                       <constraint>
                                                                                                         <height>30</height>
                                                                                                         <width>10</width>
-                                                                                                        <x>1298</x>
-                                                                                                        <y>3016</y>
+                                                                                                        <x>1163</x>
+                                                                                                        <y>3058</y>
                                                                                                       </constraint>
                                                                                                       <sourceConnections/>
                                                                                                       <targetConnections>
@@ -13335,9 +13335,9 @@ E=new eta berriro hasi</old>
                                                                                                           </java.beans.PropertyChangeSupport>
                                                                                                         </listeners>
                                                                                                         <constraint>
-                                                                                                          <height>3752</height>
+                                                                                                          <height>3911</height>
                                                                                                           <width>5</width>
-                                                                                                          <x>1303</x>
+                                                                                                          <x>1168</x>
                                                                                                           <y>20</y>
                                                                                                         </constraint>
                                                                                                         <sourceConnections/>
@@ -13360,7 +13360,7 @@ E=new eta berriro hasi</old>
                                                                                                             <constraint>
                                                                                                               <height>30</height>
                                                                                                               <width>10</width>
-                                                                                                              <x>1298</x>
+                                                                                                              <x>1163</x>
                                                                                                               <y>1301</y>
                                                                                                             </constraint>
                                                                                                             <sourceConnections/>
@@ -13408,8 +13408,8 @@ E=new eta berriro hasi</old>
                                                                                                             <constraint>
                                                                                                               <height>30</height>
                                                                                                               <width>10</width>
-                                                                                                              <x>1298</x>
-                                                                                                              <y>3692</y>
+                                                                                                              <x>1163</x>
+                                                                                                              <y>3851</y>
                                                                                                             </constraint>
                                                                                                             <sourceConnections>
                                                                                                               <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
@@ -13447,8 +13447,8 @@ E=new eta berriro hasi</old>
                                                                                                                 <bendpoints/>
                                                                                                                 <name>new ListaItsasontziak()</name>
                                                                                                                 <direction>true</direction>
-                                                                                                                <order>52</order>
-                                                                                                                <oldOrder>52</oldOrder>
+                                                                                                                <order>54</order>
+                                                                                                                <oldOrder>53</oldOrder>
                                                                                                               </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                             </targetConnections>
                                                                                                             <children/>
@@ -13475,7 +13475,7 @@ E=new eta berriro hasi</old>
                                                                                                           <constraint>
                                                                                                             <height>-1</height>
                                                                                                             <width>113</width>
-                                                                                                            <x>1247</x>
+                                                                                                            <x>1112</x>
                                                                                                             <y>20</y>
                                                                                                           </constraint>
                                                                                                           <sourceConnections/>
@@ -13494,8 +13494,8 @@ E=new eta berriro hasi</old>
                                                                                                     <bendpoints/>
                                                                                                     <name>gehituItsasontzia(pItsasontzia: Itsasontzia): void</name>
                                                                                                     <direction>true</direction>
-                                                                                                    <order>41</order>
-                                                                                                    <oldOrder>41</oldOrder>
+                                                                                                    <order>42</order>
+                                                                                                    <oldOrder>42</oldOrder>
                                                                                                   </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                   <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                     <showIcon>true</showIcon>
@@ -13526,8 +13526,8 @@ E=new eta berriro hasi</old>
                                                                                                       <constraint>
                                                                                                         <height>56</height>
                                                                                                         <width>10</width>
-                                                                                                        <x>884</x>
-                                                                                                        <y>3090</y>
+                                                                                                        <x>772</x>
+                                                                                                        <y>3132</y>
                                                                                                       </constraint>
                                                                                                       <sourceConnections>
                                                                                                         <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
@@ -13559,8 +13559,8 @@ E=new eta berriro hasi</old>
                                                                                                             <constraint>
                                                                                                               <height>30</height>
                                                                                                               <width>10</width>
-                                                                                                              <x>1102</x>
-                                                                                                              <y>3106</y>
+                                                                                                              <x>955</x>
+                                                                                                              <y>3148</y>
                                                                                                             </constraint>
                                                                                                             <sourceConnections/>
                                                                                                             <targetConnections>
@@ -13574,8 +13574,8 @@ E=new eta berriro hasi</old>
                                                                                                           <bendpoints/>
                                                                                                           <name>setItsasontzia(pItsasontzia: Itsasontzia): void</name>
                                                                                                           <direction>true</direction>
-                                                                                                          <order>43</order>
-                                                                                                          <oldOrder>43</oldOrder>
+                                                                                                          <order>44</order>
+                                                                                                          <oldOrder>44</oldOrder>
                                                                                                         </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                       </sourceConnections>
                                                                                                       <targetConnections>
@@ -13589,8 +13589,8 @@ E=new eta berriro hasi</old>
                                                                                                     <bendpoints/>
                                                                                                     <name>itsasontziaJarri(pX: int, pY: int, pTamaina: int, pNoranzkoa: char, pItsasontzia: Itsasontzia): void</name>
                                                                                                     <direction>true</direction>
-                                                                                                    <order>42</order>
-                                                                                                    <oldOrder>42</oldOrder>
+                                                                                                    <order>43</order>
+                                                                                                    <oldOrder>43</oldOrder>
                                                                                                   </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                   <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                     <backgroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../backgroundColor"/>
@@ -13610,8 +13610,8 @@ E=new eta berriro hasi</old>
                                                                                                     <bendpoints/>
                                                                                                     <name>guztizInprimatu(): void</name>
                                                                                                     <direction>true</direction>
-                                                                                                    <order>44</order>
-                                                                                                    <oldOrder>44</oldOrder>
+                                                                                                    <order>45</order>
+                                                                                                    <oldOrder>45</oldOrder>
                                                                                                   </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                 </sourceConnections>
                                                                                                 <targetConnections>
@@ -13634,8 +13634,8 @@ E=new eta berriro hasi</old>
                                                                                               <bendpoints/>
                                                                                               <name>itsasontziaJarriEskuz(pItsasontzia: Itsasontzia): void</name>
                                                                                               <direction>true</direction>
-                                                                                              <order>31</order>
-                                                                                              <oldOrder>31</oldOrder>
+                                                                                              <order>32</order>
+                                                                                              <oldOrder>32</oldOrder>
                                                                                             </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                             <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                               <showIcon>true</showIcon>
@@ -13664,10 +13664,10 @@ E=new eta berriro hasi</old>
                                                                                                   </java.beans.PropertyChangeSupport>
                                                                                                 </listeners>
                                                                                                 <constraint>
-                                                                                                  <height>127</height>
+                                                                                                  <height>202</height>
                                                                                                   <width>10</width>
-                                                                                                  <x>884</x>
-                                                                                                  <y>3370</y>
+                                                                                                  <x>772</x>
+                                                                                                  <y>3412</y>
                                                                                                 </constraint>
                                                                                                 <sourceConnections>
                                                                                                   <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
@@ -13699,8 +13699,8 @@ E=new eta berriro hasi</old>
                                                                                                       <constraint>
                                                                                                         <height>30</height>
                                                                                                         <width>10</width>
-                                                                                                        <x>1102</x>
-                                                                                                        <y>3387</y>
+                                                                                                        <x>955</x>
+                                                                                                        <y>3429</y>
                                                                                                       </constraint>
                                                                                                       <sourceConnections>
                                                                                                         <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
@@ -13732,8 +13732,8 @@ E=new eta berriro hasi</old>
                                                                                                     <bendpoints/>
                                                                                                     <name>getMina(): boolean</name>
                                                                                                     <direction>true</direction>
-                                                                                                    <order>48</order>
-                                                                                                    <oldOrder>48</oldOrder>
+                                                                                                    <order>49</order>
+                                                                                                    <oldOrder>49</oldOrder>
                                                                                                   </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                   <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                     <showIcon>true</showIcon>
@@ -13764,8 +13764,8 @@ E=new eta berriro hasi</old>
                                                                                                       <constraint>
                                                                                                         <height>30</height>
                                                                                                         <width>10</width>
-                                                                                                        <x>1102</x>
-                                                                                                        <y>3457</y>
+                                                                                                        <x>955</x>
+                                                                                                        <y>3574</y>
                                                                                                       </constraint>
                                                                                                       <sourceConnections/>
                                                                                                       <targetConnections>
@@ -13779,13 +13779,79 @@ E=new eta berriro hasi</old>
                                                                                                     <bendpoints/>
                                                                                                     <name>setMina(pMina: boolean): void</name>
                                                                                                     <direction>true</direction>
-                                                                                                    <order>49</order>
-                                                                                                    <oldOrder>49</oldOrder>
+                                                                                                    <order>51</order>
+                                                                                                    <oldOrder>50</oldOrder>
+                                                                                                  </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
+                                                                                                  <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
+                                                                                                    <showIcon>true</showIcon>
+                                                                                                    <listeners serialization="custom">
+                                                                                                      <java.beans.PropertyChangeSupport>
+                                                                                                        <default>
+                                                                                                          <source class="net.java.amateras.uml.sequencediagram.model.SyncMessageModel" reference="../../../.."/>
+                                                                                                          <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                                                                                                        </default>
+                                                                                                        <null/>
+                                                                                                      </java.beans.PropertyChangeSupport>
+                                                                                                    </listeners>
+                                                                                                    <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../.."/>
+                                                                                                    <target class="net.java.amateras.uml.sequencediagram.model.ActivationModel">
+                                                                                                      <backgroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../backgroundColor"/>
+                                                                                                      <foregroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../foregroundColor"/>
+                                                                                                      <showIcon>true</showIcon>
+                                                                                                      <parent class="net.java.amateras.uml.sequencediagram.model.InteractionModel" reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../.."/>
+                                                                                                      <listeners serialization="custom">
+                                                                                                        <java.beans.PropertyChangeSupport>
+                                                                                                          <default>
+                                                                                                            <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../../.."/>
+                                                                                                            <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                                                                                                          </default>
+                                                                                                          <null/>
+                                                                                                        </java.beans.PropertyChangeSupport>
+                                                                                                      </listeners>
+                                                                                                      <constraint>
+                                                                                                        <height>30</height>
+                                                                                                        <width>10</width>
+                                                                                                        <x>955</x>
+                                                                                                        <y>3499</y>
+                                                                                                      </constraint>
+                                                                                                      <sourceConnections>
+                                                                                                        <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
+                                                                                                          <showIcon>true</showIcon>
+                                                                                                          <listeners serialization="custom">
+                                                                                                            <java.beans.PropertyChangeSupport>
+                                                                                                              <default>
+                                                                                                                <source class="net.java.amateras.uml.sequencediagram.model.ReturnMessageModel" reference="../../../.."/>
+                                                                                                                <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                                                                                                              </default>
+                                                                                                              <null/>
+                                                                                                            </java.beans.PropertyChangeSupport>
+                                                                                                          </listeners>
+                                                                                                          <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../.."/>
+                                                                                                          <target class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../../../../.."/>
+                                                                                                          <bendpoints/>
+                                                                                                          <name></name>
+                                                                                                          <direction>false</direction>
+                                                                                                        </net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
+                                                                                                      </sourceConnections>
+                                                                                                      <targetConnections>
+                                                                                                        <net.java.amateras.uml.sequencediagram.model.SyncMessageModel reference="../../.."/>
+                                                                                                      </targetConnections>
+                                                                                                      <children/>
+                                                                                                      <filterProperty/>
+                                                                                                      <ownerLine reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../.."/>
+                                                                                                      <movable>true</movable>
+                                                                                                    </target>
+                                                                                                    <bendpoints/>
+                                                                                                    <name>getItsasontzia(): Itsasontzia</name>
+                                                                                                    <direction>true</direction>
+                                                                                                    <order>50</order>
+                                                                                                    <oldOrder>0</oldOrder>
                                                                                                   </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                                 </sourceConnections>
                                                                                                 <targetConnections>
                                                                                                   <net.java.amateras.uml.sequencediagram.model.SyncMessageModel reference="../../.."/>
                                                                                                   <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel reference="../../sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel"/>
+                                                                                                  <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel reference="../../sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[3]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel"/>
                                                                                                 </targetConnections>
                                                                                                 <children/>
                                                                                                 <filterProperty/>
@@ -13795,8 +13861,8 @@ E=new eta berriro hasi</old>
                                                                                               <bendpoints/>
                                                                                               <name>minakJarri(): void</name>
                                                                                               <direction>true</direction>
-                                                                                              <order>47</order>
-                                                                                              <oldOrder>47</oldOrder>
+                                                                                              <order>48</order>
+                                                                                              <oldOrder>48</oldOrder>
                                                                                             </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                           </sourceConnections>
                                                                                           <targetConnections>
@@ -13818,8 +13884,8 @@ E=new eta berriro hasi</old>
                                                                                               <bendpoints/>
                                                                                               <name>tableroaPrestatuEskuz(): void</name>
                                                                                               <direction>true</direction>
-                                                                                              <order>25</order>
-                                                                                              <oldOrder>25</oldOrder>
+                                                                                              <order>26</order>
+                                                                                              <oldOrder>26</oldOrder>
                                                                                             </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                                             <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel reference="../../.."/>
                                                                                             <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel reference="../../sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[2]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel"/>
@@ -13871,7 +13937,7 @@ E=new eta berriro hasi</old>
                                                                                   <constraint>
                                                                                     <height>-1</height>
                                                                                     <width>100</width>
-                                                                                    <x>583</x>
+                                                                                    <x>531</x>
                                                                                     <y>20</y>
                                                                                   </constraint>
                                                                                   <sourceConnections/>
@@ -13890,8 +13956,8 @@ E=new eta berriro hasi</old>
                                                                             <bendpoints/>
                                                                             <name>new Itsasontzia(pEzHondoratu: int, pAntiMina: boolean)</name>
                                                                             <direction>true</direction>
-                                                                            <order>4</order>
-                                                                            <oldOrder>4</oldOrder>
+                                                                            <order>7</order>
+                                                                            <oldOrder>7</oldOrder>
                                                                           </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                           <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                             <backgroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../backgroundColor"/>
@@ -13981,7 +14047,7 @@ E=new eta berriro hasi</old>
                                                                                     <constraint>
                                                                                       <height>55</height>
                                                                                       <width>10</width>
-                                                                                      <x>884</x>
+                                                                                      <x>772</x>
                                                                                       <y>1534</y>
                                                                                     </constraint>
                                                                                     <sourceConnections>
@@ -14014,7 +14080,7 @@ E=new eta berriro hasi</old>
                                                                                           <constraint>
                                                                                             <height>30</height>
                                                                                             <width>10</width>
-                                                                                            <x>1102</x>
+                                                                                            <x>955</x>
                                                                                             <y>1549</y>
                                                                                           </constraint>
                                                                                           <sourceConnections/>
@@ -14090,9 +14156,9 @@ E=new eta berriro hasi</old>
                                                                                 </java.beans.PropertyChangeSupport>
                                                                               </listeners>
                                                                               <constraint>
-                                                                                <height>136</height>
+                                                                                <height>190</height>
                                                                                 <width>10</width>
-                                                                                <x>884</x>
+                                                                                <x>772</x>
                                                                                 <y>1628</y>
                                                                               </constraint>
                                                                               <sourceConnections>
@@ -14125,8 +14191,8 @@ E=new eta berriro hasi</old>
                                                                                     <constraint>
                                                                                       <height>30</height>
                                                                                       <width>10</width>
-                                                                                      <x>1102</x>
-                                                                                      <y>1653</y>
+                                                                                      <x>955</x>
+                                                                                      <y>1646</y>
                                                                                     </constraint>
                                                                                     <sourceConnections>
                                                                                       <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
@@ -14190,8 +14256,8 @@ E=new eta berriro hasi</old>
                                                                                     <constraint>
                                                                                       <height>30</height>
                                                                                       <width>10</width>
-                                                                                      <x>1102</x>
-                                                                                      <y>1724</y>
+                                                                                      <x>955</x>
+                                                                                      <y>1778</y>
                                                                                     </constraint>
                                                                                     <sourceConnections/>
                                                                                     <targetConnections>
@@ -14205,6 +14271,71 @@ E=new eta berriro hasi</old>
                                                                                   <bendpoints/>
                                                                                   <name>setMina(pMina: boolean): void</name>
                                                                                   <direction>true</direction>
+                                                                                  <order>25</order>
+                                                                                  <oldOrder>25</oldOrder>
+                                                                                </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
+                                                                                <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
+                                                                                  <showIcon>true</showIcon>
+                                                                                  <listeners serialization="custom">
+                                                                                    <java.beans.PropertyChangeSupport>
+                                                                                      <default>
+                                                                                        <source class="net.java.amateras.uml.sequencediagram.model.SyncMessageModel" reference="../../../.."/>
+                                                                                        <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                                                                                      </default>
+                                                                                      <null/>
+                                                                                    </java.beans.PropertyChangeSupport>
+                                                                                  </listeners>
+                                                                                  <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../.."/>
+                                                                                  <target class="net.java.amateras.uml.sequencediagram.model.ActivationModel">
+                                                                                    <backgroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../backgroundColor"/>
+                                                                                    <foregroundColor reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../foregroundColor"/>
+                                                                                    <showIcon>true</showIcon>
+                                                                                    <parent class="net.java.amateras.uml.sequencediagram.model.InteractionModel" reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../.."/>
+                                                                                    <listeners serialization="custom">
+                                                                                      <java.beans.PropertyChangeSupport>
+                                                                                        <default>
+                                                                                          <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../../.."/>
+                                                                                          <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                                                                                        </default>
+                                                                                        <null/>
+                                                                                      </java.beans.PropertyChangeSupport>
+                                                                                    </listeners>
+                                                                                    <constraint>
+                                                                                      <height>30</height>
+                                                                                      <width>10</width>
+                                                                                      <x>955</x>
+                                                                                      <y>1705</y>
+                                                                                    </constraint>
+                                                                                    <sourceConnections>
+                                                                                      <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
+                                                                                        <showIcon>true</showIcon>
+                                                                                        <listeners serialization="custom">
+                                                                                          <java.beans.PropertyChangeSupport>
+                                                                                            <default>
+                                                                                              <source class="net.java.amateras.uml.sequencediagram.model.ReturnMessageModel" reference="../../../.."/>
+                                                                                              <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                                                                                            </default>
+                                                                                            <null/>
+                                                                                          </java.beans.PropertyChangeSupport>
+                                                                                        </listeners>
+                                                                                        <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../.."/>
+                                                                                        <target class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../../../../.."/>
+                                                                                        <bendpoints/>
+                                                                                        <name></name>
+                                                                                        <direction>false</direction>
+                                                                                      </net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
+                                                                                    </sourceConnections>
+                                                                                    <targetConnections>
+                                                                                      <net.java.amateras.uml.sequencediagram.model.SyncMessageModel reference="../../.."/>
+                                                                                    </targetConnections>
+                                                                                    <children/>
+                                                                                    <filterProperty/>
+                                                                                    <ownerLine reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../.."/>
+                                                                                    <movable>true</movable>
+                                                                                  </target>
+                                                                                  <bendpoints/>
+                                                                                  <name>getItsasontzia(): Itsasontzia</name>
+                                                                                  <direction>true</direction>
                                                                                   <order>24</order>
                                                                                   <oldOrder>24</oldOrder>
                                                                                 </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
@@ -14212,6 +14343,7 @@ E=new eta berriro hasi</old>
                                                                               <targetConnections>
                                                                                 <net.java.amateras.uml.sequencediagram.model.SyncMessageModel reference="../../.."/>
                                                                                 <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel reference="../../sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel"/>
+                                                                                <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel reference="../../sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[3]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel"/>
                                                                               </targetConnections>
                                                                               <children/>
                                                                               <filterProperty/>
@@ -14280,7 +14412,7 @@ E=new eta berriro hasi</old>
                                                                           <height>30</height>
                                                                           <width>10</width>
                                                                           <x>309</x>
-                                                                          <y>3560</y>
+                                                                          <y>3700</y>
                                                                         </constraint>
                                                                         <sourceConnections/>
                                                                         <targetConnections>
@@ -14295,8 +14427,8 @@ E=new eta berriro hasi</old>
                                                                       <bendpoints/>
                                                                       <name>baiEz(): char</name>
                                                                       <direction>true</direction>
-                                                                      <order>50</order>
-                                                                      <oldOrder>50</oldOrder>
+                                                                      <order>52</order>
+                                                                      <oldOrder>51</oldOrder>
                                                                     </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                     <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                       <showIcon>true</showIcon>
@@ -14327,8 +14459,8 @@ E=new eta berriro hasi</old>
                                                                         <constraint>
                                                                           <height>30</height>
                                                                           <width>10</width>
-                                                                          <x>884</x>
-                                                                          <y>3624</y>
+                                                                          <x>772</x>
+                                                                          <y>3774</y>
                                                                         </constraint>
                                                                         <sourceConnections>
                                                                           <net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
@@ -14360,8 +14492,8 @@ E=new eta berriro hasi</old>
                                                                       <bendpoints/>
                                                                       <name>new Tableroa()</name>
                                                                       <direction>true</direction>
-                                                                      <order>51</order>
-                                                                      <oldOrder>51</oldOrder>
+                                                                      <order>53</order>
+                                                                      <oldOrder>52</oldOrder>
                                                                     </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
                                                                     <net.java.amateras.uml.sequencediagram.model.SyncMessageModel reference="../net.java.amateras.uml.sequencediagram.model.SyncMessageModel[2]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel[6]/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[6]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[7]/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel[3]/targetConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel"/>
                                                                   </sourceConnections>
@@ -14392,7 +14524,7 @@ E=new eta berriro hasi</old>
                                                                           </java.beans.PropertyChangeSupport>
                                                                         </listeners>
                                                                         <constraint>
-                                                                          <height>3603</height>
+                                                                          <height>3762</height>
                                                                           <width>10</width>
                                                                           <x>87</x>
                                                                           <y>139</y>
@@ -14418,7 +14550,7 @@ E=new eta berriro hasi</old>
                                                                             </java.beans.PropertyChangeSupport>
                                                                           </listeners>
                                                                           <constraint>
-                                                                            <height>3752</height>
+                                                                            <height>3911</height>
                                                                             <width>5</width>
                                                                             <x>92</x>
                                                                             <y>20</y>
@@ -14654,7 +14786,7 @@ E=new eta berriro hasi</old>
                                               <constraint>
                                                 <height>-1</height>
                                                 <width>100</width>
-                                                <x>839</x>
+                                                <x>727</x>
                                                 <y>20</y>
                                               </constraint>
                                               <sourceConnections/>
@@ -14762,6 +14894,8 @@ E=new eta berriro hasi</old>
                       <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/targetConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/source/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[2]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel[6]/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[7]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target"/>
                       <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/targetConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/source/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[2]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel[6]/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[7]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[2]/target"/>
                       <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../../.."/>
+                      <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/targetConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/source/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[2]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[7]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[3]/target"/>
+                      <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/targetConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/source/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[2]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel[6]/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[7]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[3]/target"/>
                     </children>
                     <filterProperty/>
                     <owner>
@@ -14781,7 +14915,7 @@ E=new eta berriro hasi</old>
                       <constraint>
                         <height>-1</height>
                         <width>100</width>
-                        <x>1057</x>
+                        <x>910</x>
                         <y>20</y>
                       </constraint>
                       <sourceConnections/>
@@ -14800,8 +14934,8 @@ E=new eta berriro hasi</old>
                 <bendpoints/>
                 <name>osoaInprimatu(): void</name>
                 <direction>true</direction>
-                <order>46</order>
-                <oldOrder>46</oldOrder>
+                <order>47</order>
+                <oldOrder>47</oldOrder>
               </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
             </sourceConnections>
             <targetConnections>
@@ -14815,8 +14949,8 @@ E=new eta berriro hasi</old>
           <bendpoints/>
           <name>tableroOsoaInprimatu(): void</name>
           <direction>true</direction>
-          <order>45</order>
-          <oldOrder>45</oldOrder>
+          <order>46</order>
+          <oldOrder>46</oldOrder>
         </net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
       </sourceConnections>
       <targetConnections>
@@ -14830,6 +14964,8 @@ E=new eta berriro hasi</old>
     </net.java.amateras.uml.sequencediagram.model.ActivationModel>
     <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../net.java.amateras.uml.sequencediagram.model.ActivationModel[35]/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target"/>
     <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../net.java.amateras.uml.sequencediagram.model.ActivationModel[35]/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target"/>
+    <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../net.java.amateras.uml.sequencediagram.model.ActivationModel[35]/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/targetConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/source/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[2]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[7]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[3]/target"/>
+    <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../net.java.amateras.uml.sequencediagram.model.ActivationModel[35]/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/targetConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/source/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[2]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel[6]/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[7]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[3]/target"/>
   </children>
   <filterProperty/>
   <instances>
@@ -14894,6 +15030,8 @@ E=new eta berriro hasi</old>
     <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../../children/net.java.amateras.uml.sequencediagram.model.ActivationModel[35]"/>
     <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../../children/net.java.amateras.uml.sequencediagram.model.ActivationModel[35]/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target"/>
     <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../../children/net.java.amateras.uml.sequencediagram.model.ActivationModel[35]/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target"/>
+    <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../../children/net.java.amateras.uml.sequencediagram.model.ActivationModel[35]/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/targetConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/source/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[2]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[7]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[3]/target"/>
+    <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../../children/net.java.amateras.uml.sequencediagram.model.ActivationModel[35]/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/targetConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/source/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[2]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/children/net.java.amateras.uml.sequencediagram.model.ActivationModel[6]/sourceConnections/net.java.amateras.uml.sequencediagram.model.ReturnMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[7]/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel[3]/target"/>
   </activations>
   <fragments/>
   <lifelines>
