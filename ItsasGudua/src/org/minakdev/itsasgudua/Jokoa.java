@@ -337,13 +337,13 @@ public class Jokoa {
     	this.jokalariak[1]= new Ordenagailua();
     	
     	this.jokalariak[1].tableroaPrestatu();
-    	kontsolaGarbitu(40);
     	
     	System.out.println("//////////////////////////");
     	System.out.println("\n/ HAS DADILA PARTIDA :D /");
     	System.out.println("//////////////////////////");
     	
     	denboraItxaron(2);
+    	kontsolaGarbitu(20);
     	while(irabazlea==null){
     		this.jokalariak[0].tiroEgin2(this.jokalariak[1]);
     		this.txanda++;
@@ -354,11 +354,13 @@ public class Jokoa {
     			irabazlea=this.jokalariak[0];
     		}
     	}
-    	
+    	kontsolaGarbitu(10);
     	System.out.println("Jokoa amaitu egin da.  "+this.txanda+ " txandatan bukatu duzu." );
+    	denboraItxaron(2);
     	if (irabazlea instanceof Ordenagailua){
     		System.out.println("Galdu duzu :(");}
     	else{System.out.println("Jokoa irabazi duzu!! Zorionak!! :P");}
+    	denboraItxaron(1);
     	
     	this.jokalariak[1].guztizInprimatu();
 	}

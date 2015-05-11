@@ -62,6 +62,7 @@ public class Jokalaria {
 					begiratuta=pAurkari.tablero.begiratutaDago(pX, pY);
 					if(begiratuta){
 						System.out.println("Koordenatu horiek begiratuta daude. Saiatu berriz.");
+						Jokoa.denboraItxaron(1);
 					}
 					egokia=true;
 				}
@@ -95,7 +96,7 @@ public class Jokalaria {
 					this.penalizazioa = true;
 					this.minaIkutuak++;
 					if(!this.minaMaxGainditua()) {
-						System.out.println(" Penalizazioa jasoko duzu.");
+						System.out.println("Penalizazioa jasoko duzu.");
 						Jokoa.denboraItxaron(1);
 						pAurkari.tablero.minakBoom(pX, pY, pAurkari);
 					}
@@ -114,6 +115,7 @@ public class Jokalaria {
 	}
 	
 	public void tiroEgin2(Jokalaria pAurkari){
+		Jokoa.kontsolaGarbitu(5);
 		if(!this.penalizazioa){
 			System.out.println("Ordenagailuari gelditzen zaizkion itsasontziak:	"+ pAurkari.zenbatItsasontzi());
 			System.out.println("Gelditzen zaizkizun bizitzak:	"+ (Jokalaria.minaIkutuMaximo-this.minaIkutuak) );
@@ -127,6 +129,10 @@ public class Jokalaria {
 				pY=this.eskatuY();
 				if(pAurkari.tablero.koordenatuEgokiak(pX, pY)){
 					begiratuta=pAurkari.tablero.begiratutaDago(pX, pY);
+					if(begiratuta){
+						System.out.println("Koordenatu horiek begiratuta daude. Saiatu berriz.");
+						Jokoa.denboraItxaron(1);
+					}
 					egokia=true;
 				}
 				else{
@@ -137,9 +143,14 @@ public class Jokalaria {
 			boolean amaitu=false;
 			Itsasontzia it=pAurkari.tablero.itsasontzirikDago(pX,pY);
 			if(it!=null){
+				Jokoa.soinuaErreproduzitu(Jokoa.itsasontziaJo);
+				System.out.println("Itsasontzi bati tiro egin diozu! :))");
+				Jokoa.denboraItxaron(1);
 				it.kenduZatia();
 				if(it.hondoratutaDago()){
 					pAurkari.itsasontziak.kenduItsasontzia(it);
+					System.out.println("Gainera, itsasontzia hondoratu duzu, lan bikaina! :D");
+					Jokoa.denboraItxaron(1);
 					if(pAurkari.itsasontziak.zenbatItsasontzi()==0){
 						amaitu=true;
 					}
@@ -148,16 +159,27 @@ public class Jokalaria {
 			}
 			else {
 				if(pAurkari.tablero.minarikDago(pX, pY)){
+					Jokoa.soinuaErreproduzitu(Jokoa.leherketaSoinua);
+					System.out.println("Mina bat jo duzu.:(");
+					Jokoa.denboraItxaron(1);
 					this.penalizazioa = true;
 					this.minaIkutuak++;
-					Jokoa.soinuaErreproduzitu(Jokoa.leherketaSoinua);
 					if(!this.minaMaxGainditua()) {
+						System.out.println("Penalizazioa jasoko duzu.");
+						Jokoa.denboraItxaron(1);
 						pAurkari.tablero.minakBoom(pX, pY, pAurkari);
 					}
 				}
+				else{
+					System.out.println("Ura jo duzu.");
+					Jokoa.denboraItxaron(1);
+				}
 			}
 		}
-		else {this.penalizazioa = false;}
+		else {
+			System.out.println("Txanda bat galdu duzu.");
+			Jokoa.denboraItxaron(1);
+			this.penalizazioa = false;}
 	}
 
 	public void guztizInprimatu() {
@@ -231,11 +253,14 @@ public class Jokalaria {
 			koordenatuZuzenak = this.koordenatuZuzenak(x, y, hB, tamaina);
 			if(!koordenatuZuzenak){
 				System.out.println("Sartu dituzun koordenatuetan ezin da itsasontzia jarri. Saiatu berriz.");
+				Jokoa.denboraItxaron(1);
 			}
 		}while (!koordenatuZuzenak);
 
 		this.itsasontziak.gehituItsasontzia(pItsasontzia);
 		this.tablero.itsasontziaJarri(x, y, tamaina, hB, pItsasontzia);
+		this.guztizInprimatu();
+		Jokoa.denboraItxaron(2);
 
 	}
 
@@ -265,7 +290,7 @@ public class Jokalaria {
 		while (!zuzena) {
 			System.out.println("\nSartu H (horizontal) edo B (bertikal).");
 			s = sc.next();
-			if (s.equals("H") || s.equals("B")) {
+			if (s.equals("H") || s.equals("B")|| s.equals("b")|| s.equals("h")) {
 				zuzena = true;
 			} else {
 				System.out.println(this.izena + " sartu duzuna ez da egokia.");
@@ -281,7 +306,7 @@ public class Jokalaria {
 		boolean zuzena = true;
 		int i = 0;
 
-		if (pHorBer == 'B') {
+		if (pHorBer == 'B'||pHorBer == 'b') {
 			while (i < pTamaina && zuzena) {
 				if (this.tablero.koordenatuEgokiak(pX+i, pY)) {
 					if (this.tablero.itsasontzirikDago(pX+i, pY) != null) {
@@ -297,7 +322,7 @@ public class Jokalaria {
 		}
 
 		else { 
-			if(pHorBer=='H'){
+			if(pHorBer=='H'||pHorBer == 'h'){
 				while (i < pTamaina && zuzena) {
 					if (this.tablero.koordenatuEgokiak(pX, pY+i)) {
 						if (this.tablero.itsasontzirikDago(pX, pY+i) != null) {
@@ -336,7 +361,10 @@ public class Jokalaria {
 				}
 				else{
 					System.out.println("Txalupa guztiak jarrita daude.");
+					System.out.println();
+					Jokoa.denboraItxaron(1);
 					System.out.println("Aukeratu beste itsasontzi mota bat.");
+					Jokoa.denboraItxaron(2);
 				}
 			}
 			else{
@@ -348,7 +376,10 @@ public class Jokalaria {
 					}
 					else{
 						System.out.println("Itsaspeko guztiak jarrita daude.");
+						System.out.println();
+						Jokoa.denboraItxaron(1);
 						System.out.println("Aukeratu beste itsasontzi mota bat.");
+						Jokoa.denboraItxaron(2);
 					}
 				}
 			
@@ -361,7 +392,10 @@ public class Jokalaria {
 						}
 						else{
 							System.out.println("Ontzi guztiak jarrita daude.");
+							System.out.println();
+							Jokoa.denboraItxaron(1);
 							System.out.println("Aukeratu beste itsasontzi mota bat.");
+							Jokoa.denboraItxaron(2);
 						}
 					}
 				}
@@ -370,7 +404,6 @@ public class Jokalaria {
 				atera=true;
 			}
 		} while (!atera);
-		this.guztizInprimatu();
 		this.tablero.minakJarri();
 	}
 	

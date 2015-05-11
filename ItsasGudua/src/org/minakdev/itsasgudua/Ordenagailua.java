@@ -246,7 +246,7 @@ public class Ordenagailua extends Jokalaria{
 
 
     public void tableroaPrestatu(){
-    	super.tableroaPrestatuAutomatiko();
+    	this.tableroaPrestatuAutomatiko();
     }
     public void koordenatuenZerrendaHustu(){
     	this.itsasontzienKoordenatuak.clear();

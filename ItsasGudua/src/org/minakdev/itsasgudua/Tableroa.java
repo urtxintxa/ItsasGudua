@@ -24,7 +24,7 @@ public class Tableroa {
 	}
 	
 	public void itsasontziaJarri(int pX, int pY, int pTamaina, char pNoranzkoa, Itsasontzia pItsasontzia) {
-		if(pNoranzkoa == 'B') {
+		if(pNoranzkoa == 'B'  ||  pNoranzkoa == 'b') {
 			for(int i = 0; i < pTamaina; i++) {
 				this.lista[pX+i][pY].setItsasontzia(pItsasontzia);
 			}
