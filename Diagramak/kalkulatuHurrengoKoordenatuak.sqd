@@ -5321,7 +5321,7 @@ y==0 edo x==0</content>
                       <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../.."/>
                       <target class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../../../../.."/>
                       <bendpoints/>
-                      <name></name>
+                      <name>true bada</name>
                       <direction>false</direction>
                     </net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
                   </sourceConnections>
@@ -5389,7 +5389,7 @@ y==0 edo x==0</content>
                             <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../.."/>
                             <target class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../../../../../../../.."/>
                             <bendpoints/>
-                            <name></name>
+                            <name>false bada</name>
                             <direction>false</direction>
                           </net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
                           <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
@@ -5540,7 +5540,7 @@ y==0 edo x==0</content>
                                               <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../.."/>
                                               <target class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../../../../../../../../../../../../../../../../.."/>
                                               <bendpoints/>
-                                              <name></name>
+                                              <name>false</name>
                                               <direction>false</direction>
                                             </net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
                                             <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
@@ -6231,7 +6231,7 @@ y==0 edo x==0</content>
                             <source class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../.."/>
                             <target class="net.java.amateras.uml.sequencediagram.model.ActivationModel" reference="../../../../../../../../.."/>
                             <bendpoints/>
-                            <name></name>
+                            <name>true</name>
                             <direction>false</direction>
                           </net.java.amateras.uml.sequencediagram.model.ReturnMessageModel>
                         </sourceConnections>
