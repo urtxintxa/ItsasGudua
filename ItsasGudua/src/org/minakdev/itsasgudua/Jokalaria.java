@@ -182,6 +182,7 @@ public class Jokalaria {
 			this.penalizazioa = false;}
 	}
 
+	
 	public void guztizInprimatu() {
 		this.tablero.tableroOsoaInprimatu();
 	}
@@ -189,89 +190,7 @@ public class Jokalaria {
 	public void partzialkiInprimatu() {
 		this.tablero.egungoTableroaInprimatu();
 	}
-
-	private int eskatuX() {
-		boolean ezAmaitu = true;
-		int n = 0;
-		do {
-			try {
-				System.out.println("\nSartu X koordenatua, 0 eta "+(Tableroa.getTamaina()-1)+" artekoa (biak barne): ");
-				n = sc.nextInt();	
-				if(n > (Tableroa.getTamaina()-1) || n < 0){
-					throw new TartetikKanpoException("Zenbakiak ez daude tartean.");
-				}
-				ezAmaitu = false;
-			} catch (InputMismatchException e) {
-				sc.nextLine();
-				n = 0;
-				System.out.println("Ez duzu zenbaki oso bat sartu.");
-			}catch (TartetikKanpoException e) {
-				System.out.println(e.getMessage());
-			}
-
-			
-		} while (ezAmaitu);
-		return n;
-	}
-
-	private int eskatuY(){
-		boolean ezAmaitu = true;
-		int n = 0;
-		do {
-			try {
-				System.out.println("\nSartu Y koordenatua, 0 eta "+(Tableroa.getTamaina()-1)+" artekoa (biak barne): ");
-				n = sc.nextInt();	
-				if(n > (Tableroa.getTamaina()-1) || n < 0){
-					throw new TartetikKanpoException("Zenbakiak ez daude tartean.");
-				}
-				ezAmaitu = false;
-			} catch (InputMismatchException e) {
-				sc.nextLine();
-				n = 0;
-				System.out.println("Ez duzu zenbaki oso bat sartu.");
-			}catch (TartetikKanpoException e) {
-				System.out.println(e.getMessage());
-			}
-
-			
-		} while (ezAmaitu);
-		return n;
-	}
-
-	private void itsasontziaJarriEskuz(Itsasontzia pItsasontzia) {	
-		int x;
-		int y;
-		char hB;
-		int tamaina =pItsasontzia.getHondoratuGabekoZatiKop();
-		boolean koordenatuZuzenak;
-
-		do{
-			this.guztizInprimatu();
-			x = this.eskatuX();
-			y = this.eskatuY();
-			hB = this.eskatuHorizontalBertikal();
-			koordenatuZuzenak = this.koordenatuZuzenak(x, y, hB, tamaina);
-			if(!koordenatuZuzenak){
-				System.out.println("Sartu dituzun koordenatuetan ezin da itsasontzia jarri. Saiatu berriz.");
-				Jokoa.denboraItxaron(1);
-			}
-		}while (!koordenatuZuzenak);
-
-		this.itsasontziak.gehituItsasontzia(pItsasontzia);
-		this.tablero.itsasontziaJarri(x, y, tamaina, hB, pItsasontzia);
-		this.guztizInprimatu();
-		Jokoa.denboraItxaron(2);
-
-	}
-
-	public boolean minaMaxGainditua() {
-		boolean gainditua = false;
-		if (this.minaIkutuak >= Jokalaria.minaIkutuMaximo) {
-			gainditua = true;
-		}
-		return gainditua;
-	}
-
+	
 	public void jokalariarenEgoeraInprimatu() {
 		System.out.println();
 		System.out.println(this.getIzena());
@@ -279,67 +198,82 @@ public class Jokalaria {
 		System.out.println("Gelditzen zaizkizun bizitzak:	"+ (Jokalaria.minaIkutuMaximo-this.minaIkutuak) );
 	}
 	
-	public String getIzena() {
-		return this.izena;
-	}
 	
-	private char eskatuHorizontalBertikal() {
-		String s = null ;
-		boolean zuzena = false;
-
-		while (!zuzena) {
-			System.out.println("\nSartu H (horizontal) edo B (bertikal).");
-			s = sc.next();
-			if (s.equals("H") || s.equals("B")|| s.equals("b")|| s.equals("h")) {
-				zuzena = true;
-			} else {
-				System.out.println(this.izena + " sartu duzuna ez da egokia.");
-
-			}
-		}
-
-		return s.charAt(0);
+	public void tableroaPrestatu(){
+		boolean amaitu=false;
+		int aukera=0;
+		
+		do{
+				aukera=this.tableroaJartzekoModuaHautatu();
+				if(aukera == 1){
+					this.tableroaPrestatuAutomatiko();
+				}
+				else{
+					if(aukera == 2){
+						this.tableroaPrestatuEskuz();
+					}
+				}
+				System.out.println("\nTableroa ondo dago?    B/E");
+				char baiEz=this.baiEz();
+				if(baiEz == 'B' || baiEz == 'b'){
+					amaitu=true;
+				}
+				else{
+					this.tablero = new Tableroa();
+					this.itsasontziak = new ListaItsasontziak();
+				}
+			
+			
+		}while(!amaitu);
+		
 	}
-
-	private boolean koordenatuZuzenak(int pX, int pY, char pHorBer,
-			int pTamaina) {
-		boolean zuzena = true;
+		
+	protected void tableroaPrestatuAutomatiko() {
 		int i = 0;
+		Itsasontzia its;
 
-		if (pHorBer == 'B'||pHorBer == 'b') {
-			while (i < pTamaina && zuzena) {
-				if (this.tablero.koordenatuEgokiak(pX+i, pY)) {
-					if (this.tablero.itsasontzirikDago(pX+i, pY) != null) {
-						zuzena = false;
-					}
-					i++;
-				} 
-				else {
-					zuzena = false;
-				}
-			}
-
+		while (i < Jokalaria.itsaspekoMax) {
+			its = new Itsasontzia(Itsasontzia.getUrpekariaTamaina(), true);
+			this.itsasontziaJarriAutomatico(its);
+			i++;
 		}
-
-		else { 
-			if(pHorBer=='H'||pHorBer == 'h'){
-				while (i < pTamaina && zuzena) {
-					if (this.tablero.koordenatuEgokiak(pX, pY+i)) {
-						if (this.tablero.itsasontzirikDago(pX, pY+i) != null) {
-							zuzena = false;
-						}
-						i++;
-					} 
-					else {
-						zuzena = false;
-					}
-				}
-			}
+		i = 0;
+		while (i < Jokalaria.ontziaMax) {
+			its = new Itsasontzia(Itsasontzia.getOntziaTamaina(), false);
+			this.itsasontziaJarriAutomatico(its);
+			i++;
 		}
+		i = 0;
 
-		return zuzena;
+		while (i < Jokalaria.txalupaMax) {
+			its = new Itsasontzia(Itsasontzia.getTxalupaTamaina(), false);
+			this.itsasontziaJarriAutomatico(its);
+			i++;
+		}
+		if(!(this instanceof Ordenagailua)){this.guztizInprimatu();}
+		this.tablero.minakJarri();
+		
 	}
 
+	private void itsasontziaJarriAutomatico(Itsasontzia pItsasontzia){
+    	int x;
+    	int y;
+    	char horBer;
+    	int tamaina= pItsasontzia.getHondoratuGabekoZatiKop();
+    	boolean koordenatuZuzenak;
+    	
+    	do{
+    		x=this.lortuXY();
+        	y=this.lortuXY();
+        	horBer=this.lortuHorBer();
+        	koordenatuZuzenak = this.koordenatuZuzenak(x, y, horBer, tamaina);
+    	}while(!koordenatuZuzenak);
+    	
+    	this.itsasontziak.gehituItsasontzia(pItsasontzia);
+    	this.tablero.itsasontziaJarri(x, y, tamaina, horBer, pItsasontzia);
+    	
+    }
+		
 	private void tableroaPrestatuEskuz() {
 		int txalupaKop = 0;
 		int urpekariKop = 0;
@@ -407,123 +341,69 @@ public class Jokalaria {
 		this.tablero.minakJarri();
 	}
 	
-	private int hautatuItsasontzia(int pTxalupaKop, int pUrpekariKop, int pOntziKop) {
-		System.out.println("\nAukeratu jarri nahi duzun ontzia.");
-		System.out.println("1 - Txalupa ("+(txalupaMax-pTxalupaKop)+" gelditzen zaizkizu ipintzeko)");
-		System.out.println("2 - Urpekaria ("+(itsaspekoMax-pUrpekariKop)+" gelditzen zaizkizu ipintzeko)");
-		System.out.println("3 - Ontzia ("+(ontziaMax-pOntziKop)+" gelditzen zaizkizu ipintzeko)");
-		System.out.println("\nSartu itsasontziaren kodea: ");
-		
-		int itsasontzia = 0;
-		boolean ezAmaitu = true;
-		do {
-			try {
-				itsasontzia = sc.nextInt();
-				if(itsasontzia < 1 || itsasontzia > 3) {
-					throw new TartetikKanpoException("Sartutako zenbakia ez da zuzena.");
-				}
-				ezAmaitu = false;
-			} catch (InputMismatchException e) {
-				sc.nextLine();
-				itsasontzia = 0;
-				System.out.println("Ez duzu zenbakirik sartu.");
-			} catch (TartetikKanpoException e) {
-				System.out.println(e.getMessage());
-			}
-		} while (ezAmaitu);	
-		return itsasontzia;
-	}
-	
-	
-	public int zenbatItsasontzi(){
-		return this.itsasontziak.zenbatItsasontzi();
-	}
+	private void itsasontziaJarriEskuz(Itsasontzia pItsasontzia) {	
+		int x;
+		int y;
+		char hB;
+		int tamaina =pItsasontzia.getHondoratuGabekoZatiKop();
+		boolean koordenatuZuzenak;
 
-
-	public ListaItsasontziak getListaItsasontziak(){
-		return this.itsasontziak;
-	}
-	
-	private void itsasontziaJarriAutomatico(Itsasontzia pItsasontzia){
-    	int x;
-    	int y;
-    	char horBer;
-    	int tamaina= pItsasontzia.getHondoratuGabekoZatiKop();
-    	boolean koordenatuZuzenak;
-    	
-    	do{
-    		x=this.lortuXY();
-        	y=this.lortuXY();
-        	horBer=this.lortuHorBer();
-        	koordenatuZuzenak = this.koordenatuZuzenak(x, y, horBer, tamaina);
-    	}while(!koordenatuZuzenak);
-    	
-    	this.itsasontziak.gehituItsasontzia(pItsasontzia);
-    	this.tablero.itsasontziaJarri(x, y, tamaina, horBer, pItsasontzia);
-    	
-    }
-	
-	protected int lortuXY(){
-    	int xy = (int)(Math.random()*(Tableroa.getTamaina()+1));
-    	return xy;
-    }
-	
-	
-	protected void tableroaPrestatuAutomatiko() {
-		int i = 0;
-		Itsasontzia its;
-
-		while (i < Jokalaria.itsaspekoMax) {
-			its = new Itsasontzia(Itsasontzia.getUrpekariaTamaina(), true);
-			this.itsasontziaJarriAutomatico(its);
-			i++;
-		}
-		i = 0;
-		while (i < Jokalaria.ontziaMax) {
-			its = new Itsasontzia(Itsasontzia.getOntziaTamaina(), false);
-			this.itsasontziaJarriAutomatico(its);
-			i++;
-		}
-		i = 0;
-
-		while (i < Jokalaria.txalupaMax) {
-			its = new Itsasontzia(Itsasontzia.getTxalupaTamaina(), false);
-			this.itsasontziaJarriAutomatico(its);
-			i++;
-		}
-		if(!(this instanceof Ordenagailua)){this.guztizInprimatu();}
-		this.tablero.minakJarri();
-		
-	}
-
-	
-	public void tableroaPrestatu(){
-		boolean amaitu=false;
-		int aukera=0;
-		
 		do{
-				aukera=this.tableroaJartzekoModuaHautatu();
-				if(aukera == 1){
-					this.tableroaPrestatuAutomatiko();
+			this.guztizInprimatu();
+			x = this.eskatuX();
+			y = this.eskatuY();
+			hB = this.eskatuHorizontalBertikal();
+			koordenatuZuzenak = this.koordenatuZuzenak(x, y, hB, tamaina);
+			if(!koordenatuZuzenak){
+				System.out.println("Sartu dituzun koordenatuetan ezin da itsasontzia jarri. Saiatu berriz.");
+				Jokoa.denboraItxaron(1);
+			}
+		}while (!koordenatuZuzenak);
+
+		this.itsasontziak.gehituItsasontzia(pItsasontzia);
+		this.tablero.itsasontziaJarri(x, y, tamaina, hB, pItsasontzia);
+		this.guztizInprimatu();
+		Jokoa.denboraItxaron(2);
+
+	}
+
+	private boolean koordenatuZuzenak(int pX, int pY, char pHorBer,
+			int pTamaina) {
+		boolean zuzena = true;
+		int i = 0;
+
+		if (pHorBer == 'B'||pHorBer == 'b') {
+			while (i < pTamaina && zuzena) {
+				if (this.tablero.koordenatuEgokiak(pX+i, pY)) {
+					if (this.tablero.itsasontzirikDago(pX+i, pY) != null) {
+						zuzena = false;
+					}
+					i++;
+				} 
+				else {
+					zuzena = false;
 				}
-				else{
-					if(aukera == 2){
-						this.tableroaPrestatuEskuz();
+			}
+
+		}
+
+		else { 
+			if(pHorBer=='H'||pHorBer == 'h'){
+				while (i < pTamaina && zuzena) {
+					if (this.tablero.koordenatuEgokiak(pX, pY+i)) {
+						if (this.tablero.itsasontzirikDago(pX, pY+i) != null) {
+							zuzena = false;
+						}
+						i++;
+					} 
+					else {
+						zuzena = false;
 					}
 				}
-				System.out.println("\nTableroa ondo dago?    B/E");
-				char baiEz=this.baiEz();
-				if(baiEz == 'B' || baiEz == 'b'){
-					amaitu=true;
-				}
-				else{
-					this.tablero = new Tableroa();
-					this.itsasontziak = new ListaItsasontziak();
-				}
-			
-			
-		}while(!amaitu);
-		
+			}
+		}
+
+		return zuzena;
 	}
 	
 	private int tableroaJartzekoModuaHautatu(){
@@ -552,7 +432,52 @@ public class Jokalaria {
 		
 		return aukera;
 	}
-	
+
+	private int hautatuItsasontzia(int pTxalupaKop, int pUrpekariKop, int pOntziKop) {
+		System.out.println("\nAukeratu jarri nahi duzun ontzia.");
+		System.out.println("1 - Txalupa ("+(txalupaMax-pTxalupaKop)+" gelditzen zaizkizu ipintzeko)");
+		System.out.println("2 - Urpekaria ("+(itsaspekoMax-pUrpekariKop)+" gelditzen zaizkizu ipintzeko)");
+		System.out.println("3 - Ontzia ("+(ontziaMax-pOntziKop)+" gelditzen zaizkizu ipintzeko)");
+		System.out.println("\nSartu itsasontziaren kodea: ");
+		
+		int itsasontzia = 0;
+		boolean ezAmaitu = true;
+		do {
+			try {
+				itsasontzia = sc.nextInt();
+				if(itsasontzia < 1 || itsasontzia > 3) {
+					throw new TartetikKanpoException("Sartutako zenbakia ez da zuzena.");
+				}
+				ezAmaitu = false;
+			} catch (InputMismatchException e) {
+				sc.nextLine();
+				itsasontzia = 0;
+				System.out.println("Ez duzu zenbakirik sartu.");
+			} catch (TartetikKanpoException e) {
+				System.out.println(e.getMessage());
+			}
+		} while (ezAmaitu);	
+		return itsasontzia;
+	}
+		
+	private char eskatuHorizontalBertikal() {
+		String s = null ;
+		boolean zuzena = false;
+
+		while (!zuzena) {
+			System.out.println("\nSartu H (horizontal) edo B (bertikal).");
+			s = sc.next();
+			if (s.equals("H") || s.equals("B")|| s.equals("b")|| s.equals("h")) {
+				zuzena = true;
+			} else {
+				System.out.println(this.izena + " sartu duzuna ez da egokia.");
+
+			}
+		}
+
+		return s.charAt(0);
+	}
+
 	private char baiEz(){
 		String s = null ;
 		boolean zuzena = false;
@@ -576,6 +501,81 @@ public class Jokalaria {
 		int a = (int)(Math.random()*(2));
 		if(a==0) {return 'H';}
 		else{return 'B';}
+	}
+	
+	protected int lortuXY(){
+    	int xy = (int)(Math.random()*(Tableroa.getTamaina()+1));
+    	return xy;
+    }
+	
+	
+	private int eskatuX() {
+		boolean ezAmaitu = true;
+		int n = 0;
+		do {
+			try {
+				System.out.println("\nSartu X koordenatua, 0 eta "+(Tableroa.getTamaina()-1)+" artekoa (biak barne): ");
+				n = sc.nextInt();	
+				if(n > (Tableroa.getTamaina()-1) || n < 0){
+					throw new TartetikKanpoException("Zenbakiak ez daude tartean.");
+				}
+				ezAmaitu = false;
+			} catch (InputMismatchException e) {
+				sc.nextLine();
+				n = 0;
+				System.out.println("Ez duzu zenbaki oso bat sartu.");
+			}catch (TartetikKanpoException e) {
+				System.out.println(e.getMessage());
+			}
+
+			
+		} while (ezAmaitu);
+		return n;
+	}
+
+	private int eskatuY(){
+		boolean ezAmaitu = true;
+		int n = 0;
+		do {
+			try {
+				System.out.println("\nSartu Y koordenatua, 0 eta "+(Tableroa.getTamaina()-1)+" artekoa (biak barne): ");
+				n = sc.nextInt();	
+				if(n > (Tableroa.getTamaina()-1) || n < 0){
+					throw new TartetikKanpoException("Zenbakiak ez daude tartean.");
+				}
+				ezAmaitu = false;
+			} catch (InputMismatchException e) {
+				sc.nextLine();
+				n = 0;
+				System.out.println("Ez duzu zenbaki oso bat sartu.");
+			}catch (TartetikKanpoException e) {
+				System.out.println(e.getMessage());
+			}
+
+			
+		} while (ezAmaitu);
+		return n;
+	}
+
+		
+	public boolean minaMaxGainditua() {
+		boolean gainditua = false;
+		if (this.minaIkutuak >= Jokalaria.minaIkutuMaximo) {
+			gainditua = true;
+		}
+		return gainditua;
+	}
+	
+	public int zenbatItsasontzi(){
+		return this.itsasontziak.zenbatItsasontzi();
+	}
+
+	public String getIzena() {
+		return this.izena;
+	}
+
+	public ListaItsasontziak getListaItsasontziak(){
+		return this.itsasontziak;
 	}
 	
 	public Tableroa getTableroa(){

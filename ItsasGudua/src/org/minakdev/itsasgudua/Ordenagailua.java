@@ -235,6 +235,10 @@ public class Ordenagailua extends Jokalaria{
 		return koor;
 	}
 
+	public void tableroaPrestatu(){
+	    	this.tableroaPrestatuAutomatiko();
+	}
+	
     public void gehituKoordenatuak(Koordenatuak pKoordenatuak){
     	this.itsasontzienKoordenatuak.add(pKoordenatuak);
     }
@@ -244,10 +248,6 @@ public class Ordenagailua extends Jokalaria{
     	return this.itsasontzienKoordenatuak.size();
     }
 
-
-    public void tableroaPrestatu(){
-    	this.tableroaPrestatuAutomatiko();
-    }
     public void koordenatuenZerrendaHustu(){
     	this.itsasontzienKoordenatuak.clear();
     }

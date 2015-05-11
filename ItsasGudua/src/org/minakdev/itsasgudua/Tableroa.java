@@ -56,6 +56,10 @@ public class Tableroa {
 		return this.lista[pX][pY].getMina();
 	}
 	
+	public boolean begiratutaDago(int pX, int pY) {
+		return this.lista[pX][pY].getBegiratuta();
+	}
+	
 	public void tableroOsoaInprimatu() {
 		System.out.print("     ");
 		for(int a = 0; a < tamaina; a++){
@@ -73,57 +77,6 @@ public class Tableroa {
 				System.out.print(" ");
 			}
 			System.out.println();
-		}
-	}
-	
-	public void minakBoom(int pX, int pY, Jokalaria pAurkaria) {
-		//1
-		if(this.koordenatuEgokiak(pX - 1, pY - 1)){
-			if(!this.begiratutaDago(pX - 1, pY - 1)) {
-				this.minaLehertu(pX - 1, pY - 1, pAurkaria);
-			}
-		}
-		//2
-		if(this.koordenatuEgokiak(pX, pY - 1)){
-			if(!this.begiratutaDago(pX, pY - 1)) {
-				this.minaLehertu(pX, pY - 1, pAurkaria);
-			}
-		}
-		//3
-		if(this.koordenatuEgokiak(pX + 1, pY - 1)){
-			if(!this.begiratutaDago(pX + 1, pY - 1)) {
-				this.minaLehertu(pX + 1, pY - 1, pAurkaria);
-			}
-		}
-		//4
-		if(this.koordenatuEgokiak(pX - 1, pY)){
-			if(!this.begiratutaDago(pX - 1, pY)) {
-				this.minaLehertu(pX - 1, pY, pAurkaria);
-			}
-		}
-		//6
-		if(this.koordenatuEgokiak(pX + 1, pY)){
-			if(!this.begiratutaDago(pX + 1, pY)) {
-				this.minaLehertu(pX + 1, pY, pAurkaria);
-			}
-		}
-		//7
-		if(this.koordenatuEgokiak(pX - 1, pY + 1)){
-			if(!this.begiratutaDago(pX - 1, pY + 1)) {
-				this.minaLehertu(pX - 1, pY + 1, pAurkaria);
-			}
-		}
-		//8
-		if(this.koordenatuEgokiak(pX, pY + 1)){
-			if(!this.begiratutaDago(pX, pY + 1)) {
-				this.minaLehertu(pX, pY + 1, pAurkaria);
-			}
-		}
-		//9
-		if(this.koordenatuEgokiak(pX + 1, pY + 1)){
-			if(!this.begiratutaDago(pX + 1, pY + 1)) {
-				this.minaLehertu(pX + 1, pY + 1, pAurkaria);
-			}
 		}
 	}
 	
@@ -147,10 +100,6 @@ public class Tableroa {
 		}
 	}
 	
-	public boolean begiratutaDago(int pX, int pY) {
-		return this.lista[pX][pY].getBegiratuta();
-	}
-	
 	public boolean koordenatuEgokiak(int pX, int pY) {
 		if(pX < 0 || pX >= tamaina || pY < 0 || pY >= tamaina ) {
 			return false;
@@ -160,6 +109,57 @@ public class Tableroa {
 		}
 	}
 	
+	public void minakBoom(int pX, int pY, Jokalaria pAurkaria) {
+			//1
+			if(this.koordenatuEgokiak(pX - 1, pY - 1)){
+				if(!this.begiratutaDago(pX - 1, pY - 1)) {
+					this.minaLehertu(pX - 1, pY - 1, pAurkaria);
+				}
+			}
+			//2
+			if(this.koordenatuEgokiak(pX, pY - 1)){
+				if(!this.begiratutaDago(pX, pY - 1)) {
+					this.minaLehertu(pX, pY - 1, pAurkaria);
+				}
+			}
+			//3
+			if(this.koordenatuEgokiak(pX + 1, pY - 1)){
+				if(!this.begiratutaDago(pX + 1, pY - 1)) {
+					this.minaLehertu(pX + 1, pY - 1, pAurkaria);
+				}
+			}
+			//4
+			if(this.koordenatuEgokiak(pX - 1, pY)){
+				if(!this.begiratutaDago(pX - 1, pY)) {
+					this.minaLehertu(pX - 1, pY, pAurkaria);
+				}
+			}
+			//6
+			if(this.koordenatuEgokiak(pX + 1, pY)){
+				if(!this.begiratutaDago(pX + 1, pY)) {
+					this.minaLehertu(pX + 1, pY, pAurkaria);
+				}
+			}
+			//7
+			if(this.koordenatuEgokiak(pX - 1, pY + 1)){
+				if(!this.begiratutaDago(pX - 1, pY + 1)) {
+					this.minaLehertu(pX - 1, pY + 1, pAurkaria);
+				}
+			}
+			//8
+			if(this.koordenatuEgokiak(pX, pY + 1)){
+				if(!this.begiratutaDago(pX, pY + 1)) {
+					this.minaLehertu(pX, pY + 1, pAurkaria);
+				}
+			}
+			//9
+			if(this.koordenatuEgokiak(pX + 1, pY + 1)){
+				if(!this.begiratutaDago(pX + 1, pY + 1)) {
+					this.minaLehertu(pX + 1, pY + 1, pAurkaria);
+				}
+			}
+	}	
+			
 	private void minaLehertu(int pX, int pY, Jokalaria pAurkaria) {
 		Itsasontzia itsasontzi = this.itsasontzirikDago(pX, pY);
 		if(itsasontzi != null){

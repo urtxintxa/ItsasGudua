@@ -9,6 +9,11 @@ public class Itsasontzia {
 	private static int urpekariaTamaina = 3;
 	private static int ontziaTamaina = 4;
 	
+	
+	public Itsasontzia(int pEzHondoratu, boolean pAntiMina){
+		this.antiMina=pAntiMina;
+		this.hondoratuGabekoZatiKop= pEzHondoratu;
+	}
 	public static int getTxalupaTamaina() {
 		return txalupaTamaina;
 	}
@@ -37,13 +42,9 @@ public class Itsasontzia {
 		return hondoratuGabekoZatiKop;
 	}
 
-	//eraikitzaile
-	public Itsasontzia(int pEzHondoratu, boolean pAntiMina){
-		this.antiMina=pAntiMina;
-		this.hondoratuGabekoZatiKop= pEzHondoratu;
-	}
+
 	
-	//gainontzeko metodoak
+
 	public boolean hondoratutaDago(){
 		boolean emaitza=false;
 		if (this.hondoratuGabekoZatiKop==0){
@@ -56,7 +57,7 @@ public class Itsasontzia {
 		return this.antiMina;
 	}
 	
-	public void kenduZatia(){//0 edo negatibo ez dela badakigu?
+	public void kenduZatia(){
 		this.hondoratuGabekoZatiKop--;
 	}
 

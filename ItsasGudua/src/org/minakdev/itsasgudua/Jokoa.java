@@ -145,7 +145,7 @@ public class Jokoa {
 		}
 	}
 	
-	public int jokatzekoModuaEskatu() {
+	private int jokatzekoModuaEskatu() {
 		System.out.println("Jokatzeko 3 modu daude:");
 		System.out.println("	1 - Jokalaria vs Jokalaria");
 		System.out.println("	2 - Jokalaria vs Ordenagailua (Inteligentzia Artifiziala)");
@@ -173,7 +173,7 @@ public class Jokoa {
 		return n;
 	}
 
-	public Jokalaria partidarenIrabazlea() {
+	private Jokalaria partidarenIrabazlea() {
 		Jokalaria irabazlea=null;
         if(this.jokalariak[0].minaMaxGainditua()||this.jokalariak[0].zenbatItsasontzi()==0) {
         	irabazlea=this.jokalariak[1];
@@ -215,7 +215,7 @@ public class Jokoa {
 		catch (Exception e) {}
 	}
 	
-	public void partidaBatJolastu() {
+	private void partidaBatJolastu() {
 		Jokalaria irabazlea=null;
     	
 		System.out.println("\nHasteko tableroen parametroak definituko dituzue.");
@@ -273,7 +273,7 @@ public class Jokoa {
 
 	}
 	
-	public void partidaBatJolastu1() {
+	private void partidaBatJolastu1() {
 		Jokalaria irabazlea=null;
     	
 		System.out.println("\nHasteko tableroen parametroak definituko dituzu.");
