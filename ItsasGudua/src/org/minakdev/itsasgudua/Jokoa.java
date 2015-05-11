@@ -121,7 +121,7 @@ public class Jokoa {
 			Jokalaria.setItsaspekoMax(2);
 			Jokalaria.setOntziaMax(1);
 			Jokalaria.setTxalupaMax(3);
-			Jokalaria.setMinaIkutuMaximo(3);
+			Jokalaria.setMinaIkutuMaximo(4);
 			
 			Itsasontzia.setUrpekariaTamaina(3);
 			Itsasontzia.setOntziaTamaina(4);

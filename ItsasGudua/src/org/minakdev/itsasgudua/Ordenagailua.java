@@ -18,12 +18,12 @@ public class Ordenagailua extends Jokalaria{
 		int y;	    	
 		if(this.getPenalizazioa()){
 			System.out.println("Ordenagailuak txanda galdu du.");
-			Jokoa.denboraItxaron(1);
+			Jokoa.denboraItxaron(2);
 		    this.setPenalizazioa(false);
 		}
 		else{
 			System.out.println("Ordenagailuaren txanda.");
-			Jokoa.denboraItxaron(1);
+			Jokoa.denboraItxaron(2);
 			Tableroa aurkariarenTableroa=pAurkari.getTableroa();
 			Koordenatuak koor;
 		    this.jokalariarenEgoeraInprimatu();
@@ -34,18 +34,19 @@ public class Ordenagailua extends Jokalaria{
 			x= koor.getX();
 			y= koor.getY();
 			System.out.println("("+ x + "," + y + ")");
+			Jokoa.denboraItxaron(1);
 			aurkariarenTableroa.setBegiratuta(x, y, true);
 			Itsasontzia its=aurkariarenTableroa.itsasontzirikDago(x, y);
 			if(its!=null){
 				Jokoa.soinuaErreproduzitu(Jokoa.itsasontziaJo);
 				System.out.println("Itsasontzi bati tiro egin dio.");
-				Jokoa.denboraItxaron(1);
+				Jokoa.denboraItxaron(2);
 				this.gehituKoordenatuak(new Koordenatuak(x, y));
 			    its.kenduZatia();
 			    if(its.hondoratutaDago()){
 			    	pAurkari.getListaItsasontziak().kenduItsasontzia(its);
 			    	System.out.println("Gainera, itsasontzia hondoratu dizu.");
-			    	Jokoa.denboraItxaron(1);
+			    	Jokoa.denboraItxaron(2);
 			    	this.itsasontzienKoordenatuak.clear();
 			    }
 			    if(pAurkari.zenbatItsasontzi()!=0){
@@ -55,17 +56,19 @@ public class Ordenagailua extends Jokalaria{
 			else{
 				if(aurkariarenTableroa.minarikDago(x, y)){
 					Jokoa.soinuaErreproduzitu(Jokoa.leherketaSoinua);
-					System.out.println("Mina bat jo du. Penalizazioa jasoko du :)");
-					Jokoa.denboraItxaron(1);
+					System.out.println("Mina bat jo du.  :)");
+					Jokoa.denboraItxaron(2);
 					this.setPenalizazioa(true);
 			    	this.minaIkutuakHanditu();
 			    	if(!this.minaMaxGainditua()){
+			    		System.out.println("Penalizazioa jasoko du");
+			    		Jokoa.denboraItxaron(2);
 			    		aurkariarenTableroa.minakBoom(x, y, pAurkari);
 			    	}
 			    }
 				else{
 					System.out.println("Ura jo du.");
-					Jokoa.denboraItxaron(1);
+					Jokoa.denboraItxaron(2);
 				}
 			}	    		
 		}

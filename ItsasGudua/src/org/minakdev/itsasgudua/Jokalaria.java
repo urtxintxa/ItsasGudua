@@ -1,11 +1,10 @@
 package org.minakdev.itsasgudua;
 
-import java.io.File;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
+
 
 public class Jokalaria {
 	private Tableroa tablero;
@@ -91,11 +90,13 @@ public class Jokalaria {
 			else {
 				if(pAurkari.tablero.minarikDago(pX, pY)){
 					Jokoa.soinuaErreproduzitu(Jokoa.leherketaSoinua);
-					System.out.println("Mina bat jo duzu.. Penalizazioa jasoko duzu :(");
+					System.out.println("Mina bat jo duzu.:(");
 					Jokoa.denboraItxaron(1);
 					this.penalizazioa = true;
 					this.minaIkutuak++;
 					if(!this.minaMaxGainditua()) {
+						System.out.println(" Penalizazioa jasoko duzu.");
+						Jokoa.denboraItxaron(1);
 						pAurkari.tablero.minakBoom(pX, pY, pAurkari);
 					}
 				}
@@ -107,6 +108,7 @@ public class Jokalaria {
 		}
 		else {
 			System.out.println(this.izena + " ezin duzu jokatu, penalizazioa duzu.");
+			Jokoa.denboraItxaron(1);
 			this.penalizazioa = false;
 		}
 	}
