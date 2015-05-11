@@ -10,10 +10,14 @@ public class TableroaTest {
 	
 	private Tableroa tablero;
 	private Itsasontzia itsasontzi;
+	private Jokalaria jokalari;
 
 	@Before
 	public void setUp() throws Exception {
+		jokalari = new Jokalaria("Son Goku");
+		
 		Tableroa.setMinakop(3);
+		Tableroa.setTamaina(10);
 		tablero = new Tableroa();
 		itsasontzi = new Itsasontzia(3, true);
 	}
@@ -22,13 +26,12 @@ public class TableroaTest {
 	public void tearDown() throws Exception {
 		tablero = null;
 		itsasontzi = null;
+		jokalari = null;
 	}
 
 	@Test
 	public void testSetTamaina() {
-		Tableroa.setTamaina(10);
 		assertTrue(tablero.getTamaina() == 10);
-		
 	}
 
 
@@ -38,8 +41,7 @@ public class TableroaTest {
 	}
 	
 	@Test
-	public void testMinarikDago() {
-		Tableroa.setTamaina(10);
+	public void testMinarikDago() {;
 		tablero.minakJarri();
 		int minaKop = 0;
 		for(int i = 0; i < tablero.getTamaina()-1; i++){
@@ -56,37 +58,30 @@ public class TableroaTest {
 	@Test
 	public void testItsasontzirikDago() {
 		tablero.itsasontziaJarri(0, 0, 3, 'H', itsasontzi);
-		assertTrue(tablero.itsasontzirikDago(0, 0) != null);
+		assertNotSame(tablero.itsasontzirikDago(0, 0), null);
 	}
 
 	@Test
 	public void testTableroOsoaInprimatu() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testMinakBoom() {
-		fail("Not yet implemented");
+		tablero.minakBoom(3, 3, jokalari);
+		tablero.tableroOsoaInprimatu();
 	}
 
 	@Test
 	public void testEgungoTableroaInprimatu() {
-		fail("Not yet implemented");
+		tablero.minakBoom(3, 3, jokalari);
+		tablero.egungoTableroaInprimatu();
 	}
 
 	@Test
 	public void testBegiratutaDago() {
-		fail("Not yet implemented");
+		tablero.setBegiratuta(0, 0, true);
+		assertTrue(tablero.begiratutaDago(0, 0));
 	}
 
 	@Test
 	public void testKoordenatuEgokiak() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetBegiratuta() {
-		fail("Not yet implemented");
+		assertFalse(tablero.koordenatuEgokiak(-1, -1));
 	}
 
 }
