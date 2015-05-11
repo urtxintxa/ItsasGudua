@@ -75,113 +75,134 @@ public class Ordenagailua extends Jokalaria{
 	}
 		
 	 	
-	    private Koordenatuak kalkulatuHurrengoKoordenatuak(Jokalaria pAurkari){
-	    	int x;
-	    	int y;
-	    	Koordenatuak koor=null;
-			Koordenatuak k1;
-			Koordenatuak k2;
-	    	boolean koordenatuEgokiak=false;
-	    	int zenbatKoor=this.zenbatKoordenatu();
-	    	boolean jarraitu=true;
-	    	Tableroa aurkariarenTableroa=pAurkari.getTableroa();
+	private Koordenatuak kalkulatuHurrengoKoordenatuak(Jokalaria pAurkari){
+		int x;
+		int y;
+		Koordenatuak koor=null;
+		Koordenatuak k1;
+		Koordenatuak k2;
+		boolean koordenatuEgokiak=false;
+	    int zenbatKoor=this.zenbatKoordenatu();
+	    boolean jarraitu=true;
+	    Tableroa aurkariarenTableroa=pAurkari.getTableroa();
 	    	
-	    	if(zenbatKoor==0){
-	    		while(!koordenatuEgokiak){
-		    		x = this.lortuXY();
-		    		y = this.lortuXY();
-		    		koordenatuEgokiak=aurkariarenTableroa.koordenatuEgokiak(x, y);   
-		    		if(koordenatuEgokiak){
-		    			koordenatuEgokiak=!aurkariarenTableroa.begiratutaDago(x, y);
-						koor = new Koordenatuak(x,y);
+	    if(zenbatKoor==0){
+	    	while(!koordenatuEgokiak){
+		    	x = this.lortuXY();
+		    	y = this.lortuXY();
+		    	koordenatuEgokiak=aurkariarenTableroa.koordenatuEgokiak(x, y);   
+		    	if(koordenatuEgokiak){
+		    		koordenatuEgokiak=!aurkariarenTableroa.begiratutaDago(x, y);
+					koor = new Koordenatuak(x,y);
+		    	}
+	    	}
+	    }
+	    else{
+	    	if(zenbatKoor==1){
+	    		k1=this.itsasontzienKoordenatuak.get(0);
+	    		x=k1.getX();
+	    		y=k1.getY(); 
+		   		if(aurkariarenTableroa.koordenatuEgokiak(x-1, y)){
+		   			if(!aurkariarenTableroa.begiratutaDago(x-1, y)){
+		   				return new Koordenatuak(x-1, y);
+		   			}
+		   		}
+		   		if(aurkariarenTableroa.koordenatuEgokiak(x, y+1)){
+		    		if(!aurkariarenTableroa.begiratutaDago(x, y+1)){
+		    			return new Koordenatuak(x, y+1);
 		    		}
-	    		}
+		    	}
+		    	if(aurkariarenTableroa.koordenatuEgokiak(x+1, y)){
+		    		if(!aurkariarenTableroa.begiratutaDago(x+1, y)){
+		    			return new Koordenatuak(x+1, y);
+		    		}
+		    	}
+		    	if(aurkariarenTableroa.koordenatuEgokiak(x, y-1)){
+		    		if(!aurkariarenTableroa.begiratutaDago(x, y-1)){
+		    			return new Koordenatuak(x, y-1);
+		    		}
+		    	}
+		    	this.itsasontzienKoordenatuak.remove(0);
+					return this.kalkulatuHurrengoKoordenatuak(pAurkari);
 	    	}
 	    	else{
-	    		if(zenbatKoor==1){
-	    			k1=this.itsasontzienKoordenatuak.get(0);
-	    			x=k1.getX();
-	    			y=k1.getY(); 
-		    		if(aurkariarenTableroa.koordenatuEgokiak(x-1, y)){
-		    			if(!aurkariarenTableroa.begiratutaDago(x-1, y)){
-		    				return new Koordenatuak(x-1, y);
-		    			}
-		    		}
-		    		if(aurkariarenTableroa.koordenatuEgokiak(x, y+1)){
-		    			if(!aurkariarenTableroa.begiratutaDago(x, y+1)){
-		    				return new Koordenatuak(x, y+1);
-		    			}
-		    		}
-		    		if(aurkariarenTableroa.koordenatuEgokiak(x+1, y)){
-		    			if(!aurkariarenTableroa.begiratutaDago(x+1, y)){
-		    				return new Koordenatuak(x+1, y);
-		    			}
-		    		}
-		    		if(aurkariarenTableroa.koordenatuEgokiak(x, y-1)){
-		    			if(!aurkariarenTableroa.begiratutaDago(x, y-1)){
-		    				return new Koordenatuak(x, y-1);
-		    			}
-		    		}
-		    		this.itsasontzienKoordenatuak.remove(0);
-						return this.kalkulatuHurrengoKoordenatuak(pAurkari);
-	    		}
-	    		else{
-	    			k1=this.itsasontzienKoordenatuak.get(0);
-	    			k2=this.itsasontzienKoordenatuak.get(1);
-	    			x=k1.getX()-k2.getX();
-	    			y=k1.getY()-k2.getY();
-	    			boolean noranzkoaAldatu=false;
-					if(y==0){
-	    				x=k1.getX()+1;
-	    				y=k1.getY();
-	    				while(jarraitu){
-	    					if(aurkariarenTableroa.koordenatuEgokiak(x, y)){
-	    						if(!aurkariarenTableroa.begiratutaDago(x, y)){
-	    							koor= new Koordenatuak(x,y);
+	    		k1=this.itsasontzienKoordenatuak.get(0);
+	    		k2=this.itsasontzienKoordenatuak.get(1);
+	    		x=k1.getX()-k2.getX();
+	    		y=k1.getY()-k2.getY();
+	    		boolean noranzkoaAldatu=false;
+				if(y==0){
+	    			x=k1.getX()+1;
+	    			y=k1.getY();
+	    			while(jarraitu){
+	    				if(aurkariarenTableroa.koordenatuEgokiak(x, y)){
+	    					if(!aurkariarenTableroa.begiratutaDago(x, y)){
+	    						koor= new Koordenatuak(x,y);
+								jarraitu=false;
+	    					}
+							else{
+								if(aurkariarenTableroa.itsasontzirikDago(x,y)==null){
+									noranzkoaAldatu=true;
 									jarraitu=false;
-	    						}
+								}
+								else{x++;}
+							}
+	    				}
+						else{
+							noranzkoaAldatu=true;
+							jarraitu=false;
+						}	
+	    			}
+					if(noranzkoaAldatu){
+						jarraitu=true;
+						x=k1.getX()-1;
+						y=k1.getY();
+						while(jarraitu){
+							if(aurkariarenTableroa.koordenatuEgokiak(x, y)){
+								if(!aurkariarenTableroa.begiratutaDago(x, y)){
+									koor= new Koordenatuak(x,y);
+									jarraitu=false;
+								}
+								else{
+									if(aurkariarenTableroa.itsasontzirikDago(x,y)==null){
+										jarraitu=false;
+									}
+									else{x--;}
+								}
+							}
+							else{
+								jarraitu=false;
+							}		
+						}
+					}
+	    		}
+				else{
+					if(x==0){
+						x=k1.getX();
+						y=k1.getY()+1;
+						while(jarraitu){
+							if(aurkariarenTableroa.koordenatuEgokiak(x, y)){
+								if(!aurkariarenTableroa.begiratutaDago(x, y)){
+									koor= new Koordenatuak(x,y);
+									jarraitu=false;
+								}
 								else{
 									if(aurkariarenTableroa.itsasontzirikDago(x,y)==null){
 										noranzkoaAldatu=true;
 										jarraitu=false;
 									}
-									else{x++;}
+									else{y++;}
 								}
-	    					}
+							}
 							else{
 								noranzkoaAldatu=true;
 								jarraitu=false;
-							}
-							
-	    				}
+							}				
+						}
 						if(noranzkoaAldatu){
 							jarraitu=true;
-							x=k1.getX()-1;
-							y=k1.getY();
-							while(jarraitu){
-								if(aurkariarenTableroa.koordenatuEgokiak(x, y)){
-									if(!aurkariarenTableroa.begiratutaDago(x, y)){
-										koor= new Koordenatuak(x,y);
-										jarraitu=false;
-									}
-									else{
-										if(aurkariarenTableroa.itsasontzirikDago(x,y)==null){
-											jarraitu=false;
-										}
-										else{x--;}
-									}
-								}
-								else{
-									jarraitu=false;
-								}
-							
-							}
-						}
-	    			}
-					else{
-						if(x==0){
 							x=k1.getX();
-							y=k1.getY()+1;
+							y=k1.getY()-1;
 							while(jarraitu){
 								if(aurkariarenTableroa.koordenatuEgokiak(x, y)){
 									if(!aurkariarenTableroa.begiratutaDago(x, y)){
@@ -190,74 +211,44 @@ public class Ordenagailua extends Jokalaria{
 									}
 									else{
 										if(aurkariarenTableroa.itsasontzirikDago(x,y)==null){
-											noranzkoaAldatu=true;
 											jarraitu=false;
 										}
-										else{y++;}
+										else{y--;}
 									}
 								}
 								else{
-									noranzkoaAldatu=true;
 									jarraitu=false;
-								}
-								
-							}
-							if(noranzkoaAldatu){
-								jarraitu=true;
-								x=k1.getX();
-								y=k1.getY()-1;
-								while(jarraitu){
-									if(aurkariarenTableroa.koordenatuEgokiak(x, y)){
-										if(!aurkariarenTableroa.begiratutaDago(x, y)){
-											koor= new Koordenatuak(x,y);
-											jarraitu=false;
-										}
-										else{
-											if(aurkariarenTableroa.itsasontzirikDago(x,y)==null){
-												jarraitu=false;
-											}
-											else{y--;}
-										}
-									}
-									else{
-										jarraitu=false;
-									}
-								
-								}
+								}				
 							}
 						}
-						
-					}
-	    		}
-	    		
-	    	}
-			if(koor==null){
-				for(int i=1; i<zenbatKoor; i++){
-					this.itsasontzienKoordenatuak.remove(1);
+					}	
 				}
-				return this.kalkulatuHurrengoKoordenatuak(pAurkari);
+	    	}	
+	    }
+		if(koor==null){
+			for(int i=1; i<zenbatKoor; i++){
+				this.itsasontzienKoordenatuak.remove(1);
 			}
-	    	
-	    	
-	    	return koor;
-	    }
-
-	    public void gehituKoordenatuak(Koordenatuak pKoordenatuak){
-	    	this.itsasontzienKoordenatuak.add(pKoordenatuak);
-	    }
-
+			return this.kalkulatuHurrengoKoordenatuak(pAurkari);
+		}	
 	    
-	    private int zenbatKoordenatu(){
-	    	return this.itsasontzienKoordenatuak.size();
-	    }
+		return koor;
+	}
+
+    public void gehituKoordenatuak(Koordenatuak pKoordenatuak){
+    	this.itsasontzienKoordenatuak.add(pKoordenatuak);
+    }
+
+    
+    private int zenbatKoordenatu(){
+    	return this.itsasontzienKoordenatuak.size();
+    }
 
 
-	    public void tableroaPrestatu(){
-	    	super.tableroaPrestatuAutomatiko();
-	    }
-	    public void koordenatuenZerrendaHustu(){
-	    	this.itsasontzienKoordenatuak.clear();
-	    }
-	    
-
+    public void tableroaPrestatu(){
+    	super.tableroaPrestatuAutomatiko();
+    }
+    public void koordenatuenZerrendaHustu(){
+    	this.itsasontzienKoordenatuak.clear();
+    }
 }
