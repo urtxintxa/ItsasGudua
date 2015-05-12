@@ -27,7 +27,7 @@ public class Laukia {
 		}
 		else {
 			if(this.begiratuta){
-				System.out.print("☓"); // ur ikusia
+				System.out.print("★"); // ur ikusia
 			}
 			else {
 				System.out.print("♒"); //ur ez ikusia 
