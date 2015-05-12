@@ -21,7 +21,20 @@ public class JokoaTest {
 
 	@Test
 	public void testMain() {
-		fail("Not yet implemented");
+		String[] a = null;
+		Jokoa.main(a);
+		
+		/*
+		Kontsolako irteeran begiratuko dugu ea eskatuIzena
+		metodoak izena hartzen duen. Hala ere, exception-ekin
+		tratatua denez, %100an badakigu izen oso bat sartuko dela
+		
+		jokatzekoModuaEskatu eta jokatzekoParametroakEskatu metodoek Exception-ak
+		ere erabiltzen dituzte, beraz zihurtatu dezakegu funtzionatuko dutela
+		
+		
+		*/
+		
 	}
 
 	@Test
@@ -36,8 +49,11 @@ public class JokoaTest {
 
 	@Test
 	public void testSoinuaErreproduzitu() {
-		gureJokoa.soinuaErreproduzitu(Jokoa.leherketaSoinua);
-		gureJokoa.soinuaErreproduzitu(Jokoa.itsasontziaJo);
+		
+		gureJokoa.soinuaErreproduzitu(Jokoa.leherketaSoinua); //soinuak karpetan dagoen soinua
+		gureJokoa.soinuaErreproduzitu(Jokoa.itsasontziaJo); //soinuak karpetan dagoen soinua
+		
+		gureJokoa.soinuaErreproduzitu("kaixo"); //Exception bat
 	}
 
 	@Test
