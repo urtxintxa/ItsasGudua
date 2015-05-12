@@ -31,11 +31,17 @@ public class TableroaTest {
 
 	@Test
 	public void testSetTamaina() {
+		Tableroa.setTamaina(10);
 		assertEquals(tablero.getTamaina(), 10);
+		assertNotEquals(tablero.getTamaina(), 5);
+		
+		Tableroa.setTamaina(5);
+		assertNotEquals(tablero.getTamaina(), 10);
+		assertEquals(tablero.getTamaina(), 5);
 	}
-
+	
 	@Test
-	public void testMinarikDago() {
+	public void testMinaKop() {
 		tablero.minakJarri();
 		int minaKop = 0;
 		for(int i = 0; i < tablero.getTamaina()-1; i++){
@@ -46,6 +52,11 @@ public class TableroaTest {
 			}
 		}
 		assertEquals(minaKop, 3);
+	}
+
+	@Test
+	public void testMinarikDago() {
+		assertFalse(tablero.minarikDago(0, 0));
 	}
 
 	@Test
