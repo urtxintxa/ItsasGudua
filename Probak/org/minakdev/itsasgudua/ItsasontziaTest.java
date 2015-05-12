@@ -41,11 +41,15 @@ public class ItsasontziaTest {
 
 	@Test
 	public void testKenduZatia() {
+		assertSame(txalupa.getHondoratuGabekoZatiKop(),2);
+		
 		txalupa.kenduZatia();
 		assertFalse(txalupa.hondoratutaDago());
+		assertSame(txalupa.getHondoratuGabekoZatiKop(),1);
 		
 		txalupa.kenduZatia();
 		assertTrue(txalupa.hondoratutaDago());
+		assertSame(txalupa.getHondoratuGabekoZatiKop(),0);
 	}
 
 }

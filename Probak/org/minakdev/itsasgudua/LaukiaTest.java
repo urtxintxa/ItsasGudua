@@ -25,21 +25,28 @@ public class LaukiaTest {
 
 	@Test
 	public void testOsoaInprimatu() {
-		laukia.osoaInprimatu();
-		
-		laukia.setBegiratuta(false);
-		laukia.osoaInprimatu();
-		
-		laukia.setMina(true);
-		laukia.osoaInprimatu();
-		
+		//lauki begiratua
 		laukia.setBegiratuta(true);
 		laukia.osoaInprimatu();
 		
+		//ez begiratua
+		laukia.setBegiratuta(false);
+		laukia.osoaInprimatu();
+		
+		//mina ez begiratua
+		laukia.setMina(true);
+		laukia.osoaInprimatu();
+		
+		//mina begiratua
+		laukia.setBegiratuta(true);
+		laukia.osoaInprimatu();
+		
+		//itsasontzi begiratua
 		laukia.setMina(false);
 		laukia.setItsasontzia(itsasontzi);
 		laukia.osoaInprimatu();
 		
+		//itsasontzi ez begiratua
 		laukia.setBegiratuta(false);
 		laukia.osoaInprimatu();
 		
@@ -48,21 +55,28 @@ public class LaukiaTest {
 
 	@Test
 	public void testEgungoaInprimatu() {
-		laukia.egungoaInprimatu();
-		
-		laukia.setBegiratuta(false);
-		laukia.egungoaInprimatu();
-		
-		laukia.setMina(true);
-		laukia.egungoaInprimatu();
-		
+		//lauki begiratua
 		laukia.setBegiratuta(true);
 		laukia.egungoaInprimatu();
 		
+		//ez begiratua
+		laukia.setBegiratuta(false);
+		laukia.egungoaInprimatu();
+		
+		//mina ez begiratua
+		laukia.setMina(true);
+		laukia.egungoaInprimatu();
+		
+		//mina begiratua
+		laukia.setBegiratuta(true);
+		laukia.egungoaInprimatu();
+		
+		//itsasontzi begiratua
 		laukia.setMina(false);
 		laukia.setItsasontzia(itsasontzi);
 		laukia.egungoaInprimatu();
 		
+		//itsasontzi ez begiratua
 		laukia.setBegiratuta(false);
 		laukia.egungoaInprimatu();
 		
@@ -79,10 +93,10 @@ public class LaukiaTest {
 
 	@Test
 	public void testSetItsasontzia() {
-		assertTrue(laukia.getItsasontzia() == null);
+		assertNull(laukia.getItsasontzia());
 		
 		laukia.setItsasontzia(itsasontzi);
-		assertTrue(laukia.getItsasontzia() != null);
+		assertNotNull(laukia.getItsasontzia());
 	}
 
 	@Test
@@ -90,7 +104,7 @@ public class LaukiaTest {
 		assertFalse(laukia.getMina());
 		
 		laukia.setMina(true);
-		assertTrue(laukia.getMina() == true);
+		assertTrue(laukia.getMina());
 	}
 
 }
