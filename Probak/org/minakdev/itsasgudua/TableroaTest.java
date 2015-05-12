@@ -204,7 +204,6 @@ public class TableroaTest {
 		//minakBoom probatzeko normalean baino mina gehiago jarriko ditugu ea baten-bat boom egiten duenaren ondoan kokatzen bada
 		tablero.minakJarri();
 		tablero.minakJarri();
-		tablero.minakJarri();
 		tablero.tableroOsoaInprimatu();
 		
 		tablero.begiratutaDago(6, 4);
@@ -228,6 +227,22 @@ public class TableroaTest {
 		 */
 		tablero.egungoTableroaInprimatu();
 		
+		tablero.minakBoom(0, 1, jokalari);
+		assertSame(jokalari.zenbatItsasontzi(),5);
+		tablero.tableroOsoaInprimatu();
+		/**	lortzen dena (tablerotik zehar dauden minak kontua eduki gabe)
+		 *    0  1 2 3 4 5 6 7 
+			0   ♒ ♒ ♒ ♒ ♒ ♒ ♒ ♒ 
+			1   ♒ ✝ ♒ ⏅ ⏅ ♒ ♒ ♒ 
+			2   ♒ ⏅ ♒ ♒ ♒ ♒ ⏅ ♒ 
+			3   ♒ ♒ ♒ ♒ ♒ ♒ ⏅ ♒ 
+			4   ♒ ♒ ⏅ ⏅ ⏅ ✝ ⏅ ♒ 
+			5   ♒ ♒ ♒ ♒ ♒ ✝ ♒ ♒ 
+			6   ♒ ⏅ ⏅ ✝ ✝ ♒ ♒ ♒ 
+			7   ♒ ♒ ♒ ♒ ♒ ♒ ♒ ♒ 
+		 * ondokoak daukatenaren arabera alda daitezke 
+		 */
+		tablero.egungoTableroaInprimatu();
 	}
 
 	@Test
