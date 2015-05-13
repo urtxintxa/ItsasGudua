@@ -6644,7 +6644,7 @@
                     <movable>true</movable>
                   </target>
                   <bendpoints/>
-                  <name>tiroEgin(pAurkari: Jokalaria): void</name>
+                  <name>tiroEgin2(pAurkari: Jokalaria): void</name>
                   <direction>true</direction>
                   <order>1</order>
                   <oldOrder>1</oldOrder>
