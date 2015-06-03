@@ -32,103 +32,100 @@ public class JokalariaTest {
 	}
 
 	@Test
-	public void testTiroEgin() {
-		/**
-		 * Hau frogatzeko egoera posible hauek kontuan hartu behar ditugu:
-		 * Koordenatu ez zuzenak: errepikatu
-		 * Koordenatu zuzenak:
-		 * 		Itsasontzia dago: Beste txanda bat jokatuko da
-		 * 			- Hondoratu da itsasontzia
-		 * 			- Ez da hondoratu itsasontzia
-		 * 		Itsasontzia ez dago:
-		 * 			- Mina dago:
-		 * 			- Ura dago:
-		 *  
-		 * 
-		 */
-		/**Tableroan minak non dauden ezin dugunez jakin, 
-		 * eta itsasontzien lekua aurkariak edo automatikoki aukeratuko denez;
-		 * froga egiteko, goian azaldutako kasu guztiak lortu eta gure helburua betetzen dela frogatu behar dugu,
-		 * jolastuz
-		 */
+	public void testTiroEgin() {			
+		//Pepitoren tableroa eta ListaItsasontziak prestatu
+		Tableroa tableroa=j1.getTableroa();
+		Itsasontzia i1=new Itsasontzia(2, false);
+		Itsasontzia i2=new Itsasontzia(2, false);
+		tableroa.itsasontziaJarri(2, 1, 2, 'b', i1);
+		tableroa.itsasontziaJarri(6, 5, 2, 'h', i2);
+		ListaItsasontziak  itsasontziak=j1.getListaItsasontziak();
+		itsasontziak.gehituItsasontzia(i1);
+		itsasontziak.gehituItsasontzia(i2);
+		j1.guztizInprimatu();
+		assertSame(j1.zenbatItsasontzi(),2);
+		/**	lortu behar dena  
+		 *    0  1 2 3 4 5 6 7 
+			0   ♒ ♒ ♒ ♒ ♒ ♒ ♒ ♒ 
+			1   ♒ ♒ ♒ ♒ ♒ ♒ ♒ ♒ 
+			2   ♒ ⏅ ♒ ♒ ♒ ♒ ♒ ♒ 
+			3   ♒ ⏅ ♒ ♒ ♒ ♒ ♒ ♒ 
+			4   ♒ ♒ ♒ ♒ ♒ ♒ ♒ ♒ 
+			5   ♒ ♒ ♒ ♒ ♒ ♒ ♒ ♒ 
+			6   ♒ ♒ ♒ ♒ ♒ ⏅ ⏅ ♒ 
+			7   ♒ ♒ ♒ ♒ ♒ ♒ ♒ ♒ 
+			 * 
+			 */
+		Jokalaria j2=new Jokalaria("Froga");
+		// egin beharreko tiroak ordenean: (8) (2-8) (2-1) (2-1) (3-1) (4-1)
+		j2.tiroEgin(j1);
+		// (8) zenbakiak ez daudela tartean esango du
+		// (2-8) zenbakiak ez daudela tartean esango du
+		// (1) itsasontzi bati tiro egin diozula esango du
+		// (2-1) koordenatu horiek begiratuta daudela esango du
+		// (3-1) itsasontzi bati tiro egiteaz gain, itsasontzia hondoratu duzula esango du
+		// (4-1) ura jo duzula esango du
+		assertSame(j1.zenbatItsasontzi(),1);
+		
+		j2.setPenalizazioa(true);
+		j2.tiroEgin(j1);
+		//penalizazioa dela eta ezin duzula jokatu esango du
+		
+		//minak ez dakigu non jarriko diren (random); hori dela eta, jolastuz minei tiro egitean ondo doala frogatu dugu
 	}
 
 	@Test
 	public void testTiroEgin2() {
-		/**TestTiroEgin testeko kasu berdinda da
-		 * 
-		 * Hau frogatzeko egoera posible hauek kontuan hartu behar ditugu:
-		 * Koordenatu ez zuzenak: errepikatu
-		 * Koordenatu zuzenak:
-		 * 		Itsasontzia dago: Beste txanda bat jokatuko da
-		 * 			- Hondoratu da itsasontzia
-		 * 			- Ez da hondoratu itsasontzia
-		 * 		Itsasontzia ez dago:
-		 * 			- Mina dago:
-		 * 			- Ura dago:
-		 *  
-		 * 
-		 */
-		/**Tableroan minak non dauden ezin dugunez jakin, 
-		 * eta itsasontzien lekua aurkariak edo automatikoki aukeratuko denez;
-		 * froga egiteko, goian azaldutako kasu guztiak lortu eta gure helburua betetzen dela frogatu behar dugu,
-		 * jolastuz
-		 */
+		//Ordenagailuaren tableroa eta ListaItsasontziak prestatu
+		Tableroa tableroa=j1.getTableroa();
+		Itsasontzia i1=new Itsasontzia(2, false);
+		Itsasontzia i2=new Itsasontzia(2, false);
+		tableroa.itsasontziaJarri(2, 1, 2, 'b', i1);
+		tableroa.itsasontziaJarri(6, 5, 2, 'h', i2);
+		ListaItsasontziak  itsasontziak=j1.getListaItsasontziak();
+		itsasontziak.gehituItsasontzia(i1);
+		itsasontziak.gehituItsasontzia(i2);
+		assertSame(j1.zenbatItsasontzi(),2);
+		/**	Ordenagailuaren tableroa hau da:  
+		 *    0  1 2 3 4 5 6 7 
+			0   ♒ ♒ ♒ ♒ ♒ ♒ ♒ ♒ 
+			1   ♒ ♒ ♒ ♒ ♒ ♒ ♒ ♒ 
+			2   ♒ ⏅ ♒ ♒ ♒ ♒ ♒ ♒ 
+			3   ♒ ⏅ ♒ ♒ ♒ ♒ ♒ ♒ 
+			4   ♒ ♒ ♒ ♒ ♒ ♒ ♒ ♒ 
+			5   ♒ ♒ ♒ ♒ ♒ ♒ ♒ ♒ 
+			6   ♒ ♒ ♒ ♒ ♒ ⏅ ⏅ ♒ 
+			7   ♒ ♒ ♒ ♒ ♒ ♒ ♒ ♒ 
+			 * 
+			 */
+		Jokalaria j2=new Jokalaria("Froga");
+		// egin beharreko tiroak ordenean: (8) (2-8) (2-1) (2-1) (3-1) (4-1)
+		j2.tiroEgin2(j1);
+		// (8) zenbakiak ez daudela tartean esango du
+		// (2-8) zenbakiak ez daudela tartean esango du
+		// (1) itsasontzi bati tiro egin diozula esango du
+		// (2-1) koordenatu horiek begiratuta daudela esango du
+		// (3-1) itsasontzi bati tiro egiteaz gain, itsasontzia hondoratu duzula esango du
+		// (4-1) ura jo duzula esango du
+		assertSame(j1.zenbatItsasontzi(),1);
+	
+		j2.setPenalizazioa(true);
+		j2.tiroEgin2(j1);
+		//penalizazioa dela eta txanda galdu duzula esango du
+	
+		//minak ez dakigu non jarriko diren (random); hori dela eta, jolastuz minei tiro egitean ondo doala frogatu dugu
 	}
 
 	@Test
 	public void testGuztizInprimatu() {
 		//TableroaTest klasean frogatutako metodo bati dei egiten dio 
-		assertTrue(true);
 	}
 
 	@Test
 	public void testPartzialkiInprimatu() {
 		//TableroaTest klasean frogatutako metodo bati dei egiten dio 
-		assertTrue(true);
 	}
 	
-	@Test
-	public void testEskatuX(){
-		/**Programa hasieratu
-		 * Aukeratu 1 (jolasteko)
-		 * Aukeratu 3 (Jokalaria vs Ordenagailuaren Tableroa)
-		 * Aukeratu 1 (5x5koa)
-		 * Sartu edozein izen
-		 *
-		 * Orain froga dator:
-		 * Sartu kaixo (Error - Ez da Int motakoa)
-		 * Sartu -1 (Error - Posizioa ez dago tableroan)
-		 * Sartu 5 (Error - Posizioa ez dago tableroan)
-		 * Sartu 0 (Posizioa egokia da)
-		 */
-		assertTrue(true);
-	}
-
-	@Test
-	public void testEskatuY(){
-		/**Programa hasieratu
-		 * Aukeratu 1 (jolasteko)
-		 * Aukeratu 3 (Jokalaria vs Ordenagailuaren Tableroa)
-		 * Aukeratu 1 (5x5koa)
-		 * Sartu edozein izen
-		 * Sartu 0 (X posizioa tableroan)
-		 *
-		 * Orain froga dator:
-		 * Sartu kaixo (Error - Ez da Int motakoa)
-		 * Sartu -1 (Error - Posizioa ez dago tableroan)
-		 * Sartu 5 (Error - Posizioa ez dago tableroan)
-		 * Sartu 0 (Posizioa egokia da)
-		 */
-		assertTrue(true);
-	}
-
-	@Test
-	public void testItsasontziaJarriEskuz() {
-		//TestTableroaPrestatu testean forgatzen da metodo hau (pribatua da)
-		assertTrue(true);
-	}
-
 	@Test
 	public void testMinaMaxGainditua() {
 		j1.minaIkutuakHanditu();
@@ -144,74 +141,14 @@ public class JokalariaTest {
 		j1.jokalariarenEgoeraInprimatu();
 		j1.tableroaPrestatuAutomatiko();
 		j1.jokalariarenEgoeraInprimatu();
+		assertSame(j1.zenbatItsasontzi(),6);
 	}
-	
-	@Test
-	public void testEskatuHorizontalBertikal() {
-		//TestTableroaPrestatu testean forgatzen da metodo hau (pribatua da)
-		assertTrue(true);
-	}
-	
-	@Test
-	public void testKoordenatuZuzenak() {
-		//TestTableroaPrestatu testean forgatzen da metodo hau (pribatua da)
-		assertTrue(true);
-	}
-	
-	@Test
-	public void testTableroaPrestatuEskuz() {
-		//TestTableroaPrestatu testean forgatzen da metodo hau (pribatua da)
-		assertTrue(true);
-	}
-	
-	@Test
-	public void testHautatuItsasontzia() {
-		//TestTableroaPrestatu testean forgatzen da metodo hau (pribatua da)
-		assertTrue(true);
-	}
-
+		
 	@Test
 	public void testZenbatItsasontzi() {
 		//ListaItsasontziakTest klasean frogatutako metodo bati dei egiten dio 
-		assertTrue(true);
 	}
-
-	@Test
-	public void testItsasontziaJarriAutomatiko() {
-		//TestTableroaPrestatu testean forgatzen da metodo hau (pribatua da)
-		assertTrue(true);
-	}
-	
-	@Test
-	public void testLortuXY() {
-		//TestTableroaPrestatu testean forgatzen da metodo hau (pribatua da)
-		assertTrue(true);
-	}
-	
-	@Test
-	public void testTableroaPrestatuAutomatiko() {
-		j1.tableroaPrestatu();
-		//1 Aukeratuz gero, ikusi egiten da arazorik gabe aukeratu egin dela itsasontzientzat leku egokia
-	}
-
-	@Test
-	public void testTableroaJartzekoModuaEskatu() {
-		//TestTableroaPrestatu testean forgatzen da metodo hau (pribatua da)
-		assertTrue(true);
-	}
-	
-	@Test
-	public void testBaiEz() {
-		//TestTableroaPrestatu testean forgatzen da metodo hau (pribatua da)
-		assertTrue(true);
-	}
-	
-	@Test
-	public void testLortuHorBer() {
-		//TestTableroaPrestatu testean forgatzen da metodo hau (pribatua da)
-		assertTrue(true);
-	}
-	
+			
 	@Test
 	public void testMinaIkutuakHanditu() {
 		j1.minaIkutuakHanditu();
