@@ -67,6 +67,11 @@ public class JokalariaTest {
 		// (4-1) ura jo duzula esango du
 		assertSame(j1.zenbatItsasontzi(),1);
 		
+		// egin beharreko tiroak ordenean: (6-5) (6-6)
+		j2.tiroEgin(j1);
+		// (6-5) (6-6) azkenengo itsasontzia hondoratu eta txanda bukatuko da
+		assertSame(j1.zenbatItsasontzi(),0);
+		
 		j2.setPenalizazioa(true);
 		j2.tiroEgin(j1);
 		//penalizazioa dela eta ezin duzula jokatu esango du
@@ -108,7 +113,12 @@ public class JokalariaTest {
 		// (3-1) itsasontzi bati tiro egiteaz gain, itsasontzia hondoratu duzula esango du
 		// (4-1) ura jo duzula esango du
 		assertSame(j1.zenbatItsasontzi(),1);
-	
+		
+		// egin beharreko tiroak ordenean: (6-5) (6-6)
+		j2.tiroEgin(j1);
+		// (6-5) (6-6) azkenengo itsasontzia hondoratu eta txanda bukatuko da
+		assertSame(j1.zenbatItsasontzi(),0);
+
 		j2.setPenalizazioa(true);
 		j2.tiroEgin2(j1);
 		//penalizazioa dela eta txanda galdu duzula esango du
